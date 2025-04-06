@@ -1,0 +1,4 @@
+#ifndef WARNING_PROMPTS_H
+#define WARNING_PROMPTS_H
+
+#endif // WARNING_PROMPTS_H
