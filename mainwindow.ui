@@ -33,12 +33,6 @@ li.checked::marker { content: &quot;\2612&quot;; }
     </item>
     <item>
      <widget class="QLabel" name="eyeCatch">
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>18</height>
-       </size>
-      </property>
       <property name="text">
        <string>TextLabel</string>
       </property>

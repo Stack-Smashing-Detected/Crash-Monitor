@@ -29,6 +29,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         headers/sort_processes.h
         src/warning_prompts.cpp
         headers/warning_prompts.h
+        resource.qrc
+
+
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET crashMonitor APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
