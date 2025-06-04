@@ -30,6 +30,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         src/warning_prompts.cpp
         headers/warning_prompts.h
         resource.qrc
+        helpwindow.h helpwindow.cpp helpwindow.ui
+
 
 
     )

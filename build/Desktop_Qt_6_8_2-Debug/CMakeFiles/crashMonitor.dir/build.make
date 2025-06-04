@@ -171,10 +171,24 @@ CMakeFiles/crashMonitor.dir/src/warning_prompts.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crashMonitor.dir/src/warning_prompts.cpp.s"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victor-j-wilson/projects2/crashMonitor/src/warning_prompts.cpp -o CMakeFiles/crashMonitor.dir/src/warning_prompts.cpp.s
 
+CMakeFiles/crashMonitor.dir/helpwindow.cpp.o: CMakeFiles/crashMonitor.dir/flags.make
+CMakeFiles/crashMonitor.dir/helpwindow.cpp.o: /home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp
+CMakeFiles/crashMonitor.dir/helpwindow.cpp.o: CMakeFiles/crashMonitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/crashMonitor.dir/helpwindow.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crashMonitor.dir/helpwindow.cpp.o -MF CMakeFiles/crashMonitor.dir/helpwindow.cpp.o.d -o CMakeFiles/crashMonitor.dir/helpwindow.cpp.o -c /home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp
+
+CMakeFiles/crashMonitor.dir/helpwindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crashMonitor.dir/helpwindow.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp > CMakeFiles/crashMonitor.dir/helpwindow.cpp.i
+
+CMakeFiles/crashMonitor.dir/helpwindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crashMonitor.dir/helpwindow.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp -o CMakeFiles/crashMonitor.dir/helpwindow.cpp.s
+
 CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o: CMakeFiles/crashMonitor.dir/flags.make
 CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o: crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp
 CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o: CMakeFiles/crashMonitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o -MF CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o.d -o CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o -c /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp
 
 CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.i: cmake_force
@@ -193,6 +207,7 @@ crashMonitor_OBJECTS = \
 "CMakeFiles/crashMonitor.dir/src/find_processes.cpp.o" \
 "CMakeFiles/crashMonitor.dir/src/sort_processes.cpp.o" \
 "CMakeFiles/crashMonitor.dir/src/warning_prompts.cpp.o" \
+"CMakeFiles/crashMonitor.dir/helpwindow.cpp.o" \
 "CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o"
 
 # External object files for target crashMonitor
@@ -204,6 +219,7 @@ crashMonitor: CMakeFiles/crashMonitor.dir/mainwindow.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/src/find_processes.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/src/sort_processes.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/src/warning_prompts.cpp.o
+crashMonitor: CMakeFiles/crashMonitor.dir/helpwindow.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/build.make
 crashMonitor: CMakeFiles/crashMonitor.dir/compiler_depend.ts
@@ -213,7 +229,7 @@ crashMonitor: /usr/lib/x86_64-linux-gnu/libGLX.so
 crashMonitor: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 crashMonitor: /home/victor-j-wilson/Qt/6.8.2/gcc_64/lib/libQt6Core.so.6.8.2
 crashMonitor: CMakeFiles/crashMonitor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable crashMonitor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable crashMonitor"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/crashMonitor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

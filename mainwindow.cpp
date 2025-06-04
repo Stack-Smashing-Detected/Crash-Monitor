@@ -3,6 +3,8 @@
 #include <QMessageBox>
 #include <QPixmap>
 #include <QString>
+#include <QFrame>
+#include <QPushButton>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -10,9 +12,10 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     QPixmap pix(":/resources/images/app-visual.png");
-    int width = ui->eyeCatch->width();
-    int height = ui->eyeCatch->height();
-    ui->eyeCatch->setPixmap(pix.scaled(width, height, Qt::KeepAspectRatio));
+
+    // set the eye catch image
+    ui->eyeCatch->setScaledContents(true);
+    ui->eyeCatch->setPixmap(pix);
 
 }
 
@@ -21,8 +24,11 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_pushButton_clicked()
+
+
+
+void MainWindow::on_runBtn_clicked()
 {
-    return;
+
 }
 

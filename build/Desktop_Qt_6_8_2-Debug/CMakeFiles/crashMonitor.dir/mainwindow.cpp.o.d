@@ -395,6 +395,14 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o: \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qinputmethod.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qlocale.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qguiapplication_platform.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QFrame \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QHBoxLayout \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qlayout.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qlayoutitem.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qgridlayout.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QLabel \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qlabel.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
@@ -419,11 +427,6 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o: \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qtextformat.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qpen.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QVBoxLayout \
- /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
- /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qlayout.h \
- /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qlayoutitem.h \
- /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qboxlayout.h \
- /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qgridlayout.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QWidget \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qwidget.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QMessageBox \
@@ -433,4 +436,6 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o: \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/QPixmap \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qpixmap.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/QString \
- /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qstring.h
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qstring.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QFrame \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QPushButton

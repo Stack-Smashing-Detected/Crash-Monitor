@@ -441,6 +441,12 @@
 			null
 		],
 		[
+			"/home/victor-j-wilson/projects2/crashMonitor/helpwindow.h",
+			"MU",
+			"EWIEGA46WW/moc_helpwindow.cpp",
+			null
+		],
+		[
 			"/home/victor-j-wilson/projects2/crashMonitor/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
@@ -506,6 +512,11 @@
 	"SETTINGS_FILE" : "/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/CMakeFiles/crashMonitor_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp",
+			"MU",
+			null
+		],
 		[ "/home/victor-j-wilson/projects2/crashMonitor/main.cpp", "MU", null ],
 		[
 			"/home/victor-j-wilson/projects2/crashMonitor/mainwindow.cpp",
