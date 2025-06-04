@@ -2,8 +2,9 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o: \
  /home/victor-j-wilson/projects2/crashMonitor/mainwindow.cpp \
  /usr/include/stdc-predef.h \
  /home/victor-j-wilson/projects2/crashMonitor/mainwindow.h \
- /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QMainWindow \
- /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qmainwindow.h \
+ /home/victor-j-wilson/projects2/crashMonitor/helpwindow.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QDialog \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qdialog.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qtguiglobal.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qglobal.h \
@@ -378,6 +379,8 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o: \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qsizepolicy.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qcursor.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qbitmap.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QMainWindow \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qmainwindow.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qtabwidget.h \
  /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/crashMonitor_autogen/include/./ui_mainwindow.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/QVariant \
