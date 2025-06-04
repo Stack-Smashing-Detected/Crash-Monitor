@@ -1,4 +1,4 @@
-/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/crashMonitor_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/victor-j-wilson/projects2/crashMonitor/mainwindow.h \
+/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/crashMonitor_autogen/EWIEGA46WW/moc_helpwindow.cpp: /home/victor-j-wilson/projects2/crashMonitor/helpwindow.h \
   /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/crashMonitor_autogen/moc_predefs.h \
   /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/q20functional.h \
   /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/q20iterator.h \
@@ -145,16 +145,12 @@
   /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qtransform.h \
   /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qwindowdefs.h \
   /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QDialog \
-  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QMainWindow \
   /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qdialog.h \
-  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qmainwindow.h \
   /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qsizepolicy.h \
-  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qtabwidget.h \
   /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgets-config.h \
   /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsexports.h \
   /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
   /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qwidget.h \
-  /home/victor-j-wilson/projects2/crashMonitor/helpwindow.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

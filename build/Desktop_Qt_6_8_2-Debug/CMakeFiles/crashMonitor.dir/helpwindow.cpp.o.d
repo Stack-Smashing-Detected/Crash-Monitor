@@ -1,8 +1,7 @@
-CMakeFiles/crashMonitor.dir/crashMonitor_autogen/mocs_compilation.cpp.o: \
- /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/crashMonitor_autogen/mocs_compilation.cpp \
+CMakeFiles/crashMonitor.dir/helpwindow.cpp.o: \
+ /home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp \
  /usr/include/stdc-predef.h \
- /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/crashMonitor_autogen/EWIEGA46WW/moc_helpwindow.cpp \
- /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/crashMonitor_autogen/EWIEGA46WW/../../../../helpwindow.h \
+ /home/victor-j-wilson/projects2/crashMonitor/helpwindow.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QDialog \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qdialog.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -379,10 +378,34 @@ CMakeFiles/crashMonitor.dir/crashMonitor_autogen/mocs_compilation.cpp.o: \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qsizepolicy.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qcursor.h \
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qbitmap.h \
- /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qtmochelpers.h \
- /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/crashMonitor_autogen/EWIEGA46WW/moc_mainwindow.cpp \
- /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/crashMonitor_autogen/EWIEGA46WW/../../../../mainwindow.h \
- /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/crashMonitor_autogen/EWIEGA46WW/../../../../helpwindow.h \
- /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QMainWindow \
- /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qmainwindow.h \
- /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qtabwidget.h
+ /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_8_2-Debug/crashMonitor_autogen/include/ui_helpwindow.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/QVariant \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qvariant.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QAbstractButton \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qabstractbutton.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QApplication \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qapplication.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qcoreapplication.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qcoreevent.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qdeadlinetimer.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qelapsedtimer.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qeventloop.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qnativeinterface.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qcoreapplication_platform.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qguiapplication.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qinputmethod.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qlocale.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qguiapplication_platform.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QDialog \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QDialogButtonBox \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QTextEdit \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qtextedit.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qframe.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qtextdocument.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtCore/qurl.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qtextoption.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qtextcursor.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qtextformat.h \
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qpen.h

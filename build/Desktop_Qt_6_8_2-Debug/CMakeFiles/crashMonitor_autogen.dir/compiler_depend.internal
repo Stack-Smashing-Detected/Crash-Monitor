@@ -146,7 +146,9 @@
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qtguiglobal.h
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qtransform.h
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtGui/qwindowdefs.h
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QDialog
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/QMainWindow
+ /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qdialog.h
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qmainwindow.h
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qsizepolicy.h
  /home/victor-j-wilson/Qt/6.8.2/gcc_64/include/QtWidgets/qtabwidget.h
@@ -390,6 +392,9 @@
  /home/victor-j-wilson/projects2/crashMonitor/headers/find_processes.h
  /home/victor-j-wilson/projects2/crashMonitor/headers/sort_processes.h
  /home/victor-j-wilson/projects2/crashMonitor/headers/warning_prompts.h
+ /home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp
+ /home/victor-j-wilson/projects2/crashMonitor/helpwindow.h
+ /home/victor-j-wilson/projects2/crashMonitor/helpwindow.ui
  /home/victor-j-wilson/projects2/crashMonitor/main.cpp
  /home/victor-j-wilson/projects2/crashMonitor/mainwindow.cpp
  /home/victor-j-wilson/projects2/crashMonitor/mainwindow.h
