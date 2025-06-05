@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include "helpwindow.h"
+#include "settings.h"
 #include <QMainWindow>
 #include <memory>
 
@@ -24,8 +25,11 @@ private slots:
 
     void on_helpBtn_clicked();
 
+    void on_settingsBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     HelpWindow *helpWindow;
+    Settings *settings;
 };
 #endif // MAINWINDOW_H
