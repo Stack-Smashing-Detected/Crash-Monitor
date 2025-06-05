@@ -25,12 +25,13 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         ${PROJECT_SOURCES}
         src/find_processes.cpp
         headers/find_processes.h
-        src/sort_processes.cpp
-        headers/sort_processes.h
+        src/calculate_ram.cpp
+        headers/calculate_ram.h
         src/warning_prompts.cpp
         headers/warning_prompts.h
         resource.qrc
         helpwindow.h helpwindow.cpp helpwindow.ui
+        settings.h settings.cpp settings.ui
 
 
 

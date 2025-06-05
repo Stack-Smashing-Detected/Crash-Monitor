@@ -1,0 +1,10 @@
+Todo:
+
+- Build general design for settings page (done)
+- Research way to display "Warning prompt" and Force Close threshold points as synchronized input and slider.
+- Research way to obtain fonts and apply them across the application (if this proves too challenging this can be dropped).
+- Research way to generate and destroy widget displays dynamically when switching between RGB input/Hex code input/Color Wheel Picker/ options in the color settings.
+- Create a button for application viewer, this should open a new dialog box that views currently added applications, this box should also have buttons for adding and removing applications.
+- The add and remove application buttons should open their own dialog boxes, "add" should create a form with a dropdown list of installed applications.
+- The remove application form should have a similar list but for "added" applications.
+- Try to make the dropdowns "UX" friendly, that means use of Icons, larger text and good spacing. 

@@ -1,4 +1,0 @@
-#ifndef SORT_PROCESSES_H
-#define SORT_PROCESSES_H
-
-#endif // SORT_PROCESSES_H

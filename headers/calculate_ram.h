@@ -1,0 +1,4 @@
+#ifndef CALCULATE_RAM_H
+#define CALCULATE_RAM_H
+
+#endif // CALCULATE_RAM_H
