@@ -428,18 +428,19 @@ CMakeFiles/crashMonitor.dir/settings.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qiodevice.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qurl.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QLineEdit \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlineedit.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qtextcursor.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qtextformat.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qpen.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qtextoption.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QSlider \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qslider.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractslider.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTextEdit \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtextedit.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qtextoption.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qtextcursor.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qtextformat.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qpen.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/QFont \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qfont.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QGridLayout
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/QObject \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qobject.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QGridLayout \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QSlider
