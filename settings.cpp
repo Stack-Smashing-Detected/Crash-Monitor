@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QGridLayout>
 #include <QSlider>
+#include <sstream>
 
 #define MIN_RAM 80
 #define TERMINATE 98
@@ -50,6 +51,17 @@ void Settings::onSliderChange(int change)
     // on slider change calculate the RAM value, this will be need to be passed throughout the
     // application.
 
+    int newRam = MIN_RAM + change;
+    Settings::setRam(newRam);
+
+    // display RAM value in label.
+    std::stringstream ss;
+    ss << newRam;
+    ss << "%";
+
+    // get the output as a QString
+    QString ramDisplay = QString::fromStdString(ss.str());
+    ui->warningPoint->setText(ramDisplay);
 }
 
 

@@ -15,6 +15,17 @@ public:
     explicit Settings(QWidget *parent = nullptr);
     ~Settings();
 
+    // getter and setter for ram.
+    int getRam(){
+        return ram;
+    }
+
+    void setRam(int newRam){
+        this->ram = newRam;
+    }
+
+
+
 private slots:
     void onSliderChange(int change);
 
