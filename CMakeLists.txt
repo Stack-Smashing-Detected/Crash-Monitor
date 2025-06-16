@@ -23,15 +23,18 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(crashMonitor
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-        src/find_processes.cpp
-        headers/find_processes.h
-        src/calculate_ram.cpp
-        headers/calculate_ram.h
-        src/warning_prompts.cpp
-        headers/warning_prompts.h
-        resource.qrc
-        helpwindow.h helpwindow.cpp helpwindow.ui
-        settings.h settings.cpp settings.ui
+            src/cpu_calculator.cpp
+            headers/cpu_calculator.h
+            src/process_finder.cpp
+            headers/process_finder.h
+            src/ram_calculator.cpp
+            headers/ram_calculator.h
+            src/warning_prompts.cpp
+            headers/warning_prompts.h
+            resource.qrc
+            helpwindow.h helpwindow.cpp helpwindow.ui
+            settings.h settings.cpp settings.ui
+
 
 
 
