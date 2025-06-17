@@ -31,9 +31,9 @@
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/Qt6Config.cmake",
-			"/snap/cmake/1463/share/cmake-4.0/Modules/FindOpenGL.cmake",
+			"/snap/cmake/1468/share/cmake-4.0/Modules/FindOpenGL.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/FindWrapOpenGL.cmake",
-			"/snap/cmake/1463/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+			"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
@@ -479,12 +479,12 @@
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-			"path" : "src/sort_processes.cpp",
+			"path" : "src/calculate_ram.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 4,
-			"path" : "headers/calculate_RAM.h",
+			"path" : "headers/calculate_ram.h",
 			"sourceGroupIndex" : 1
 		},
 		{

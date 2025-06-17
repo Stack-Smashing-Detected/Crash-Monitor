@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/cmake/1463/bin/cmake
+CMAKE_COMMAND = /snap/cmake/1468/bin/cmake
 
 # The command to remove a file.
-RM = /snap/cmake/1463/bin/cmake -E rm -f
+RM = /snap/cmake/1468/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -73,8 +73,8 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/libexec/mo
 crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/libexec/uic
 crashMonitor_autogen/timestamp: CMakeFiles/crashMonitor.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target crashMonitor"
-	/snap/cmake/1463/bin/cmake -E cmake_autogen /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/crashMonitor_autogen.dir/AutogenInfo.json Debug
-	/snap/cmake/1463/bin/cmake -E touch /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/timestamp
+	/snap/cmake/1468/bin/cmake -E cmake_autogen /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/crashMonitor_autogen.dir/AutogenInfo.json Debug
+	/snap/cmake/1468/bin/cmake -E touch /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/timestamp
 
 crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp: /home/victor-j-wilson/projects2/crashMonitor/resource.qrc
 crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp: CMakeFiles/crashMonitor_autogen.dir/AutoRcc_resource_EWIEGA46WW_Info.json
@@ -82,7 +82,7 @@ crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp: /home/victor-j-wilson/projects
 crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/libexec/rcc
 crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/libexec/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for resource.qrc"
-	/snap/cmake/1463/bin/cmake -E cmake_autorcc /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/crashMonitor_autogen.dir/AutoRcc_resource_EWIEGA46WW_Info.json Debug
+	/snap/cmake/1468/bin/cmake -E cmake_autorcc /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/crashMonitor_autogen.dir/AutoRcc_resource_EWIEGA46WW_Info.json Debug
 
 CMakeFiles/crashMonitor.dir/codegen:
 .PHONY : CMakeFiles/crashMonitor.dir/codegen
