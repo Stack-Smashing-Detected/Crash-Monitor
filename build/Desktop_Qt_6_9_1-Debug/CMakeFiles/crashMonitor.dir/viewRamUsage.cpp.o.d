@@ -1,7 +1,7 @@
-CMakeFiles/crashMonitor.dir/settings.cpp.o: \
- /home/victor-j-wilson/projects2/crashMonitor/settings.cpp \
+CMakeFiles/crashMonitor.dir/viewRamUsage.cpp.o: \
+ /home/victor-j-wilson/projects2/crashMonitor/viewRamUsage.cpp \
  /usr/include/stdc-predef.h \
- /home/victor-j-wilson/projects2/crashMonitor/settings.h \
+ /home/victor-j-wilson/projects2/crashMonitor/viewRamUsage.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QDialog \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qdialog.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -387,11 +387,9 @@ CMakeFiles/crashMonitor.dir/settings.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qsizepolicy.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qcursor.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qbitmap.h \
- /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/include/ui_settings.h \
+ /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/include/ui_viewRamUsage.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qvariant.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QAbstractButton \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractbutton.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qapplication.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qcoreapplication.h \
@@ -408,16 +406,6 @@ CMakeFiles/crashMonitor.dir/settings.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QDialog \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QDialogButtonBox \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QFrame \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QGridLayout \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qgridlayout.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlayout.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlayoutitem.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qboxlayout.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qgridlayout.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
@@ -425,25 +413,7 @@ CMakeFiles/crashMonitor.dir/settings.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qiodevice.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qurl.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QSlider \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qslider.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractslider.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/QFont \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qfont.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/QObject \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qobject.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QGridLayout \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QSlider \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/QPalette \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qpalette.h \
- /usr/include/c++/13/sstream /usr/include/c++/13/istream \
- /usr/include/c++/13/ios /usr/include/c++/13/bits/basic_ios.h \
- /usr/include/c++/13/bits/locale_facets.h /usr/include/c++/13/cwctype \
- /usr/include/wctype.h /usr/include/x86_64-linux-gnu/bits/wctype-wchar.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_base.h \
- /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h \
- /usr/include/c++/13/bits/locale_facets.tcc \
- /usr/include/c++/13/bits/basic_ios.tcc /usr/include/c++/13/ostream \
- /usr/include/c++/13/bits/ostream.tcc \
- /usr/include/c++/13/bits/istream.tcc \
- /usr/include/c++/13/bits/sstream.tcc
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTabWidget \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qwidget.h

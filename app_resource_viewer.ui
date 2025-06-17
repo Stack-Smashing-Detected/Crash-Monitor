@@ -39,7 +39,7 @@
     </rect>
    </property>
    <property name="text">
-    <string>Application Resource Viewer</string>
+    <string>TextLabel</string>
    </property>
   </widget>
   <widget class="QTabWidget" name="tabWidget">

@@ -8,61 +8,9 @@
 	[
 		"/home/victor-j-wilson/projects2/crashMonitor/CMakeLists.txt",
 		"/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/.qtc/package-manager/auto-setup.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeSystem.cmake.in",
 		"/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/4.0.3/CMakeSystem.cmake",
 		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake",
 		"/snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linux-Initialize.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeDetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linux-Determine-CXX.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCompilerIdDetection.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/ADSP-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/ARMCC-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/ARMClang-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/AppleClang-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/Borland-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/Clang-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/Clang-DetermineCompilerInternal.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/Cray-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/CrayClang-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/Embarcadero-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/Fujitsu-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/GHS-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/HP-CXX-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/IAR-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/Intel-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/MSVC-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/NVHPC-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/NVIDIA-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/OrangeC-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/PGI-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/PathScale-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/SCO-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/TI-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/TIClang-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/Tasking-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/Watcom-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/XL-CXX-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeFindBinUtils.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/GNU-FindBinUtils.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCXXCompiler.cmake.in",
 		"/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/4.0.3/CMakeCXXCompiler.cmake",
 		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake",
 		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeGenericSystem.cmake",
@@ -77,19 +25,6 @@
 		"/snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linux-GNU-CXX.cmake",
 		"/snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linux-GNU.cmake",
 		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeTestCompilerCommon.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Internal/CMakeDetermineLinkerId.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeParseImplicitIncludeInfo.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeParseImplicitLinkInfo.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeParseLibraryArchitecture.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeTestCompilerCommon.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeDetermineCompilerSupport.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Internal/FeatureTesting.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCXXCompiler.cmake.in",
-		"/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/4.0.3/CMakeCXXCompiler.cmake",
 		"/snap/cmake/1468/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake",
 		"/snap/cmake/1468/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake",
 		"/snap/cmake/1468/share/cmake-4.0/Modules/Linker/GNU-CXX.cmake",
@@ -97,8 +32,6 @@
 		"/snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-CXX.cmake",
 		"/snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU.cmake",
 		"/snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/Internal/CMakeInspectCXXLinker.cmake",
-		"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCXXCompiler.cmake.in",
 		"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake",
 		"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/Qt6ConfigVersionImpl.cmake",
 		"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/Qt6Config.cmake",
@@ -560,15 +493,27 @@
 	"HEADERS" : 
 	[
 		[
-			"/home/victor-j-wilson/projects2/crashMonitor/headers/calculate_ram.h",
+			"/home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.h",
 			"MU",
-			"K6S233IZAZ/moc_calculate_ram.cpp",
+			"EWIEGA46WW/moc_app_resource_viewer.cpp",
 			null
 		],
 		[
-			"/home/victor-j-wilson/projects2/crashMonitor/headers/find_processes.h",
+			"/home/victor-j-wilson/projects2/crashMonitor/headers/cpu_calculator.h",
 			"MU",
-			"K6S233IZAZ/moc_find_processes.cpp",
+			"K6S233IZAZ/moc_cpu_calculator.cpp",
+			null
+		],
+		[
+			"/home/victor-j-wilson/projects2/crashMonitor/headers/process_finder.h",
+			"MU",
+			"K6S233IZAZ/moc_process_finder.cpp",
+			null
+		],
+		[
+			"/home/victor-j-wilson/projects2/crashMonitor/headers/ram_calculator.h",
+			"MU",
+			"K6S233IZAZ/moc_ram_calculator.cpp",
 			null
 		],
 		[
@@ -656,6 +601,11 @@
 	"SOURCES" : 
 	[
 		[
+			"/home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp",
 			"MU",
 			null
@@ -672,12 +622,17 @@
 			null
 		],
 		[
-			"/home/victor-j-wilson/projects2/crashMonitor/src/calculate_ram.cpp",
+			"/home/victor-j-wilson/projects2/crashMonitor/src/cpu_calculator.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/victor-j-wilson/projects2/crashMonitor/src/find_processes.cpp",
+			"/home/victor-j-wilson/projects2/crashMonitor/src/process_finder.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/victor-j-wilson/projects2/crashMonitor/src/ram_calculator.cpp",
 			"MU",
 			null
 		],

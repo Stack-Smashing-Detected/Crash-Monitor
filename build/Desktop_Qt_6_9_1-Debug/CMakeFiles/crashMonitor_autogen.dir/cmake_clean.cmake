@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/crashMonitor_autogen"
+  "crashMonitor_autogen/include/ui_app_resource_viewer.h"
   "crashMonitor_autogen/include/ui_helpwindow.h"
   "crashMonitor_autogen/include/ui_mainwindow.h"
   "crashMonitor_autogen/include/ui_settings.h"

@@ -1,4 +1,0 @@
-#ifndef FIND_PROCESSES_H
-#define FIND_PROCESSES_H
-
-#endif // FIND_PROCESSES_H
