@@ -493,6 +493,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.h",
+			"MU",
+			"EWIEGA46WW/moc_app_resource_viewer.cpp",
+			null
+		],
+		[
 			"/home/victor-j-wilson/projects2/crashMonitor/headers/cpu_calculator.h",
 			"MU",
 			"K6S233IZAZ/moc_cpu_calculator.cpp",
@@ -594,6 +600,11 @@
 	"SETTINGS_FILE" : "/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/crashMonitor_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.cpp",
+			"MU",
+			null
+		],
 		[
 			"/home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp",
 			"MU",

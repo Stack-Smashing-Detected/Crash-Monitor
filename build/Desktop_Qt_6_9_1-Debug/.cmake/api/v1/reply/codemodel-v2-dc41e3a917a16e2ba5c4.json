@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-431b89b342e166d8eec8.json",
+					"jsonFile" : "directory-.-Debug-7bb04fbabdff9990f291.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,7 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "crashMonitor::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-crashMonitor-Debug-552cdbff61d925bc33cc.json",
+					"jsonFile" : "target-crashMonitor-Debug-d94a0c6f88be956bdc55.json",
 					"name" : "crashMonitor",
 					"projectIndex" : 0
 				},
