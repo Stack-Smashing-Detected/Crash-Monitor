@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QGridLayout>
 #include <QSlider>
+#include <QPalette>
 #include <sstream>
 
 #define MIN_RAM 80
@@ -22,11 +23,12 @@ Settings::Settings(QWidget *parent)
     titleFont.setPointSize(16);
     ui->title->setFont(titleFont);
 
-    // style the slider & input
+    // style the slider & display grid.
     QGridLayout *settingsGrid = qobject_cast<QGridLayout *>(ui->ramSettings->layout());
     settingsGrid->setColumnStretch(0, 4);
     settingsGrid->setColumnStretch(1, 1);
 
+    // modify backgrounds for slider and text for display.
 
     // setup QSlider values
     ui->ramValueController->setMinimum(0);

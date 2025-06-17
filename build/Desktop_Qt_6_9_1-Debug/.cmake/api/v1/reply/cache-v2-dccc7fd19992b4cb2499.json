@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "2"
+			"value" : "3"
 		},
 		{
 			"name" : "CMAKE_COLOR_DIAGNOSTICS",
@@ -131,7 +131,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/cmake/1463/bin/cmake"
+			"value" : "/snap/cmake/1468/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -143,7 +143,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/cmake/1463/bin/cpack"
+			"value" : "/snap/cmake/1468/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -155,7 +155,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/cmake/1463/bin/ctest"
+			"value" : "/snap/cmake/1468/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -1191,7 +1191,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/snap/cmake/1463/share/cmake-4.0"
+			"value" : "/snap/cmake/1468/share/cmake-4.0"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",

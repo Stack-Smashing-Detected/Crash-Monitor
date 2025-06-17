@@ -445,11 +445,12 @@ crashMonitor_autogen/timestamp: \
 	/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake \
 	/home/victor-j-wilson/projects2/crashMonitor/CMakeLists.txt \
 	/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/.qtc/package-manager/auto-setup.cmake \
-	/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/4.0.2/CMakeCXXCompiler.cmake \
-	/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/4.0.2/CMakeSystem.cmake \
+	/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/4.0.3/CMakeCXXCompiler.cmake \
+	/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/4.0.3/CMakeSystem.cmake \
 	/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/moc_predefs.h \
-	/home/victor-j-wilson/projects2/crashMonitor/headers/calculate_ram.h \
-	/home/victor-j-wilson/projects2/crashMonitor/headers/find_processes.h \
+	/home/victor-j-wilson/projects2/crashMonitor/headers/cpu_calculator.h \
+	/home/victor-j-wilson/projects2/crashMonitor/headers/process_finder.h \
+	/home/victor-j-wilson/projects2/crashMonitor/headers/ram_calculator.h \
 	/home/victor-j-wilson/projects2/crashMonitor/headers/warning_prompts.h \
 	/home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp \
 	/home/victor-j-wilson/projects2/crashMonitor/helpwindow.h \
@@ -459,49 +460,50 @@ crashMonitor_autogen/timestamp: \
 	/home/victor-j-wilson/projects2/crashMonitor/resource.qrc \
 	/home/victor-j-wilson/projects2/crashMonitor/settings.cpp \
 	/home/victor-j-wilson/projects2/crashMonitor/settings.h \
-	/home/victor-j-wilson/projects2/crashMonitor/src/calculate_ram.cpp \
-	/home/victor-j-wilson/projects2/crashMonitor/src/find_processes.cpp \
+	/home/victor-j-wilson/projects2/crashMonitor/src/cpu_calculator.cpp \
+	/home/victor-j-wilson/projects2/crashMonitor/src/process_finder.cpp \
+	/home/victor-j-wilson/projects2/crashMonitor/src/ram_calculator.cpp \
 	/home/victor-j-wilson/projects2/crashMonitor/src/warning_prompts.cpp \
-	/snap/cmake/1463/share/cmake-4.0/Modules/CMakeCXXInformation.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/CMakeGenericSystem.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/CheckCXXSourceCompiles.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/CheckIncludeFileCXX.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/CheckLibraryExists.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Compiler/GNU.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/FeatureSummary.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/FindOpenGL.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/FindPackageMessage.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/FindPkgConfig.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/FindThreads.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/FindVulkan.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/GNUInstallDirs.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Internal/CheckFlagCommonConfig.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Linker/GNU-CXX.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Linker/GNU.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/MacroAddFileDependencies.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-CXX.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Platform/Linux-GNU-CXX.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Platform/Linux-GNU.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Platform/Linux-Initialize.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Platform/Linux.cmake \
-	/snap/cmake/1463/share/cmake-4.0/Modules/Platform/UnixPaths.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCXXInformation.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeGenericSystem.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeInitializeConfigs.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeLanguageInformation.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeSystemSpecificInformation.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeSystemSpecificInitialize.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/CheckCXXCompilerFlag.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/CheckCXXSourceCompiles.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/CheckIncludeFileCXX.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/CheckLibraryExists.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/CMakeCommonCompilerMacros.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/GNU-CXX.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Compiler/GNU.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/FeatureSummary.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/FindOpenGL.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/FindPackageMessage.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/FindPkgConfig.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/FindThreads.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/FindVulkan.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/GNUInstallDirs.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Internal/CMakeCXXLinkerInformation.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Internal/CMakeCommonLinkerInformation.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Internal/CheckCompilerFlag.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Internal/CheckFlagCommonConfig.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Internal/CheckSourceCompiles.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Linker/GNU-CXX.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Linker/GNU.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/MacroAddFileDependencies.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU-CXX.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linux-GNU-CXX.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linux-GNU.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linux-Initialize.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linux.cmake \
+	/snap/cmake/1468/share/cmake-4.0/Modules/Platform/UnixPaths.cmake \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/errno-base.h \
 	/usr/include/asm-generic/errno.h \
@@ -771,4 +773,4 @@ crashMonitor_autogen/timestamp: \
 	/home/victor-j-wilson/projects2/crashMonitor/helpwindow.ui \
 	/home/victor-j-wilson/projects2/crashMonitor/mainwindow.ui \
 	/home/victor-j-wilson/projects2/crashMonitor/settings.ui \
-	/snap/cmake/1463/bin/cmake
+	/snap/cmake/1468/bin/cmake

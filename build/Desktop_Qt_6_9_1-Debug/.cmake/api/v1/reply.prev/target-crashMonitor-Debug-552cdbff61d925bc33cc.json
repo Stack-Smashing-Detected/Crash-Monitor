@@ -31,9 +31,9 @@
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/Qt6Config.cmake",
-			"/snap/cmake/1463/share/cmake-4.0/Modules/FindOpenGL.cmake",
+			"/snap/cmake/1468/share/cmake-4.0/Modules/FindOpenGL.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/FindWrapOpenGL.cmake",
-			"/snap/cmake/1463/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+			"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
@@ -71,13 +71,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 74,
+				"line" : 77,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 57,
+				"line" : 60,
 				"parent" : 0
 			},
 			{
@@ -288,9 +288,11 @@
 				5,
 				7,
 				9,
-				13,
-				16,
-				22
+				11,
+				15,
+				18,
+				21,
+				28
 			]
 		}
 	],
@@ -382,9 +384,11 @@
 				5,
 				7,
 				9,
-				13,
-				16,
-				22
+				11,
+				15,
+				18,
+				21,
+				28
 			]
 		},
 		{
@@ -396,10 +400,13 @@
 				8,
 				10,
 				12,
-				15,
-				18,
-				19,
-				20
+				14,
+				17,
+				20,
+				23,
+				24,
+				25,
+				26
 			]
 		},
 		{
@@ -407,30 +414,31 @@
 			"sourceIndexes" : 
 			[
 				4,
-				14,
-				17
+				16,
+				19,
+				22
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				11
+				13
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				21
+				27
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				23,
-				24
+				29,
+				30
 			]
 		}
 	],
@@ -468,23 +476,34 @@
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-			"path" : "src/find_processes.cpp",
+			"path" : "src/cpu_calculator.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 4,
-			"path" : "headers/find_processes.h",
+			"path" : "headers/cpu_calculator.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-			"path" : "src/sort_processes.cpp",
+			"path" : "src/process_finder.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 4,
-			"path" : "headers/calculate_RAM.h",
+			"path" : "headers/process_finder.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/ram_calculator.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "headers/ram_calculator.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -536,6 +555,22 @@
 			"sourceGroupIndex" : 2
 		},
 		{
+			"backtrace" : 4,
+			"path" : "viewRamUsage.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "viewRamUsage.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "viewRamUsage.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/include/ui_mainwindow.h",
@@ -551,6 +586,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/include/ui_settings.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/include/ui_viewRamUsage.h",
 			"sourceGroupIndex" : 1
 		},
 		{

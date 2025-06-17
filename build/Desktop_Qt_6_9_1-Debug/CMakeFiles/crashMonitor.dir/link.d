@@ -5,8 +5,9 @@ crashMonitor: \
   CMakeFiles/crashMonitor.dir/crashMonitor_autogen/mocs_compilation.cpp.o \
   CMakeFiles/crashMonitor.dir/main.cpp.o \
   CMakeFiles/crashMonitor.dir/mainwindow.cpp.o \
-  CMakeFiles/crashMonitor.dir/src/find_processes.cpp.o \
-  CMakeFiles/crashMonitor.dir/src/calculate_ram.cpp.o \
+  CMakeFiles/crashMonitor.dir/src/cpu_calculator.cpp.o \
+  CMakeFiles/crashMonitor.dir/src/process_finder.cpp.o \
+  CMakeFiles/crashMonitor.dir/src/ram_calculator.cpp.o \
   CMakeFiles/crashMonitor.dir/src/warning_prompts.cpp.o \
   CMakeFiles/crashMonitor.dir/helpwindow.cpp.o \
   CMakeFiles/crashMonitor.dir/settings.cpp.o \
@@ -93,9 +94,11 @@ CMakeFiles/crashMonitor.dir/main.cpp.o:
 
 CMakeFiles/crashMonitor.dir/mainwindow.cpp.o:
 
-CMakeFiles/crashMonitor.dir/src/find_processes.cpp.o:
+CMakeFiles/crashMonitor.dir/src/cpu_calculator.cpp.o:
 
-CMakeFiles/crashMonitor.dir/src/calculate_ram.cpp.o:
+CMakeFiles/crashMonitor.dir/src/process_finder.cpp.o:
+
+CMakeFiles/crashMonitor.dir/src/ram_calculator.cpp.o:
 
 CMakeFiles/crashMonitor.dir/src/warning_prompts.cpp.o:
 
