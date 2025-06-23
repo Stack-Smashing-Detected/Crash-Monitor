@@ -1,4 +1,4 @@
-/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/victor-j-wilson/projects2/crashMonitor/mainwindow.h \
+/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/EWIEGA46WW/moc_app_resource_viewer.cpp: /home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.h \
   /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/moc_predefs.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/q17memory.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/q20functional.h \
@@ -157,7 +157,6 @@
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qwindowdefs.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QDialog \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QListWidget \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QMainWindow \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
@@ -168,7 +167,6 @@
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlistview.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlistwidget.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qmainwindow.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qsizepolicy.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qslider.h \
@@ -180,9 +178,6 @@
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtwidgetsexports.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qwidget.h \
-  /home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.h \
-  /home/victor-j-wilson/projects2/crashMonitor/helpwindow.h \
-  /home/victor-j-wilson/projects2/crashMonitor/settings.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

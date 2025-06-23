@@ -389,9 +389,31 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qcursor.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qbitmap.h \
  /home/victor-j-wilson/projects2/crashMonitor/settings.h \
+ /home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QListWidget \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlistwidget.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlistview.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qitemselectionmodel.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qstyleoption.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qvalidator.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qregularexpression.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qslider.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractslider.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qstyle.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qwidget.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QMainWindow \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qmainwindow.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
  /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/include/./ui_mainwindow.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qvariant.h \
@@ -408,7 +430,6 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qcoreapplication_platform.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qinputmethod.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qguiapplication_platform.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QFrame \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
@@ -420,7 +441,6 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qgridlayout.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qpicture.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qiodevice.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qtextdocument.h \
@@ -436,7 +456,6 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qstatusbar.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QVBoxLayout \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qwidget.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QMessageBox \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qmessagebox.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qdialog.h \

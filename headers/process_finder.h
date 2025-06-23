@@ -21,12 +21,16 @@ public:
 
     // get the list of process pid's to use throughout the app
     std::vector<std::string> getProcessList(){
-        return processes;
+        return processList;
+    }
+
+    void setProcessList(std::vector<std::string> processList){
+        this->processList = processList;
     }
 
 private:
     DIR *dir;
-    std::vector<std::string> processes;
+    std::vector<std::string> processList;
 };
 
 #endif // PROCESS_FINDER_H

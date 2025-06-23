@@ -3,6 +3,7 @@
 
 #include "helpwindow.h"
 #include "settings.h"
+#include "app_resource_viewer.h"
 #include <QMainWindow>
 #include <memory>
 
@@ -27,9 +28,12 @@ private slots:
 
     void on_settingsBtn_clicked();
 
+    void on_viewBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     HelpWindow *helpWindow;
     Settings *settings;
+    AppResourceViewer *app_resource_viewer;
 };
 #endif // MAINWINDOW_H

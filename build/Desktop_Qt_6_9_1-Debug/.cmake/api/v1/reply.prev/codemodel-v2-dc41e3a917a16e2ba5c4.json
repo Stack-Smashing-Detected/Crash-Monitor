@@ -7,7 +7,7 @@
 				{
 					"build" : ".",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-431b89b342e166d8eec8.json",
+					"jsonFile" : "directory-.-Debug-7bb04fbabdff9990f291.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.16"
@@ -44,11 +44,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "crashMonitor::@6890427a1f51a3e7e1df",
-<<<<<<<< HEAD:build/Desktop_Qt_6_9_1-Debug/.cmake/api/v1/reply/codemodel-v2-7637823e430a7d0475ba.json
-					"jsonFile" : "target-crashMonitor-Debug-e3f37eb19eba51f33679.json",
-========
-					"jsonFile" : "target-crashMonitor-Debug-d0fc9bf73fd6ba0d3329.json",
->>>>>>>> process-algorithm:build/Desktop_Qt_6_9_1-Debug/.cmake/api/v1/reply.prev/codemodel-v2-6963eb856552757a8150.json
+					"jsonFile" : "target-crashMonitor-Debug-d94a0c6f88be956bdc55.json",
 					"name" : "crashMonitor",
 					"projectIndex" : 0
 				},

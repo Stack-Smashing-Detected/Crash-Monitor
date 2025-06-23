@@ -487,18 +487,11 @@
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-<<<<<<<< HEAD:build/Desktop_Qt_6_9_1-Debug/.cmake/api/v1/reply/target-crashMonitor-Debug-e3f37eb19eba51f33679.json
-			"path" : "src/calculate_ram.cpp",
-========
 			"path" : "src/process_finder.cpp",
->>>>>>>> process-algorithm:build/Desktop_Qt_6_9_1-Debug/.cmake/api/v1/reply/target-crashMonitor-Debug-d94a0c6f88be956bdc55.json
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 4,
-<<<<<<<< HEAD:build/Desktop_Qt_6_9_1-Debug/.cmake/api/v1/reply/target-crashMonitor-Debug-e3f37eb19eba51f33679.json
-			"path" : "headers/calculate_ram.h",
-========
 			"path" : "headers/process_finder.h",
 			"sourceGroupIndex" : 1
 		},
@@ -511,7 +504,6 @@
 		{
 			"backtrace" : 4,
 			"path" : "headers/ram_calculator.h",
->>>>>>>> process-algorithm:build/Desktop_Qt_6_9_1-Debug/.cmake/api/v1/reply/target-crashMonitor-Debug-d94a0c6f88be956bdc55.json
 			"sourceGroupIndex" : 1
 		},
 		{

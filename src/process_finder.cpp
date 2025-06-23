@@ -4,7 +4,8 @@
 // constructor, sets up the process list.
 ProcessFinder::ProcessFinder(DIR *dir) : dir(dir)
 {
-    std::vector<std::string> processes = ProcessFinder::findProcesses(dir);
+    std::vector<std::string> processList = ProcessFinder::findProcesses(dir);
+    ProcessFinder::setProcessList(processList);
 }
 
 // default constructor
@@ -12,7 +13,7 @@ ProcessFinder::ProcessFinder(){}
 
 std::vector<std::string> ProcessFinder::findProcesses(DIR *dir)
 {
-    std::vector<std::string> processes;
+    std::vector<std::string> foundProcesses;
 
     if(!(dir = opendir("/proc")))
     {
@@ -32,10 +33,10 @@ std::vector<std::string> ProcessFinder::findProcesses(DIR *dir)
 
         // convert the c-string into a std::string
 		std::string pid(dirp->d_name);
-		processes.push_back(pid);
+        foundProcesses.push_back(pid);
     }
     if(closedir(dir))
         throw std::runtime_error(std::strerror(errno));
 
-    return processes;
+    return foundProcesses;
 }

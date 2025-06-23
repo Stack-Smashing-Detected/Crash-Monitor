@@ -58,31 +58,11 @@
     <attribute name="title">
      <string>CPU</string>
     </attribute>
-    <widget class="QListWidget" name="listWidget">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>381</width>
-       <height>351</height>
-      </rect>
-     </property>
-    </widget>
    </widget>
    <widget class="QWidget" name="m_ram">
     <attribute name="title">
      <string>Memory (RAM)</string>
     </attribute>
-    <widget class="QListWidget" name="listWidget_2">
-     <property name="geometry">
-      <rect>
-       <x>10</x>
-       <y>10</y>
-       <width>381</width>
-       <height>351</height>
-      </rect>
-     </property>
-    </widget>
    </widget>
   </widget>
  </widget>

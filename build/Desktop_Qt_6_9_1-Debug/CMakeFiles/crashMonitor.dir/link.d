@@ -11,6 +11,7 @@ crashMonitor: \
   CMakeFiles/crashMonitor.dir/src/warning_prompts.cpp.o \
   CMakeFiles/crashMonitor.dir/helpwindow.cpp.o \
   CMakeFiles/crashMonitor.dir/settings.cpp.o \
+  CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o \
   CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/libQt6Widgets.so.6.9.1 \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/libQt6Gui.so.6.9.1 \
@@ -105,6 +106,8 @@ CMakeFiles/crashMonitor.dir/src/warning_prompts.cpp.o:
 CMakeFiles/crashMonitor.dir/helpwindow.cpp.o:
 
 CMakeFiles/crashMonitor.dir/settings.cpp.o:
+
+CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o:
 
 CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o:
 

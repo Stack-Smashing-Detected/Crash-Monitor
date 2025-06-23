@@ -50,10 +50,6 @@ void MainWindow::on_runBtn_clicked()
     // run the crash monitor program, include a loading message if needed.
 }
 
-
-
-
-
 void MainWindow::on_helpBtn_clicked()
 {
     // open the help tab for assistance on using the application
@@ -68,4 +64,11 @@ void MainWindow::on_settingsBtn_clicked()
     settings = new Settings(this);
     settings->show();
 }
+
+void MainWindow::on_viewBtn_clicked(){
+    // open the view processes window
+    app_resource_viewer = new AppResourceViewer(this);
+    app_resource_viewer->show();
+}
+
 
