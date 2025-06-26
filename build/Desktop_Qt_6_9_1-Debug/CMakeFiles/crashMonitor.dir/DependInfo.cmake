@@ -17,7 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/victor-j-wilson/projects2/crashMonitor/mainwindow.cpp" "CMakeFiles/crashMonitor.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/mainwindow.cpp.o.d"
   "/home/victor-j-wilson/projects2/crashMonitor/settings.cpp" "CMakeFiles/crashMonitor.dir/settings.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/settings.cpp.o.d"
   "/home/victor-j-wilson/projects2/crashMonitor/src/cpu_calculator.cpp" "CMakeFiles/crashMonitor.dir/src/cpu_calculator.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/src/cpu_calculator.cpp.o.d"
-  "/home/victor-j-wilson/projects2/crashMonitor/src/process_finder.cpp" "CMakeFiles/crashMonitor.dir/src/process_finder.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/src/process_finder.cpp.o.d"
+  "/home/victor-j-wilson/projects2/crashMonitor/src/process_algorithms.cpp" "CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.o.d"
   "/home/victor-j-wilson/projects2/crashMonitor/src/ram_calculator.cpp" "CMakeFiles/crashMonitor.dir/src/ram_calculator.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/src/ram_calculator.cpp.o.d"
   "/home/victor-j-wilson/projects2/crashMonitor/src/warning_prompts.cpp" "CMakeFiles/crashMonitor.dir/src/warning_prompts.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/src/warning_prompts.cpp.o.d"
   "" "crashMonitor" "gcc" "CMakeFiles/crashMonitor.dir/link.d"

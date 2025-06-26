@@ -505,9 +505,9 @@
 			null
 		],
 		[
-			"/home/victor-j-wilson/projects2/crashMonitor/headers/process_finder.h",
+			"/home/victor-j-wilson/projects2/crashMonitor/headers/process_algorithms.h",
 			"MU",
-			"K6S233IZAZ/moc_process_finder.cpp",
+			"K6S233IZAZ/moc_process_algorithms.cpp",
 			null
 		],
 		[
@@ -627,7 +627,7 @@
 			null
 		],
 		[
-			"/home/victor-j-wilson/projects2/crashMonitor/src/process_finder.cpp",
+			"/home/victor-j-wilson/projects2/crashMonitor/src/process_algorithms.cpp",
 			"MU",
 			null
 		],
