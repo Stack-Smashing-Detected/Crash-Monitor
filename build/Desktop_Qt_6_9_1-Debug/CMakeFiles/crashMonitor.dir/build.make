@@ -143,19 +143,19 @@ CMakeFiles/crashMonitor.dir/src/cpu_calculator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crashMonitor.dir/src/cpu_calculator.cpp.s"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victor-j-wilson/projects2/crashMonitor/src/cpu_calculator.cpp -o CMakeFiles/crashMonitor.dir/src/cpu_calculator.cpp.s
 
-CMakeFiles/crashMonitor.dir/src/process_finder.cpp.o: CMakeFiles/crashMonitor.dir/flags.make
-CMakeFiles/crashMonitor.dir/src/process_finder.cpp.o: /home/victor-j-wilson/projects2/crashMonitor/src/process_finder.cpp
-CMakeFiles/crashMonitor.dir/src/process_finder.cpp.o: CMakeFiles/crashMonitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/crashMonitor.dir/src/process_finder.cpp.o"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crashMonitor.dir/src/process_finder.cpp.o -MF CMakeFiles/crashMonitor.dir/src/process_finder.cpp.o.d -o CMakeFiles/crashMonitor.dir/src/process_finder.cpp.o -c /home/victor-j-wilson/projects2/crashMonitor/src/process_finder.cpp
+CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.o: CMakeFiles/crashMonitor.dir/flags.make
+CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.o: /home/victor-j-wilson/projects2/crashMonitor/src/process_algorithms.cpp
+CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.o: CMakeFiles/crashMonitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.o -MF CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.o.d -o CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.o -c /home/victor-j-wilson/projects2/crashMonitor/src/process_algorithms.cpp
 
-CMakeFiles/crashMonitor.dir/src/process_finder.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crashMonitor.dir/src/process_finder.cpp.i"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/victor-j-wilson/projects2/crashMonitor/src/process_finder.cpp > CMakeFiles/crashMonitor.dir/src/process_finder.cpp.i
+CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/victor-j-wilson/projects2/crashMonitor/src/process_algorithms.cpp > CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.i
 
-CMakeFiles/crashMonitor.dir/src/process_finder.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crashMonitor.dir/src/process_finder.cpp.s"
-	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victor-j-wilson/projects2/crashMonitor/src/process_finder.cpp -o CMakeFiles/crashMonitor.dir/src/process_finder.cpp.s
+CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victor-j-wilson/projects2/crashMonitor/src/process_algorithms.cpp -o CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.s
 
 CMakeFiles/crashMonitor.dir/src/ram_calculator.cpp.o: CMakeFiles/crashMonitor.dir/flags.make
 CMakeFiles/crashMonitor.dir/src/ram_calculator.cpp.o: /home/victor-j-wilson/projects2/crashMonitor/src/ram_calculator.cpp
@@ -247,7 +247,7 @@ crashMonitor_OBJECTS = \
 "CMakeFiles/crashMonitor.dir/main.cpp.o" \
 "CMakeFiles/crashMonitor.dir/mainwindow.cpp.o" \
 "CMakeFiles/crashMonitor.dir/src/cpu_calculator.cpp.o" \
-"CMakeFiles/crashMonitor.dir/src/process_finder.cpp.o" \
+"CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.o" \
 "CMakeFiles/crashMonitor.dir/src/ram_calculator.cpp.o" \
 "CMakeFiles/crashMonitor.dir/src/warning_prompts.cpp.o" \
 "CMakeFiles/crashMonitor.dir/helpwindow.cpp.o" \
@@ -262,7 +262,7 @@ crashMonitor: CMakeFiles/crashMonitor.dir/crashMonitor_autogen/mocs_compilation.
 crashMonitor: CMakeFiles/crashMonitor.dir/main.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/mainwindow.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/src/cpu_calculator.cpp.o
-crashMonitor: CMakeFiles/crashMonitor.dir/src/process_finder.cpp.o
+crashMonitor: CMakeFiles/crashMonitor.dir/src/process_algorithms.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/src/ram_calculator.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/src/warning_prompts.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/helpwindow.cpp.o

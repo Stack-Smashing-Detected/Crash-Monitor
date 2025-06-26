@@ -492,7 +492,7 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "headers/process_finder.h",
+			"path" : "headers/process_algorithms.h",
 			"sourceGroupIndex" : 1
 		},
 		{

@@ -1,10 +1,28 @@
-Todo:
 
-- Build general design for settings page (done)
-- Research way to display "Warning prompt" and Force Close threshold points as synchronized input and slider.
-- Research way to obtain fonts and apply them across the application (if this proves too challenging this can be dropped).
-- Research way to generate and destroy widget displays dynamically when switching between RGB input/Hex code input/Color Wheel Picker/ options in the color settings.
-- Create a button for application viewer, this should open a new dialog box that views currently added applications, this box should also have buttons for adding and removing applications.
-- The add and remove application buttons should open their own dialog boxes, "add" should create a form with a dropdown list of installed applications.
-- The remove application form should have a similar list but for "added" applications.
-- Try to make the dropdowns "UX" friendly, that means use of Icons, larger text and good spacing. 
+
+Previous Task: Prototype the "process index" fetcher by displaying it a list display of any kind within a tab widget there by also prototyping our UI for when the application runs.
+Ideally the ListWidget will be used to prototype and test our process index fetching algorithm. The final product will use a ListView widget as we'll want to display percentage bars application icons and it needs to be done on loop which in itself makes the ListWidget unfeasible for this operation.
+
+
+
+
+Current Tasks:
+Application names can be found using the system command "cat /proc/[PID]/comm"
+Lets try and use this to our advantage. 
+
+Notes/Hints
+
+
+
+Other Thoughts:
+
+Do you want the application name with or without the file suffix? (i.e. Firefox instead of Firefox.exe). One option is to use strtok but strtok is old and does modern C++ already have an improved version?
+
+
+
+Final Thoughts:
+
+Stuff like finding app names, ram usage, cpu usage should be done in the one class called the "process algorithms"
+
+
+

@@ -23,22 +23,17 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
     qt_add_executable(crashMonitor
         MANUAL_FINALIZATION
         ${PROJECT_SOURCES}
-            src/cpu_calculator.cpp
             headers/cpu_calculator.h
-            src/process_finder.cpp
-            headers/process_finder.h
-            src/ram_calculator.cpp
+            utilities/cpu_calculator.cpp
+            headers/process_algorithms.h
+            utilities/process_algorithms.cpp
             headers/ram_calculator.h
-            src/warning_prompts.cpp
-            headers/warning_prompts.h
+            utilities/ram_calculator.cpp
+            headers/alert_controller.h
             resource.qrc
             helpwindow.h helpwindow.cpp helpwindow.ui
             settings.h settings.cpp settings.ui
             app_resource_viewer.h app_resource_viewer.cpp app_resource_viewer.ui
-
-
-
-
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET crashMonitor APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

@@ -1,6 +1,6 @@
 #include "app_resource_viewer.h"
 #include "ui_app_resource_viewer.h"
-#include "headers/process_finder.h"
+#include "headers/process_algorithms.h"
 #include <memory>
 #include <QVBoxLayout>
 
