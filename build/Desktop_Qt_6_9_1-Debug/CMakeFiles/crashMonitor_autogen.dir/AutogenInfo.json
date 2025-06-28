@@ -499,6 +499,12 @@
 			null
 		],
 		[
+			"/home/victor-j-wilson/projects2/crashMonitor/headers/alert_controller.h",
+			"MU",
+			"K6S233IZAZ/moc_alert_controller.cpp",
+			null
+		],
+		[
 			"/home/victor-j-wilson/projects2/crashMonitor/headers/cpu_calculator.h",
 			"MU",
 			"K6S233IZAZ/moc_cpu_calculator.cpp",
@@ -514,12 +520,6 @@
 			"/home/victor-j-wilson/projects2/crashMonitor/headers/ram_calculator.h",
 			"MU",
 			"K6S233IZAZ/moc_ram_calculator.cpp",
-			null
-		],
-		[
-			"/home/victor-j-wilson/projects2/crashMonitor/headers/warning_prompts.h",
-			"MU",
-			"K6S233IZAZ/moc_warning_prompts.cpp",
 			null
 		],
 		[
@@ -622,22 +622,17 @@
 			null
 		],
 		[
-			"/home/victor-j-wilson/projects2/crashMonitor/src/cpu_calculator.cpp",
+			"/home/victor-j-wilson/projects2/crashMonitor/utilities/cpu_calculator.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/victor-j-wilson/projects2/crashMonitor/src/process_algorithms.cpp",
+			"/home/victor-j-wilson/projects2/crashMonitor/utilities/process_algorithms.cpp",
 			"MU",
 			null
 		],
 		[
-			"/home/victor-j-wilson/projects2/crashMonitor/src/ram_calculator.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/victor-j-wilson/projects2/crashMonitor/src/warning_prompts.cpp",
+			"/home/victor-j-wilson/projects2/crashMonitor/utilities/ram_calculator.cpp",
 			"MU",
 			null
 		]

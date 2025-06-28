@@ -120,7 +120,14 @@ CMakeFiles/crashMonitor.dir/crashMonitor_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/vector /usr/include/c++/13/bits/stl_uninitialized.h \
  /usr/include/c++/13/bits/stl_vector.h \
  /usr/include/c++/13/bits/stl_bvector.h \
- /usr/include/c++/13/bits/vector.tcc \
+ /usr/include/c++/13/bits/vector.tcc /usr/include/c++/13/unordered_map \
+ /usr/include/c++/13/bits/unordered_map.h \
+ /usr/include/c++/13/bits/hashtable.h \
+ /usr/include/c++/13/bits/hashtable_policy.h \
+ /usr/include/c++/13/ext/aligned_buffer.h \
+ /usr/include/c++/13/bits/enable_special_members.h \
+ /usr/include/c++/13/bits/node_handle.h \
+ /usr/include/c++/13/bits/erase_if.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QDialog \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qdialog.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
@@ -181,9 +188,7 @@ CMakeFiles/crashMonitor.dir/crashMonitor_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/13/bits/exception_ptr.h \
  /usr/include/c++/13/bits/cxxabi_init_exception.h \
  /usr/include/c++/13/typeinfo /usr/include/c++/13/bits/nested_exception.h \
- /usr/include/c++/13/bits/enable_special_members.h \
  /usr/include/c++/13/variant /usr/include/c++/13/bits/parse_numbers.h \
- /usr/include/c++/13/ext/aligned_buffer.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qfunctionpointer.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qglobalstatic.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qmalloc.h \
@@ -230,13 +235,7 @@ CMakeFiles/crashMonitor.dir/crashMonitor_autogen/mocs_compilation.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qcomparehelpers.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/q20type_traits.h \
  /usr/include/c++/13/functional /usr/include/c++/13/bits/std_function.h \
- /usr/include/c++/13/unordered_map \
- /usr/include/c++/13/bits/unordered_map.h \
- /usr/include/c++/13/bits/hashtable.h \
- /usr/include/c++/13/bits/hashtable_policy.h \
- /usr/include/c++/13/bits/node_handle.h \
- /usr/include/c++/13/bits/erase_if.h /usr/include/c++/13/array \
- /usr/include/c++/13/compare \
+ /usr/include/c++/13/array /usr/include/c++/13/compare \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qtmetamacros.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qobjectdefs_impl.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qfunctionaltools_impl.h \
@@ -413,6 +412,9 @@ CMakeFiles/crashMonitor.dir/crashMonitor_autogen/mocs_compilation.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qwidget.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTableWidget \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtablewidget.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qtmochelpers.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qtmocconstants.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/q20algorithm.h \
