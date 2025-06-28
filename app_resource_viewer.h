@@ -3,9 +3,12 @@
 
 #include <string>
 #include <vector>
+#include <unordered_map>
+
 #include <QDialog>
 #include <QListWidget>
 #include <QWidget>
+#include <QTableWidget>
 
 namespace Ui {
 class AppResourceViewer;
@@ -20,13 +23,14 @@ public:
     ~AppResourceViewer();
 
     void fillListViewer(std::vector<std::string> &appList, QListWidget *listWidget);
+    void fillTableViewer(std::unordered_map<std::string, int> &appNames, QTableWidget *tableWidget);
 
 private:
     Ui::AppResourceViewer *ui;
     QWidget* cpuTab;
     QWidget* ramTab;
     QListWidget* cpuUsageView;
-    QListWidget* ramUsageView;
+    QTableWidget* ramUsageView;
 };
 
 #endif // APP_RESOURCE_VIEWER_H

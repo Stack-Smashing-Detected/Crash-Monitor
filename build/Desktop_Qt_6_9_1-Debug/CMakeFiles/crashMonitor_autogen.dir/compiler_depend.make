@@ -159,6 +159,7 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QDialog \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QListWidget \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QMainWindow \
+  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTableWidget \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
@@ -176,6 +177,8 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qstyle.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qstyleoption.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
+  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h \
+  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtablewidget.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtwidgets-config.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtwidgetsexports.h \
@@ -473,10 +476,10 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
   CMakeFiles/4.0.3/CMakeCXXCompiler.cmake \
   CMakeFiles/4.0.3/CMakeSystem.cmake \
   crashMonitor_autogen/moc_predefs.h \
+  /home/victor-j-wilson/projects2/crashMonitor/headers/alert_controller.h \
   /home/victor-j-wilson/projects2/crashMonitor/headers/cpu_calculator.h \
-  /home/victor-j-wilson/projects2/crashMonitor/headers/process_finder.h \
+  /home/victor-j-wilson/projects2/crashMonitor/headers/process_algorithms.h \
   /home/victor-j-wilson/projects2/crashMonitor/headers/ram_calculator.h \
-  /home/victor-j-wilson/projects2/crashMonitor/headers/warning_prompts.h \
   /home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp \
   /home/victor-j-wilson/projects2/crashMonitor/helpwindow.h \
   /home/victor-j-wilson/projects2/crashMonitor/helpwindow.ui \
@@ -488,10 +491,9 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
   /home/victor-j-wilson/projects2/crashMonitor/settings.cpp \
   /home/victor-j-wilson/projects2/crashMonitor/settings.h \
   /home/victor-j-wilson/projects2/crashMonitor/settings.ui \
-  /home/victor-j-wilson/projects2/crashMonitor/src/cpu_calculator.cpp \
-  /home/victor-j-wilson/projects2/crashMonitor/src/process_finder.cpp \
-  /home/victor-j-wilson/projects2/crashMonitor/src/ram_calculator.cpp \
-  /home/victor-j-wilson/projects2/crashMonitor/src/warning_prompts.cpp \
+  /home/victor-j-wilson/projects2/crashMonitor/utilities/cpu_calculator.cpp \
+  /home/victor-j-wilson/projects2/crashMonitor/utilities/process_algorithms.cpp \
+  /home/victor-j-wilson/projects2/crashMonitor/utilities/ram_calculator.cpp \
   /snap/cmake/1468/bin/cmake \
   /snap/cmake/1468/share/cmake-4.0/Modules/CMakeCXXInformation.cmake \
   /snap/cmake/1468/share/cmake-4.0/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
@@ -915,9 +917,7 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /usr/include/string.h:
 
-/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake:
-
-/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qmap.h:
+/usr/include/sched.h:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets-relwithdebinfo.cmake:
 
@@ -1169,6 +1169,12 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/Qt6ConfigVersion.cmake:
 
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtablewidget.h:
+
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginAdditionalTargetInfo.cmake:
+
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginAdditionalTargetInfo.cmake:
+
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6WidgetsPrivate/Qt6WidgetsPrivateDependencies.cmake:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qstyleoption.h:
@@ -1249,7 +1255,7 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /snap/cmake/1468/share/cmake-4.0/Modules/CheckCXXSourceCompiles.cmake:
 
-/home/victor-j-wilson/projects2/crashMonitor/src/process_finder.cpp:
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qmap.h:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qscopedpointer.h:
 
@@ -1288,6 +1294,8 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 /usr/include/c++/13/cctype:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtwidgetsexports.h:
+
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qiterable.h:
 
@@ -1443,8 +1451,6 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/q23utility.h:
 
-/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qstringview.h:
-
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlistwidget.h:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qtguiglobal.h:
@@ -1475,21 +1481,19 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qvarlengtharray.h:
 
-/home/victor-j-wilson/projects2/crashMonitor/src/ram_calculator.cpp:
-
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/c++/13/bits/locale_classes.tcc:
-
-/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-relwithdebinfo.cmake:
-
-/usr/include/c++/13/cmath:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QEglFSKmsEglDeviceIntegrationPluginConfig.cmake:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qtcoreexports.h:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qbitmap.h:
+
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qstringview.h:
+
+/usr/include/c++/13/bits/vector.tcc:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/q20functional.h:
 
@@ -1568,6 +1572,10 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h:
 
 /usr/include/c++/13/debug/assertions.h:
+
+/usr/include/stdc-predef.h:
+
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qstringfwd.h:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qstringliteral.h:
 
@@ -1691,8 +1699,6 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qfont.h:
 
-/home/victor-j-wilson/projects2/crashMonitor/src/cpu_calculator.cpp:
-
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qglobal.h:
 
 /usr/include/c++/13/bits/functional_hash.h:
@@ -1717,9 +1723,9 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /usr/include/c++/13/cerrno:
 
-/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget:
-
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h:
+
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QJpegPluginConfig.cmake:
 
@@ -1766,6 +1772,12 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qregion.h:
+
+/usr/include/c++/13/cmath:
+
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QICOPluginTargets-relwithdebinfo.cmake:
+
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QICOPluginTargets.cmake:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateVersionlessAliasTargets.cmake:
 
@@ -1847,6 +1859,8 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.h:
 
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QSvgPluginConfig.cmake:
+
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QSvgPluginTargets.cmake:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QTgaPluginAdditionalTargetInfo.cmake:
@@ -1907,10 +1921,6 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QVncIntegrationPluginAdditionalTargetInfo.cmake:
 
-/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QXcbGlxIntegrationPluginAdditionalTargetInfo.cmake:
-
-/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginAdditionalTargetInfo.cmake:
-
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginConfig.cmake:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QWbmpPluginConfig.cmake:
@@ -1922,6 +1932,10 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 /usr/include/c++/13/cstring:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QWbmpPluginTargets-relwithdebinfo.cmake:
+
+/home/victor-j-wilson/projects2/crashMonitor/utilities/ram_calculator.cpp:
+
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTableWidget:
 
 /usr/include/c++/13/bits/unique_ptr.h:
 
@@ -1975,6 +1989,8 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /snap/cmake/1468/share/cmake-4.0/Modules/GNUInstallDirs.cmake:
 
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake:
+
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake:
@@ -1986,10 +2002,6 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake:
-
-/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qstringfwd.h:
-
-/usr/include/stdc-predef.h:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake:
 
@@ -2037,6 +2049,8 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake:
 
+/home/victor-j-wilson/projects2/crashMonitor/headers/alert_controller.h:
+
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake:
 
 /usr/include/c++/13/clocale:
@@ -2053,17 +2067,13 @@ crashMonitor_autogen/moc_predefs.h:
 
 /usr/include/c++/13/ext/aligned_buffer.h:
 
-/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QSvgPluginConfig.cmake:
-
-/home/victor-j-wilson/projects2/crashMonitor/headers/process_finder.h:
+/home/victor-j-wilson/projects2/crashMonitor/headers/process_algorithms.h:
 
 /home/victor-j-wilson/projects2/crashMonitor/headers/ram_calculator.h:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6DBus/Qt6DBusVersionlessAliasTargets.cmake:
 
 /usr/include/c++/13/bits/stl_numeric.h:
-
-/home/victor-j-wilson/projects2/crashMonitor/headers/warning_prompts.h:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake:
 
@@ -2073,9 +2083,9 @@ crashMonitor_autogen/moc_predefs.h:
 
 /home/victor-j-wilson/projects2/crashMonitor/settings.h:
 
-/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake:
+/home/victor-j-wilson/projects2/crashMonitor/utilities/cpu_calculator.cpp:
 
-/home/victor-j-wilson/projects2/crashMonitor/src/warning_prompts.cpp:
+/home/victor-j-wilson/projects2/crashMonitor/utilities/process_algorithms.cpp:
 
 /snap/cmake/1468/share/cmake-4.0/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake:
 
@@ -2134,6 +2144,10 @@ crashMonitor_autogen/moc_predefs.h:
 /snap/cmake/1468/share/cmake-4.0/Modules/MacroAddFileDependencies.cmake:
 
 /snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linker/Linux-GNU.cmake:
+
+/usr/include/c++/13/bits/unordered_set.h:
+
+/usr/include/c++/13/set:
 
 CMakeFiles/4.0.3/CMakeCXXCompiler.cmake:
 
@@ -2311,12 +2325,6 @@ CMakeFiles/4.0.3/CMakeCXXCompiler.cmake:
 
 /usr/include/c++/13/bits/unordered_map.h:
 
-/usr/include/c++/13/set:
-
-/usr/include/c++/13/bits/unordered_set.h:
-
-/usr/include/c++/13/bits/vector.tcc:
-
 /usr/include/c++/13/cassert:
 
 /usr/include/c++/13/climits:
@@ -2394,5 +2402,3 @@ CMakeFiles/4.0.3/CMakeCXXCompiler.cmake:
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QEvdevTouchScreenPluginConfig.cmake:
 
 /usr/include/linux/limits.h:
-
-/usr/include/sched.h:

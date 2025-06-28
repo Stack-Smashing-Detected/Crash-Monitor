@@ -69,7 +69,7 @@ std::unordered_map<std::string, int> ProcessAlgorithms::getApplicationNames(std:
     // a list of application names and occurences of application name i.e the number of processes per application.
     std::unordered_map<std::string, int> appNames;
 
-    for (std::string pid : processIndexes)
+    for (std::string &pid : processIndexes)
     {
         filepathStream << "/proc/" << pid << "/comm";
         std::string filepath = filepathStream.str();
