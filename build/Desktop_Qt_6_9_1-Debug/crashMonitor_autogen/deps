@@ -157,6 +157,7 @@ crashMonitor_autogen/timestamp: \
 	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QDialog \
 	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QListWidget \
 	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QMainWindow \
+	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTableWidget \
 	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget \
 	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
 	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
@@ -174,6 +175,8 @@ crashMonitor_autogen/timestamp: \
 	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qstyle.h \
 	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qstyleoption.h \
 	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
+	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h \
+	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtablewidget.h \
 	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
 	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtwidgets-config.h \
 	/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtwidgetsexports.h \
@@ -470,10 +473,10 @@ crashMonitor_autogen/timestamp: \
 	/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/4.0.3/CMakeCXXCompiler.cmake \
 	/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/4.0.3/CMakeSystem.cmake \
 	/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/moc_predefs.h \
+	/home/victor-j-wilson/projects2/crashMonitor/headers/alert_controller.h \
 	/home/victor-j-wilson/projects2/crashMonitor/headers/cpu_calculator.h \
-	/home/victor-j-wilson/projects2/crashMonitor/headers/process_finder.h \
+	/home/victor-j-wilson/projects2/crashMonitor/headers/process_algorithms.h \
 	/home/victor-j-wilson/projects2/crashMonitor/headers/ram_calculator.h \
-	/home/victor-j-wilson/projects2/crashMonitor/headers/warning_prompts.h \
 	/home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp \
 	/home/victor-j-wilson/projects2/crashMonitor/helpwindow.h \
 	/home/victor-j-wilson/projects2/crashMonitor/main.cpp \
@@ -482,10 +485,9 @@ crashMonitor_autogen/timestamp: \
 	/home/victor-j-wilson/projects2/crashMonitor/resource.qrc \
 	/home/victor-j-wilson/projects2/crashMonitor/settings.cpp \
 	/home/victor-j-wilson/projects2/crashMonitor/settings.h \
-	/home/victor-j-wilson/projects2/crashMonitor/src/cpu_calculator.cpp \
-	/home/victor-j-wilson/projects2/crashMonitor/src/process_finder.cpp \
-	/home/victor-j-wilson/projects2/crashMonitor/src/ram_calculator.cpp \
-	/home/victor-j-wilson/projects2/crashMonitor/src/warning_prompts.cpp \
+	/home/victor-j-wilson/projects2/crashMonitor/utilities/cpu_calculator.cpp \
+	/home/victor-j-wilson/projects2/crashMonitor/utilities/process_algorithms.cpp \
+	/home/victor-j-wilson/projects2/crashMonitor/utilities/ram_calculator.cpp \
 	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCXXInformation.cmake \
 	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake \

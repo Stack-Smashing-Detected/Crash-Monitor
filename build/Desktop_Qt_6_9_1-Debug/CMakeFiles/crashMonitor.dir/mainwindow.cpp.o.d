@@ -412,6 +412,9 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qwidget.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTableWidget \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtablewidget.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QMainWindow \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qmainwindow.h \
  /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/include/./ui_mainwindow.h \
