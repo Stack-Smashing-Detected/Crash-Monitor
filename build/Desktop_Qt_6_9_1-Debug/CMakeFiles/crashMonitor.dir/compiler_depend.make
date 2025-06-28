@@ -3879,6 +3879,7 @@ CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o: /home/victor-j-w
   /usr/include/c++/13/initializer_list \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
+  /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
   /usr/include/c++/13/memory \
   /usr/include/c++/13/new \
@@ -5682,6 +5683,8 @@ crashMonitor_autogen/moc_predefs.h:
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake:
 
 /home/victor-j-wilson/projects2/crashMonitor/helpwindow.h:
+
+/usr/include/c++/13/iostream:
 
 /usr/include/pthread.h:
 
