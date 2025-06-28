@@ -1,6 +1,7 @@
 #include "../headers/process_algorithms.h"
 #include <cstring>
 #include <fstream>
+#include <iostream>
 #include <sstream>
 
 // constructor, sets up the process list.
@@ -74,16 +75,26 @@ std::unordered_map<std::string, int> ProcessAlgorithms::getApplicationNames(std:
         filepathStream << "/proc/" << pid << "/comm";
         std::string filepath = filepathStream.str();
 
-        // adding the contents of "/proc/{pid}/comm" to name map
-        int count = 1;
-        auto [it, inserted] = appNames.try_emplace(filepath, count);
+        // extract the name out of the application
+        std::ifstream ifs(filepath);
+        if(ifs.is_open()){
+            // get file contents
+            std::string appName;
+            std::getline(ifs, appName);
+            // adding the contents of "/proc/{pid}/comm" to name map
+            int count = 1;
+            auto [it, inserted] = appNames.try_emplace(appName, count);
 
-        // if duplicate name found increase the value of "processes"
-        if (!inserted)
-        {
-            it->second += 1;
+            // if duplicate name found increase the value of "processes"
+            if (!inserted)
+            {
+                it->second += 1;
+            }
+        }else {
+            std::cout << "Error opening file";
         }
-
+        // close the current filestream
+        ifs.close();
         // reset string stream.
         filepathStream.str("");
         filepathStream.clear();
