@@ -979,6 +979,7 @@ CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o: /home/victor-j-wilson/pro
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QDialog \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QDialogButtonBox \
+  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QHeaderView \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QListWidget \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTabWidget \
@@ -998,6 +999,7 @@ CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o: /home/victor-j-wilson/pro
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qgridlayout.h \
+  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qheaderview.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlayout.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlayoutitem.h \
@@ -4264,6 +4266,8 @@ crashMonitor_autogen/include/ui_app_resource_viewer.h:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h:
 
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qheaderview.h:
+
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h:
 
 crashMonitor_autogen/EWIEGA46WW/moc_settings.cpp:
@@ -5151,6 +5155,8 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o:
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qstringtokenizer.h:
 
 /home/victor-j-wilson/projects2/crashMonitor/resource.qrc:
+
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QHeaderView:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 

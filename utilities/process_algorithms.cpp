@@ -80,7 +80,7 @@ std::unordered_map<std::string, int> ProcessAlgorithms::getApplicationNames(std:
         if(ifs.is_open()){
             // get file contents
             std::string appName;
-            std::getline(ifs, appName);
+            std::getline(ifs, appName, '/');
             // adding the contents of "/proc/{pid}/comm" to name map
             int count = 1;
             auto [it, inserted] = appNames.try_emplace(appName, count);
@@ -102,3 +102,4 @@ std::unordered_map<std::string, int> ProcessAlgorithms::getApplicationNames(std:
 
     return appNames;
 }
+
