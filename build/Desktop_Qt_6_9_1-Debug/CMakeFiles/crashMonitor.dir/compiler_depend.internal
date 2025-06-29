@@ -981,6 +981,7 @@ CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QDialog
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QDialogButtonBox
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QHeaderView
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QLabel
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QListWidget
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTabWidget
@@ -1000,6 +1001,7 @@ CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qdialogbuttonbox.h
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qgridlayout.h
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qheaderview.h
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlabel.h
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlayout.h
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlayoutitem.h
