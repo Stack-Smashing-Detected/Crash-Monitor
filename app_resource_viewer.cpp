@@ -6,6 +6,7 @@
 
 #include <QVBoxLayout>
 #include <QTableWidgetItem>
+#include <QHeaderView>
 
 
 AppResourceViewer::AppResourceViewer(QWidget *parent)
@@ -64,6 +65,9 @@ void AppResourceViewer::fillTableViewer(std::unordered_map<std::string, int> &ap
     tableWidget->insertRow(row);
     tableWidget->insertColumn(0);
     tableWidget->insertColumn(1);
+
+    // resize the table view
+    tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
     for(const auto &[key, value] : appNames){
         // create table widget items

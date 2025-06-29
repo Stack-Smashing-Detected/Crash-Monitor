@@ -454,4 +454,6 @@ CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlayoutitem.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qboxlayout.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qgridlayout.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTableWidgetItem
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTableWidgetItem \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QHeaderView \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qheaderview.h
