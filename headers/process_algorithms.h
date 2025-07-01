@@ -33,6 +33,16 @@ public:
         this->processList = processList;
     }
 
+    std::vector<std::string> getSymlinks()
+    {
+        return processSymlinks;
+    }
+
+    void setSymLinksList(std::vector<std::string> processSymlinks)
+    {
+        this->processSymlinks = processSymlinks;
+    }
+
     // get all the process names we'll need this to access the process data
     // for displaying ram usage, cpu usage, application logos for UI enhancement etc.
     std::vector<std::string> findProcesses(DIR *dir);
@@ -45,6 +55,7 @@ public:
 
 private:
     std::vector<std::string> processList;
+    std::vector<std::string> processSymlinks; // a list of filepaths to the processes' executables, known as symbolic links.
 };
 
 #endif // PROCESS_ALGORITHMS_H

@@ -3790,6 +3790,7 @@ CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o: /home/victor-j-w
   /usr/include/c++/13/bits/basic_string.tcc \
   /usr/include/c++/13/bits/char_traits.h \
   /usr/include/c++/13/bits/charconv.h \
+  /usr/include/c++/13/bits/chrono.h \
   /usr/include/c++/13/bits/codecvt.h \
   /usr/include/c++/13/bits/concept_check.h \
   /usr/include/c++/13/bits/cpp_type_traits.h \
@@ -3800,6 +3801,10 @@ CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o: /home/victor-j-w
   /usr/include/c++/13/bits/exception.h \
   /usr/include/c++/13/bits/exception_defines.h \
   /usr/include/c++/13/bits/exception_ptr.h \
+  /usr/include/c++/13/bits/fs_dir.h \
+  /usr/include/c++/13/bits/fs_fwd.h \
+  /usr/include/c++/13/bits/fs_ops.h \
+  /usr/include/c++/13/bits/fs_path.h \
   /usr/include/c++/13/bits/fstream.tcc \
   /usr/include/c++/13/bits/functexcept.h \
   /usr/include/c++/13/bits/functional_hash.h \
@@ -3811,8 +3816,11 @@ CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o: /home/victor-j-w
   /usr/include/c++/13/bits/istream.tcc \
   /usr/include/c++/13/bits/locale_classes.h \
   /usr/include/c++/13/bits/locale_classes.tcc \
+  /usr/include/c++/13/bits/locale_conv.h \
   /usr/include/c++/13/bits/locale_facets.h \
   /usr/include/c++/13/bits/locale_facets.tcc \
+  /usr/include/c++/13/bits/locale_facets_nonio.h \
+  /usr/include/c++/13/bits/locale_facets_nonio.tcc \
   /usr/include/c++/13/bits/localefwd.h \
   /usr/include/c++/13/bits/memory_resource.h \
   /usr/include/c++/13/bits/memoryfwd.h \
@@ -3822,9 +3830,11 @@ CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o: /home/victor-j-w
   /usr/include/c++/13/bits/node_handle.h \
   /usr/include/c++/13/bits/ostream.tcc \
   /usr/include/c++/13/bits/ostream_insert.h \
+  /usr/include/c++/13/bits/parse_numbers.h \
   /usr/include/c++/13/bits/postypes.h \
   /usr/include/c++/13/bits/predefined_ops.h \
   /usr/include/c++/13/bits/ptr_traits.h \
+  /usr/include/c++/13/bits/quoted_string.h \
   /usr/include/c++/13/bits/range_access.h \
   /usr/include/c++/13/bits/refwrap.h \
   /usr/include/c++/13/bits/requires_hosted.h \
@@ -3861,10 +3871,13 @@ CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o: /home/victor-j-w
   /usr/include/c++/13/cctype \
   /usr/include/c++/13/cerrno \
   /usr/include/c++/13/clocale \
+  /usr/include/c++/13/codecvt \
   /usr/include/c++/13/cstddef \
+  /usr/include/c++/13/cstdint \
   /usr/include/c++/13/cstdio \
   /usr/include/c++/13/cstdlib \
   /usr/include/c++/13/cstring \
+  /usr/include/c++/13/ctime \
   /usr/include/c++/13/cwchar \
   /usr/include/c++/13/cwctype \
   /usr/include/c++/13/debug/assertions.h \
@@ -3877,12 +3890,16 @@ CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o: /home/victor-j-w
   /usr/include/c++/13/ext/numeric_traits.h \
   /usr/include/c++/13/ext/string_conversions.h \
   /usr/include/c++/13/ext/type_traits.h \
+  /usr/include/c++/13/filesystem \
   /usr/include/c++/13/fstream \
   /usr/include/c++/13/initializer_list \
+  /usr/include/c++/13/iomanip \
   /usr/include/c++/13/ios \
   /usr/include/c++/13/iosfwd \
   /usr/include/c++/13/iostream \
   /usr/include/c++/13/istream \
+  /usr/include/c++/13/limits \
+  /usr/include/c++/13/locale \
   /usr/include/c++/13/memory \
   /usr/include/c++/13/new \
   /usr/include/c++/13/ostream \
@@ -3890,6 +3907,7 @@ CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o: /home/victor-j-w
   /usr/include/c++/13/pstl/glue_algorithm_defs.h \
   /usr/include/c++/13/pstl/glue_memory_defs.h \
   /usr/include/c++/13/pstl/pstl_config.h \
+  /usr/include/c++/13/ratio \
   /usr/include/c++/13/sstream \
   /usr/include/c++/13/stdexcept \
   /usr/include/c++/13/streambuf \
@@ -3907,6 +3925,7 @@ CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o: /home/victor-j-w
   /usr/include/errno.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
+  /usr/include/libintl.h \
   /usr/include/linux/errno.h \
   /usr/include/linux/limits.h \
   /usr/include/locale.h \
@@ -3999,7 +4018,9 @@ CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o: /home/victor-j-w
   /usr/include/x86_64-linux-gnu/c++/13/bits/error_constants.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/gthr-default.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/gthr.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h \
   /usr/include/x86_64-linux-gnu/c++/13/bits/os_defines.h \
+  /usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/sys/cdefs.h \
@@ -4102,8 +4123,6 @@ CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/crti.o:
 
-/lib64/ld-linux-x86-64.so.2:
-
 /lib/x86_64-linux-gnu/libzstd.so.1:
 
 /lib/x86_64-linux-gnu/libxkbcommon.so.0:
@@ -4160,9 +4179,27 @@ CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/libQt6Gui.so.6.9.1:
 
+/usr/include/x86_64-linux-gnu/c++/13/bits/time_members.h:
+
 /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h:
 
+/usr/include/libintl.h:
+
+/usr/include/c++/13/locale:
+
+/usr/include/c++/13/iomanip:
+
 /usr/include/c++/13/fstream:
+
+/usr/include/c++/13/filesystem:
+
+/usr/include/c++/13/bits/locale_facets_nonio.tcc:
+
+/lib64/ld-linux-x86-64.so.2:
+
+/usr/include/c++/13/bits/locale_facets_nonio.h:
+
+/usr/include/c++/13/bits/fs_dir.h:
 
 /usr/include/x86_64-linux-gnu/c++/13/bits/ctype_inline.h:
 
@@ -4537,6 +4574,8 @@ crashMonitor_autogen/include/ui_mainwindow.h:
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake:
 
 /snap/cmake/1468/share/cmake-4.0/Modules/Platform/Linker/GNU.cmake:
+
+/usr/include/c++/13/bits/fs_path.h:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6DBusPrivate/Qt6DBusPrivateConfigVersionImpl.cmake:
 
@@ -5256,7 +5295,11 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h:
 
+/usr/include/c++/13/bits/locale_conv.h:
+
 /usr/include/linux/errno.h:
+
+/usr/include/c++/13/codecvt:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QDialog:
 
@@ -5583,6 +5626,10 @@ crashMonitor_autogen/include/ui_helpwindow.h:
 /usr/include/x86_64-linux-gnu/c++/13/bits/c++io.h:
 
 /usr/include/c++/13/bits/hash_bytes.h:
+
+/usr/include/x86_64-linux-gnu/c++/13/bits/messages_members.h:
+
+/usr/include/c++/13/bits/fs_ops.h:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake:
 
@@ -5934,6 +5981,8 @@ CMakeFiles/4.0.3/CMakeCXXCompiler.cmake:
 
 /usr/include/c++/13/bits/stl_iterator.h:
 
+/usr/include/c++/13/bits/fs_fwd.h:
+
 /usr/include/c++/13/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/13/bits/stl_list.h:
@@ -5943,6 +5992,8 @@ CMakeFiles/4.0.3/CMakeCXXCompiler.cmake:
 /usr/include/c++/13/bits/stl_multiset.h:
 
 /usr/include/c++/13/bits/stl_set.h:
+
+/usr/include/c++/13/bits/quoted_string.h:
 
 /usr/include/c++/13/bits/streambuf.tcc:
 

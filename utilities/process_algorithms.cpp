@@ -3,6 +3,7 @@
 #include <fstream>
 #include <iostream>
 #include <sstream>
+#include <filesystem>
 
 // constructor, sets up the process list.
 ProcessAlgorithms::ProcessAlgorithms(DIR *dir)
@@ -24,6 +25,7 @@ ProcessAlgorithms::ProcessAlgorithms() {}
 std::vector<std::string> ProcessAlgorithms::findProcesses(DIR *dir)
 {
     std::vector<std::string> foundProcesses;
+    std::vector<std::string> processSymlinks;
 
     if (!(dir = opendir("/proc")))
     {
@@ -44,7 +46,19 @@ std::vector<std::string> ProcessAlgorithms::findProcesses(DIR *dir)
 
         // convert the c-string into a std::string
         std::string pid(dirp->d_name);
-        foundProcesses.push_back(pid);
+        // filter out the user owned PIDs using std::filesystem::read_symlink()'s error handling. Any PID owned by the system i.e. root will throw an exception via "readlink()"
+        // which is implemented in "read_symlink", this exception should be caught as "filesystem::error" which would stop it from being added to our list.
+
+        try{
+            std::stringstream filepathStream;
+            filepathStream << "/proc/" << pid << "/exe";
+            std::string exePath = filepathStream.str();
+            processSymlinks.push_back(std::filesystem::read_symlink(exePath));
+
+            foundProcesses.push_back(pid);
+        }catch(std::filesystem::filesystem_error fe){
+            continue;
+        }
     }
     if (closedir(dir))
         throw std::runtime_error(std::strerror(errno));
@@ -102,4 +116,6 @@ std::unordered_map<std::string, int> ProcessAlgorithms::getApplicationNames(std:
 
     return appNames;
 }
+
+
 
