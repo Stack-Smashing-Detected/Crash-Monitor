@@ -45,13 +45,13 @@ public:
 
     // get all the process names we'll need this to access the process data
     // for displaying ram usage, cpu usage, application logos for UI enhancement etc.
-    std::vector<std::string> findProcesses(DIR *dir);
+    void findProcesses(DIR *dir);
 
     // Algorithm for finding the names of the application
     std::unordered_map<std::string, int> getApplicationNames(std::vector<std::string> processIndexes);
 
     // Algorithm for finding Application Logos for better UI/UX
-    std::vector<std::string> getApplicationLogoPaths(std::vector<std::string> processIndexes);
+    std::vector<std::string> getApplicationLogoPaths(std::vector<std::string> processSymlinks);
 
 private:
     std::vector<std::string> processList;

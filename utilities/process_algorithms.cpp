@@ -5,24 +5,22 @@
 #include <sstream>
 #include <filesystem>
 
-// constructor, sets up the process list.
+// constructor, sets up the process list and process symlinks for use later.
 ProcessAlgorithms::ProcessAlgorithms(DIR *dir)
 {
-    std::vector<std::string> processList = ProcessAlgorithms::findProcesses(dir);
-    ProcessAlgorithms::setProcessList(processList);
+    ProcessAlgorithms::findProcesses(dir);
 }
 
 // default constructor
 ProcessAlgorithms::ProcessAlgorithms() {}
 
 /**
- * Traverses through the "/proc" directory and adds all PID directory names to a list.
- *  This PID list is essential in discovering data needed for the application to function.
+ * Traverses through the "/proc" directory and stores all user owned PID directory names and symlinks
  *
  * @params: DIR
  * @return: std::vector<std::string>
  */
-std::vector<std::string> ProcessAlgorithms::findProcesses(DIR *dir)
+void ProcessAlgorithms::findProcesses(DIR *dir)
 {
     std::vector<std::string> foundProcesses;
     std::vector<std::string> processSymlinks;
@@ -47,15 +45,16 @@ std::vector<std::string> ProcessAlgorithms::findProcesses(DIR *dir)
         // convert the c-string into a std::string
         std::string pid(dirp->d_name);
         // filter out the user owned PIDs using std::filesystem::read_symlink()'s error handling. Any PID owned by the system i.e. root will throw an exception via "readlink()"
-        // which is implemented in "read_symlink", this exception should be caught as "filesystem::error" which would stop it from being added to our list.
+        // which is implemented in "read_symlink", this exception should be caught as "filesystem::error" which would stop it from being added to our lists.
 
         try{
             std::stringstream filepathStream;
             filepathStream << "/proc/" << pid << "/exe";
             std::string exePath = filepathStream.str();
-            processSymlinks.push_back(std::filesystem::read_symlink(exePath));
 
+            processSymlinks.push_back(std::filesystem::read_symlink(exePath).string());
             foundProcesses.push_back(pid);
+
         }catch(std::filesystem::filesystem_error fe){
             continue;
         }
@@ -63,55 +62,33 @@ std::vector<std::string> ProcessAlgorithms::findProcesses(DIR *dir)
     if (closedir(dir))
         throw std::runtime_error(std::strerror(errno));
 
-    return foundProcesses;
+    // finally set the newly populated data structures so we can use them later.
+    this->setProcessList(foundProcesses);
+    this->setSymLinksList(processSymlinks);
 }
 
 /**
- * using the PID list generated from the findProcesses function, a list of application names are extracted and emplaced
- * inside a vector data structure.
+ * using the symlinks we obtained from the findProcesses function we can find our application names
  *
  * @params: std::vector<std::string>
  * @return: std::vector<std::string>
  */
-std::unordered_map<std::string, int> ProcessAlgorithms::getApplicationNames(std::vector<std::string> processIndexes)
+std::unordered_map<std::string, int> ProcessAlgorithms::getApplicationNames(std::vector<std::string> processSymlinks)
 {
-    // open file at "/proc/processIndex[index]/comm";
-    std::filebuf fb;
-
-    // build path using stringsteam
-    std::stringstream filepathStream;
-
     // a list of application names and occurences of application name i.e the number of processes per application.
     std::unordered_map<std::string, int> appNames;
 
-    for (std::string &pid : processIndexes)
+    for (std::string &symlink : processSymlinks)
     {
-        filepathStream << "/proc/" << pid << "/comm";
-        std::string filepath = filepathStream.str();
+        auto const& pos = symlink.find_last_of('/');
+        std::string appName = symlink.substr(pos + 1);
 
-        // extract the name out of the application
-        std::ifstream ifs(filepath);
-        if(ifs.is_open()){
-            // get file contents
-            std::string appName;
-            std::getline(ifs, appName, '/');
-            // adding the contents of "/proc/{pid}/comm" to name map
-            int count = 1;
-            auto [it, inserted] = appNames.try_emplace(appName, count);
+        int procCount = 1;
+        auto const& result = appNames.try_emplace(appName, procCount);
 
-            // if duplicate name found increase the value of "processes"
-            if (!inserted)
-            {
-                it->second += 1;
-            }
-        }else {
-            std::cout << "Error opening file";
+        if(!result.second){
+            result.first->second += 1;
         }
-        // close the current filestream
-        ifs.close();
-        // reset string stream.
-        filepathStream.str("");
-        filepathStream.clear();
     }
 
     return appNames;
