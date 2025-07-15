@@ -5,6 +5,8 @@ file(REMOVE_RECURSE
   "crashMonitor_autogen"
   "CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o"
   "CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o.d"
+  "CMakeFiles/crashMonitor.dir/application_obj.cpp.o"
+  "CMakeFiles/crashMonitor.dir/application_obj.cpp.o.d"
   "CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o"
   "CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o.d"
   "CMakeFiles/crashMonitor.dir/crashMonitor_autogen/mocs_compilation.cpp.o"

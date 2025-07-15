@@ -499,6 +499,12 @@
 			null
 		],
 		[
+			"/home/victor-j-wilson/projects2/crashMonitor/application_obj.h",
+			"MU",
+			"EWIEGA46WW/moc_application_obj.cpp",
+			null
+		],
+		[
 			"/home/victor-j-wilson/projects2/crashMonitor/headers/alert_controller.h",
 			"MU",
 			"K6S233IZAZ/moc_alert_controller.cpp",
@@ -532,6 +538,18 @@
 			"/home/victor-j-wilson/projects2/crashMonitor/mainwindow.h",
 			"MU",
 			"EWIEGA46WW/moc_mainwindow.cpp",
+			null
+		],
+		[
+			"/home/victor-j-wilson/projects2/crashMonitor/nlohmann/json.hpp",
+			"MU",
+			"UK7WSB6VKJ/moc_json.cpp",
+			null
+		],
+		[
+			"/home/victor-j-wilson/projects2/crashMonitor/nlohmann/json_fwd.hpp",
+			"MU",
+			"UK7WSB6VKJ/moc_json_fwd.cpp",
 			null
 		],
 		[
@@ -581,7 +599,7 @@
 	"MOC_PREDEFS_CMD" : 
 	[
 		"/bin/g++",
-		"-std=gnu++17",
+		"-std=gnu++20",
 		"-w",
 		"-dM",
 		"-E",
@@ -602,6 +620,11 @@
 	[
 		[
 			"/home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/victor-j-wilson/projects2/crashMonitor/application_obj.cpp",
 			"MU",
 			null
 		],

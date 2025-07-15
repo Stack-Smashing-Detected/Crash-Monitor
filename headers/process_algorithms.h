@@ -43,15 +43,48 @@ public:
         this->processSymlinks = processSymlinks;
     }
 
-    // get all the process names we'll need this to access the process data
-    // for displaying ram usage, cpu usage, application logos for UI enhancement etc.
+    /**
+    * Traverses through the "/proc" directory and stores all user owned PID directory names and symlinks
+    *
+    * @param: DIR
+    * @return: std::vector<std::string>
+    */
     void findProcesses(DIR *dir);
 
-    // Algorithm for finding the names of the application
+    /**
+    * using the symlinks we obtained from the findProcesses function we can find our application names
+    *
+    * @param: std::vector<std::string>
+    * @return: std::vector<std::string>
+    */
     std::unordered_map<std::string, int> getApplicationNames(std::vector<std::string> processIndexes);
 
-    // Algorithm for finding Application Logos for better UI/UX
+    /** Algorithm for finding Application Logos for better UI/UX
     std::vector<std::string> getApplicationLogoPaths(std::vector<std::string> processSymlinks);
+    */
+
+    /**
+     * @brief Opens smaps file for each of the process PIDs provided so it can be parsed into JSON format
+     *
+     * @param std::vector<std::string>
+     * @return void
+     */
+    void openSmaps(std::vector<std::string> &processIndexes);
+
+
+    /**
+    * @brief Parses through the provided smap file, should pass by reference as the vector will be updated through this function.
+    *
+    * @param std::vector<std::string> pids
+    * @return void
+    */
+    void parseSmap(std::ifstream smap, std::string pid);
+
+    /**
+    * @brief incoming smaps data is not consistent so validation is required to ensure seamless transfer of data to json file.
+    * @return std::string
+    */
+    std::string validateIncomingData(std::vector<std::string> tokens);
 
 private:
     std::vector<std::string> processList;

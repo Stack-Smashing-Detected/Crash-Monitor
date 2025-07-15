@@ -472,6 +472,8 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
   /home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.cpp \
   /home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.h \
   /home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.ui \
+  /home/victor-j-wilson/projects2/crashMonitor/application_obj.cpp \
+  /home/victor-j-wilson/projects2/crashMonitor/application_obj.h \
   .qtc/package-manager/auto-setup.cmake \
   CMakeFiles/4.0.3/CMakeCXXCompiler.cmake \
   CMakeFiles/4.0.3/CMakeSystem.cmake \
@@ -919,6 +921,8 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /usr/include/sched.h:
 
+/usr/include/pthread.h:
+
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QICNSPluginTargets-relwithdebinfo.cmake:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake:
@@ -1116,6 +1120,10 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QICNSPluginAdditionalTargetInfo.cmake:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/QtPublicSbomHelpers.cmake:
+
+/usr/include/locale.h:
+
+/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginTargets.cmake:
 
@@ -1709,10 +1717,6 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QComposePlatformInputContextPluginConfig.cmake:
 
-/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/QtPublicSbomFileHelpers.cmake:
-
-/usr/include/locale.h:
-
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qicon.h:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QLinuxFbIntegrationPluginConfig.cmake:
@@ -1977,6 +1981,8 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake:
 
+/home/victor-j-wilson/projects2/crashMonitor/application_obj.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
 
 /usr/include/c++/13/bits/uses_allocator_args.h:
@@ -2049,6 +2055,8 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/Qt
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake:
 
+/home/victor-j-wilson/projects2/crashMonitor/application_obj.cpp:
+
 /home/victor-j-wilson/projects2/crashMonitor/headers/alert_controller.h:
 
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QICOPluginConfig.cmake:
@@ -2078,8 +2086,6 @@ crashMonitor_autogen/moc_predefs.h:
 /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6QSvgIconPluginTargets.cmake:
 
 /home/victor-j-wilson/projects2/crashMonitor/helpwindow.h:
-
-/usr/include/pthread.h:
 
 /home/victor-j-wilson/projects2/crashMonitor/settings.h:
 
