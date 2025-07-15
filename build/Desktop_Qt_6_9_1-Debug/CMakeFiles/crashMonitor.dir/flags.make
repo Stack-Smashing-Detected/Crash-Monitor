@@ -6,5 +6,5 @@ CXX_DEFINES = -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB
 
 CXX_INCLUDES = -I/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/include -isystem /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore -isystem /home/victor-j-wilson/Qt/6.9.1/gcc_64/include -isystem /home/victor-j-wilson/Qt/6.9.1/gcc_64/mkspecs/linux-g++ -isystem /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets -isystem /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui
 
-CXX_FLAGS = -DQT_QML_DEBUG -g -std=gnu++17 -fdiagnostics-color=always -fPIC
+CXX_FLAGS = -DQT_QML_DEBUG -g -std=gnu++20 -fdiagnostics-color=always -fPIC
 

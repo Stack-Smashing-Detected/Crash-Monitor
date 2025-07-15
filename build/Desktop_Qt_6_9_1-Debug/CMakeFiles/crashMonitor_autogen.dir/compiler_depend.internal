@@ -473,6 +473,8 @@
  /home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.cpp
  /home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.h
  /home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.ui
+ /home/victor-j-wilson/projects2/crashMonitor/application_obj.cpp
+ /home/victor-j-wilson/projects2/crashMonitor/application_obj.h
  /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/.qtc/package-manager/auto-setup.cmake
  /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/4.0.3/CMakeCXXCompiler.cmake
  /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/4.0.3/CMakeSystem.cmake
