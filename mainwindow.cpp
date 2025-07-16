@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "./ui_mainwindow.h"
+#include <memory>
 #include <QMessageBox>
 #include <QFont>
 #include <QPixmap>
@@ -73,6 +74,9 @@ void MainWindow::view_button_clicked(){
 }
 
 void MainWindow::setup_button_clicked(){
+    std::unique_ptr<ProcessAlgorithms> ptr_proc_algos = std::make_unique<ProcessAlgorithms>();
 
+    std::vector<std::string> pids = ptr_proc_algos->get_process_list();
+    ptr_proc_algos->open_smap(pids[0]);
 }
 

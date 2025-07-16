@@ -18,8 +18,8 @@ AppResourceViewer::AppResourceViewer(QWidget *parent)
     // Create a diectory pointer to pass to the process finder
     // create an instance of the process finder object, eventually this will be used as a shared pointer.
     std::unique_ptr<ProcessAlgorithms> processDataPtr = std::make_unique<ProcessAlgorithms>();
-    std::vector<std::string> pidList = processDataPtr->getProcessList();
-    std::vector<std::string> appList = processDataPtr->getSymlinks();
+    std::vector<std::string> pidList = processDataPtr->get_process_list();
+    std::vector<std::string> appList = processDataPtr->get_symlinks();
 
 
     // set up list viewers
@@ -43,7 +43,7 @@ AppResourceViewer::AppResourceViewer(QWidget *parent)
     fillListViewer(pidList, cpuUsageView);
 
     // fill table
-    std::unordered_map<std::string, int> appNames = processDataPtr->getApplicationNames(appList);
+    std::unordered_map<std::string, int> appNames = processDataPtr->get_application_names(appList);
     fillTableViewer(appNames, ramUsageView);
 
 }

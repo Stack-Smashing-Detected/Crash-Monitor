@@ -23,23 +23,23 @@ public:
     ProcessAlgorithms();
 
     // mainly for using the listview during testing, will change regularly depending on what needs to be tested.
-    std::vector<std::string> getProcessList()
+    std::vector<std::string> get_process_list()
     {
         return processList;
     }
 
     // mainly for testing the list views will change regularaly depending on what needs to be tested.
-    void setProcessList(std::vector<std::string> processList)
+    void set_process_list(std::vector<std::string> processList)
     {
         this->processList = processList;
     }
 
-    std::vector<std::string> getSymlinks()
+    std::vector<std::string> get_symlinks()
     {
         return processSymlinks;
     }
 
-    void setSymLinksList(std::vector<std::string> processSymlinks)
+    void set_symlinks_list(std::vector<std::string> processSymlinks)
     {
         this->processSymlinks = processSymlinks;
     }
@@ -50,7 +50,7 @@ public:
     * @param: DIR
     * @return: std::vector<std::string>
     */
-    void findProcesses(DIR *dir);
+    void find_processes(DIR *dir);
 
     /**
     * using the symlinks we obtained from the findProcesses function we can find our application names
@@ -58,7 +58,7 @@ public:
     * @param: std::vector<std::string>
     * @return: std::vector<std::string>
     */
-    std::unordered_map<std::string, int> getApplicationNames(std::vector<std::string> processIndexes);
+    std::unordered_map<std::string, int> get_application_names(std::vector<std::string> processIndexes);
 
     /** Algorithm for finding Application Logos for better UI/UX
     std::vector<std::string> getApplicationLogoPaths(std::vector<std::string> processSymlinks);
@@ -70,22 +70,28 @@ public:
      * @param std::vector<std::string>
      * @return void
      */
-    void openSmaps(std::vector<std::string> processIndexes);
+    void open_smaps(std::vector<std::string> processIndexes);
 
-
+    /**
+     * @brief opens an smap file for a single process
+     *
+     * @param std::string pid
+     * @return void
+     */
+    void open_smap(std::string pid);
     /**
     * @brief Parses through the provided smap file, should pass by reference as the vector will be updated through this function.
     *
     * @param std::vector<std::string> pids
     * @return void
     */
-    void parseSmap(std::ifstream &smap, std::string pid);
+    void parse_smap(std::ifstream &smap, std::string pid);
 
     /**
     * @brief incoming smaps data is not consistent so validation is required to ensure seamless transfer of data to json file.
     * @return std::string
     */
-    std::string validateIncomingData(std::vector<std::string> tokens);
+    std::string validate_incoming_data(std::vector<std::string> tokens);
 
 private:
     std::vector<std::string> processList;

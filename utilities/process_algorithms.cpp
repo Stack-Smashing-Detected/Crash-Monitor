@@ -13,10 +13,10 @@ constexpr auto max_size = std::numeric_limits<std::streamsize>::max(); // a glob
 ProcessAlgorithms::ProcessAlgorithms()
 {
     DIR *dir;
-    findProcesses(dir);
+    find_processes(dir);
 }
 
-void ProcessAlgorithms::findProcesses(DIR *dir)
+void ProcessAlgorithms::find_processes(DIR *dir)
 {
     std::vector<std::string> foundProcesses;
     std::vector<std::string> processSymlinks;
@@ -59,12 +59,12 @@ void ProcessAlgorithms::findProcesses(DIR *dir)
         throw std::runtime_error(std::strerror(errno));
 
     // finally set the newly populated data structures so we can use them later.
-    this->setProcessList(foundProcesses);
-    this->setSymLinksList(processSymlinks);
+    this->set_process_list(foundProcesses);
+    this->set_symlinks_list(processSymlinks);
 }
 
 
-std::unordered_map<std::string, int> ProcessAlgorithms::getApplicationNames(std::vector<std::string> processSymlinks)
+std::unordered_map<std::string, int> ProcessAlgorithms::get_application_names(std::vector<std::string> processSymlinks)
 {
     // a list of application names and occurences of application name i.e the number of processes per application.
     std::unordered_map<std::string, int> appNames;
@@ -86,16 +86,16 @@ std::unordered_map<std::string, int> ProcessAlgorithms::getApplicationNames(std:
 }
 
 
-void ProcessAlgorithms::openSmaps(std::vector<std::string> processIndexes){
+void ProcessAlgorithms::open_smaps(std::vector<std::string> processIndexes){
 
     // attempt to open the /proc/$$/smaps file
     for (std::string &pid : processIndexes){
         // get filepath to smaps file
-        std::string path = std::format("{}/{}/{}", "/proc", pid, "smaps");
+        std::string path = std::format("/proc/{}/smaps", pid);
         // open smaps filepath
         std::ifstream smap(path);
         if(smap.is_open()){
-            parseSmap(smap, pid); // smap file is parsed in the next function below (for reference).
+            parse_smap(smap, pid); /** FUNCTION CALL ALERT for more details go to line 120 **/
         }else{
             // if this happens then it was probably a zombie process.
             continue;
@@ -103,11 +103,21 @@ void ProcessAlgorithms::openSmaps(std::vector<std::string> processIndexes){
     }
 }
 
+void ProcessAlgorithms::open_smap(std::string pid){
+    std::string path = std::format("/proc/{}/smaps", pid);
+    std::ifstream smap(path);
+    if(smap.is_open()){
+        parse_smap(smap, pid);
+    }else{
+        std::cout << "Error opening file" << std::endl;
+    }
+}
+
 /**
  * @brief apologies for the double nested while loop but parsing files really is "f**ed" in terms of time complexity.
  * but the bulk of the large time complexity should be spent in setup.
  */
-void ProcessAlgorithms::parseSmap(std::ifstream &smap, std::string pid){
+void ProcessAlgorithms::parse_smap(std::ifstream &smap, std::string pid){
     // parse through the smap, we want to find the pss Values since that will identify the exact memory mapping of the process.
     using json = nlohmann::json;
     json process = json::array();
@@ -150,7 +160,7 @@ void ProcessAlgorithms::parseSmap(std::ifstream &smap, std::string pid){
                 page[tokens[0]] = flags;
                 process.push_back(page);
             }
-            page[tokens[0]] = validateIncomingData(tokens);
+            page[tokens[0]] = validate_incoming_data(tokens); /** FUNCION CALL ALERT check line 192 for more details **/
 
             // free memory allocated to buffer and clear tokens vector.
             delete[] buffer;
@@ -179,7 +189,7 @@ void ProcessAlgorithms::parseSmap(std::ifstream &smap, std::string pid){
     out << process.dump(4);
 }
 
-std::string ProcessAlgorithms::validateIncomingData(std::vector<std::string> tokens){
+std::string ProcessAlgorithms::validate_incoming_data(std::vector<std::string> tokens){
     // edge cases.
     if(tokens[0] == "THPeligible" || tokens[0] == "ProtectionKey"){
         return tokens[1];
