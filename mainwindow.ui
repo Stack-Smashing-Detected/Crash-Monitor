@@ -119,6 +119,13 @@ Author: Victor J Wilson</string>
          </property>
         </widget>
        </item>
+       <item>
+        <widget class="QPushButton" name="setupButton">
+         <property name="text">
+          <string>Setup</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>

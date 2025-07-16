@@ -6,6 +6,7 @@
 #include <QString>
 #include <QFrame>
 #include <QPushButton>
+#include "headers/process_algorithms.h"
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -45,12 +46,12 @@ MainWindow::~MainWindow()
 
 
 
-void MainWindow::on_runBtn_clicked()
+void MainWindow::run_button_clicked()
 {
     // run the crash monitor program, include a loading message if needed.
 }
 
-void MainWindow::on_helpBtn_clicked()
+void MainWindow::help_button_clicked()
 {
     // open the help tab for assistance on using the application
     helpWindow = new HelpWindow(this);
@@ -58,17 +59,20 @@ void MainWindow::on_helpBtn_clicked()
 }
 
 
-void MainWindow::on_settingsBtn_clicked()
+void MainWindow::settings_button_clicked()
 {
     // open the settings tab to change application settings.
     settings = new Settings(this);
     settings->show();
 }
 
-void MainWindow::on_viewBtn_clicked(){
+void MainWindow::view_button_clicked(){
     // open the view processes window
     app_resource_viewer = new AppResourceViewer(this);
     app_resource_viewer->show();
 }
 
+void MainWindow::setup_button_clicked(){
+
+}
 

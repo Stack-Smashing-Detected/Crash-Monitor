@@ -22,14 +22,15 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_runBtn_clicked();
+    void run_button_clicked();
 
-    void on_helpBtn_clicked();
+    void help_button_clicked();
 
-    void on_settingsBtn_clicked();
+    void settings_button_clicked();
 
-    void on_viewBtn_clicked();
+    void view_button_clicked();
 
+    void setup_button_clicked();
 private:
     Ui::MainWindow *ui;
     HelpWindow *helpWindow;

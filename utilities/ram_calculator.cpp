@@ -16,5 +16,14 @@
 RamCalculator::RamCalculator(){} // nothing needs to be setup since data is accessed from file.
 
 
+void RamCalculator::evaluate_memory_stat_sheet(std::string pid)
+{
+    // code goes here
+}
+
+void RamCalculator::update_application_statistics(std::string pid)
+{
+    // code goes here
+}
 
 

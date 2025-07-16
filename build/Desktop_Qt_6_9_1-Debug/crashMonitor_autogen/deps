@@ -484,6 +484,8 @@ crashMonitor_autogen/timestamp: \
 	/home/victor-j-wilson/projects2/crashMonitor/main.cpp \
 	/home/victor-j-wilson/projects2/crashMonitor/mainwindow.cpp \
 	/home/victor-j-wilson/projects2/crashMonitor/mainwindow.h \
+	/home/victor-j-wilson/projects2/crashMonitor/nlohmann/json.hpp \
+	/home/victor-j-wilson/projects2/crashMonitor/nlohmann/json_fwd.hpp \
 	/home/victor-j-wilson/projects2/crashMonitor/resource.qrc \
 	/home/victor-j-wilson/projects2/crashMonitor/settings.cpp \
 	/home/victor-j-wilson/projects2/crashMonitor/settings.h \

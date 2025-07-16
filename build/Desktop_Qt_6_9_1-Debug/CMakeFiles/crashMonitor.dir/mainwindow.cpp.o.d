@@ -512,4 +512,7 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/QString \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qstring.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QFrame \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton \
+ /home/victor-j-wilson/projects2/crashMonitor/headers/process_algorithms.h \
+ /usr/include/dirent.h /usr/include/x86_64-linux-gnu/bits/dirent.h \
+ /usr/include/x86_64-linux-gnu/bits/dirent_ext.h

@@ -16,9 +16,8 @@ AppResourceViewer::AppResourceViewer(QWidget *parent)
     ui->setupUi(this);
 
     // Create a diectory pointer to pass to the process finder
-    DIR *dirp;
     // create an instance of the process finder object, eventually this will be used as a shared pointer.
-    std::unique_ptr<ProcessAlgorithms> processDataPtr = std::make_unique<ProcessAlgorithms>(dirp);
+    std::unique_ptr<ProcessAlgorithms> processDataPtr = std::make_unique<ProcessAlgorithms>();
     std::vector<std::string> pidList = processDataPtr->getProcessList();
     std::vector<std::string> appList = processDataPtr->getSymlinks();
 

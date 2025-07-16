@@ -1,11 +1,9 @@
 #ifndef CALCULATE_RAM_H
 #define CALCULATE_RAM_H
 
-#include "../application_obj.h"
-
 #include <filesystem>
 #include <fstream>
-
+#include <vector>
 
 
 class RamCalculator{
@@ -29,7 +27,7 @@ public:
      * @param std::vector<std::pair> mem_stats
      * @param std::string pid
      */
-    void update_application_statistics(std::vector<std::pair> mem_stats, std::string pid);
+    void update_application_statistics(std::string pid);
 };
 
 

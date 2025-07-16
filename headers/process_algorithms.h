@@ -8,7 +8,9 @@
 #include <vector>
 #include <unordered_map>
 #include <string>
+#include <format>
 #include <dirent.h>
+
 
 /**
  * A library class for finding application data that does not require constant monitoring.
@@ -18,7 +20,6 @@ class ProcessAlgorithms
 {
 
 public:
-    ProcessAlgorithms(DIR *dir); // setup directory
     ProcessAlgorithms();
 
     // mainly for using the listview during testing, will change regularly depending on what needs to be tested.
@@ -69,7 +70,7 @@ public:
      * @param std::vector<std::string>
      * @return void
      */
-    void openSmaps(std::vector<std::string> &processIndexes);
+    void openSmaps(std::vector<std::string> processIndexes);
 
 
     /**
@@ -78,7 +79,7 @@ public:
     * @param std::vector<std::string> pids
     * @return void
     */
-    void parseSmap(std::ifstream smap, std::string pid);
+    void parseSmap(std::ifstream &smap, std::string pid);
 
     /**
     * @brief incoming smaps data is not consistent so validation is required to ensure seamless transfer of data to json file.

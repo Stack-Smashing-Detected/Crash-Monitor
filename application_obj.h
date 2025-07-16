@@ -1,8 +1,10 @@
 #ifndef APPLICATION_OBJ_H
 #define APPLICATION_OBJ_H
 
-#include
+#include "headers/ram_calculator.h"
 #include <string>
+#include <unordered_map>
+
 
 class ApplicationObj
 {
@@ -11,26 +13,6 @@ public:
 
     std::string getApplicationName(){
         return this->applicationName;
-    }
-
-    // get the latest RAM usage reading
-    int getRamUsage(){
-        return ramUsage;
-    }
-
-    // update the RAM usage metric
-    void updateRamUsage(int ram){
-        this->ramUsage = ram;
-    }
-
-    // get the latest CPU usage reading
-    int getCpuUsage(){
-        return cpuUsage;
-    }
-
-    // update the CPU usage metric
-    void updateCpuUsage(int cpu){
-        this->cpuUsage = cpu;
     }
 
     // gets the current number of active spawned processes for this application
@@ -71,6 +53,9 @@ private:
         size_t swap = 0; // amount of swap memory used by the page;
         size_t swap_pss = 0; // process' proportion of swap memory within the page
         size_t locked = 0; // locked memory that cannot be moved to swap'
+        std::unordered_map<bool, int> thp_eligiblity;
+        std::unordered_map<int, int> protection_keys;
+        std::vector<std::string> vm_flags;
 
         /**
          * @brief constructor for memory stats struct
@@ -86,6 +71,7 @@ private:
         */
         void update_statistic(std::string metric, int metric_value);
 
+    };
 };
 
 #endif // APPLICATION_OBJ_H

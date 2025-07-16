@@ -10,14 +10,11 @@
 constexpr auto max_size = std::numeric_limits<std::streamsize>::max(); // a global constant that's only used in this application (thus far).
 
 // constructor, sets up the process list and process symlinks for use later.
-ProcessAlgorithms::ProcessAlgorithms(DIR *dir)
+ProcessAlgorithms::ProcessAlgorithms()
 {
-    ProcessAlgorithms::findProcesses(dir);
+    DIR *dir;
+    findProcesses(dir);
 }
-
-// default constructor
-ProcessAlgorithms::ProcessAlgorithms() {}
-
 
 void ProcessAlgorithms::findProcesses(DIR *dir)
 {
@@ -92,7 +89,7 @@ std::unordered_map<std::string, int> ProcessAlgorithms::getApplicationNames(std:
 void ProcessAlgorithms::openSmaps(std::vector<std::string> processIndexes){
 
     // attempt to open the /proc/$$/smaps file
-    for (std::string &pid : pids){
+    for (std::string &pid : processIndexes){
         // get filepath to smaps file
         std::string path = std::format("{}/{}/{}", "/proc", pid, "smaps");
         // open smaps filepath
@@ -110,14 +107,16 @@ void ProcessAlgorithms::openSmaps(std::vector<std::string> processIndexes){
  * @brief apologies for the double nested while loop but parsing files really is "f**ed" in terms of time complexity.
  * but the bulk of the large time complexity should be spent in setup.
  */
-void ProcessAlgorithms::parseSmap(std::ifstream smap, std::string pid){
+void ProcessAlgorithms::parseSmap(std::ifstream &smap, std::string pid){
     // parse through the smap, we want to find the pss Values since that will identify the exact memory mapping of the process.
     using json = nlohmann::json;
     json process = json::array();
 
     // a bunch of variables that we'll need for tokenization procedure.
     int index = 0;
-    char* delim = ": "; // can specify multiple delimiters for more precise tokenization.
+    std::string cpp_delim = ": ";
+    char *delim = new char[cpp_delim.size() + 1];
+    std::copy(cpp_delim.begin(), cpp_delim.end(), delim);    // can specify multiple delimiters for more precise tokenization.
     char *saveptr, *token; // saveptr is required for strtok_r
     std::vector<std::string> tokens;
     json page;
@@ -132,7 +131,8 @@ void ProcessAlgorithms::parseSmap(std::ifstream smap, std::string pid){
             std::getline(smap, buf);
 
             // tokenize line.
-            std::vector<char> buffer(buf.begin(), buf.end();)
+            char *buffer = new char[buf.size() + 1];
+            std::copy(buf.begin(), buf.end(), buffer);
             token = strtok_r(buffer, delim, &saveptr);
 
             // call strtok_r until it outputs null, should only be 2 times for the most part, last 3 page entries are 1 for 2nd last and 3rd last (THPeligible and ProtectionKey)
@@ -151,6 +151,10 @@ void ProcessAlgorithms::parseSmap(std::ifstream smap, std::string pid){
                 process.push_back(page);
             }
             page[tokens[0]] = validateIncomingData(tokens);
+
+            // free memory allocated to buffer and clear tokens vector.
+            delete[] buffer;
+            tokens.clear();
         }
         // account for the first line being the descriptor which would mess up the naming convention a little bit.
         if(!process.empty()){
@@ -162,16 +166,17 @@ void ProcessAlgorithms::parseSmap(std::ifstream smap, std::string pid){
         }
 
         // provide the page's indexer (in this case name).
-        json["name"] = std::format("mem_page_{}", index);
+        page["name"] = std::format("mem_page_{}", index);
         // ignore any thing that gets here.
-        smap.ignore(max_size, '/n');
+        smap.ignore(max_size, '\n');
         index++;
     }
+    // free allocation for delim character
+    delete[] delim;
 
     // finally write the array to the json file.
-    std::ofstream out(std::format("{}.json", pid));
+    std::ofstream out(std::format("../mem_stats/{}.json", pid));
     out << process.dump(4);
-
 }
 
 std::string ProcessAlgorithms::validateIncomingData(std::vector<std::string> tokens){
