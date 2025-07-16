@@ -37,6 +37,12 @@ MainWindow::MainWindow(QWidget *parent)
     // Generate the eye catch image in the eyeCatch label
     ui->eyeCatch->setScaledContents(true);
     ui->eyeCatch->setPixmap(pix);
+
+    // connect slots
+    connect(ui->helpBtn, &QPushButton::clicked, this, &MainWindow::help_button_clicked);
+    connect(ui->settingsBtn, &QPushButton::clicked, this, &MainWindow::settings_button_clicked);
+    connect(ui->viewBtn, &QPushButton::clicked, this, &MainWindow::view_button_clicked);
+    connect(ui->setupBtn, &QPushButton::clicked, this, &MainWindow::setup_button_clicked);
 }
 
 MainWindow::~MainWindow()

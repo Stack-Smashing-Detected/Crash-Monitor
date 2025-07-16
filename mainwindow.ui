@@ -120,7 +120,7 @@ Author: Victor J Wilson</string>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="setupButton">
+        <widget class="QPushButton" name="setupBtn">
          <property name="text">
           <string>Setup</string>
          </property>
