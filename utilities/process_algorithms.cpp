@@ -7,6 +7,15 @@
 #include <filesystem>
 #include <limits>
 
+// error handling
+#ifdef _WIN32
+#include <windows.h>
+#define SYSERROR()  GetLastError()
+#else
+#include <errno.h>
+#define SYSERROR()  errno
+#endif
+
 constexpr auto max_size = std::numeric_limits<std::streamsize>::max(); // a global constant that's only used in this application (thus far).
 
 // constructor, sets up the process list and process symlinks for use later.
@@ -126,6 +135,7 @@ void ProcessAlgorithms::parse_smap(std::ifstream &smap, std::string pid){
     int index = 0;
     std::string cpp_delim = ": ";
     char *delim = new char[cpp_delim.size() + 1];
+    delim[cpp_delim.length()] = '\0';
     std::copy(cpp_delim.begin(), cpp_delim.end(), delim);    // can specify multiple delimiters for more precise tokenization.
     char *saveptr, *token; // saveptr is required for strtok_r
     std::vector<std::string> tokens;
@@ -142,6 +152,7 @@ void ProcessAlgorithms::parse_smap(std::ifstream &smap, std::string pid){
 
             // tokenize line.
             char *buffer = new char[buf.size() + 1];
+            buffer[buf.length()] = '\0';
             std::copy(buf.begin(), buf.end(), buffer);
             token = strtok_r(buffer, delim, &saveptr);
 
@@ -156,12 +167,19 @@ void ProcessAlgorithms::parse_smap(std::ifstream &smap, std::string pid){
             // except with the special case for the entry "VmFlags" which is an arbitrary list of virtual memory permissions
             // since VmFlags is the last entry in a memory page we add the page to the process json_array here.
             if(tokens[0] == "VmFlags"){
-                std::vector<std::string> flags(tokens.begin() + 1, tokens.end());
-                page[tokens[0]] = flags;
-                process.push_back(page);
+                if(tokens.size() > 2){
+                    std::vector<std::string> flags(tokens.begin() + 1, tokens.end());
+                    page[tokens[0]] = flags;
+                    process.push_back(page);
+                }else{
+                    std::vector<std::string> flags;
+                    flags.push_back(tokens[1]);
+                    page[tokens[0]] = flags;
+                    process.push_back(page);
+                }
+            }else{
+                page[tokens[0]] = validate_incoming_data(tokens); /** FUNCION CALL ALERT check line 192 for more details **/
             }
-            page[tokens[0]] = validate_incoming_data(tokens); /** FUNCION CALL ALERT check line 192 for more details **/
-
             // free memory allocated to buffer and clear tokens vector.
             delete[] buffer;
             tokens.clear();
@@ -185,8 +203,13 @@ void ProcessAlgorithms::parse_smap(std::ifstream &smap, std::string pid){
     delete[] delim;
 
     // finally write the array to the json file.
-    std::ofstream out(std::format("../mem_stats/{}.json", pid));
-    out << process.dump(4);
+    std::ofstream out(std::format("../../mem_stats/{}.json", pid));
+    if(out.is_open()){
+        out << process.dump(4);
+    }else{
+        std::cerr << "Failed to open file: " << SYSERROR() << std::endl;
+    }
+
 }
 
 std::string ProcessAlgorithms::validate_incoming_data(std::vector<std::string> tokens){

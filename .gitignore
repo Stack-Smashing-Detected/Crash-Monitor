@@ -55,3 +55,6 @@ compile_commands.json
 *.swp
 debug/
 saves/
+
+# memory stats (these are not constant and shouldn't be pushed).
+mem_stats/
