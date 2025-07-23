@@ -1,7 +1,7 @@
 #ifndef APPLICATION_OBJ_H
 #define APPLICATION_OBJ_H
 
-#include "headers/ram_calculator.h"
+#include "../headers/memory_stat_processing.h"
 #include <string>
 #include <unordered_map>
 
@@ -55,9 +55,9 @@ private:
         size_t swap = 0;             // amount of swap memory used by the page;
         size_t swap_pss = 0;         // process' proportion of swap memory within the page
         size_t locked = 0;           // locked memory that cannot be moved to swap'
-        std::unordered_map<bool, int> thp_eligiblity;
-        std::unordered_map<int, int> protection_keys;
-        std::vector<std::string> vm_flags;
+        double protection_level;     // the percentage of pages with a non-zero protection key.
+        double thp_eligibility;      // the percentage of pages that are "true" for the THPeligibility metric
+
 
         /**
          * @brief constructor for memory stats struct

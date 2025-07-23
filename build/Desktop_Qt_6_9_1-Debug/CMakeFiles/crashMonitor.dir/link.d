@@ -5,13 +5,13 @@ crashMonitor: \
   CMakeFiles/crashMonitor.dir/crashMonitor_autogen/mocs_compilation.cpp.o \
   CMakeFiles/crashMonitor.dir/main.cpp.o \
   CMakeFiles/crashMonitor.dir/mainwindow.cpp.o \
-  CMakeFiles/crashMonitor.dir/utilities/cpu_calculator.cpp.o \
   CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o \
-  CMakeFiles/crashMonitor.dir/utilities/ram_calculator.cpp.o \
+  CMakeFiles/crashMonitor.dir/utilities/memory_stat_processing.cpp.o \
+  CMakeFiles/crashMonitor.dir/src/application_manager.cpp.o \
+  CMakeFiles/crashMonitor.dir/src/application_obj.cpp.o \
   CMakeFiles/crashMonitor.dir/helpwindow.cpp.o \
   CMakeFiles/crashMonitor.dir/settings.cpp.o \
   CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o \
-  CMakeFiles/crashMonitor.dir/application_obj.cpp.o \
   CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/libQt6Widgets.so.6.9.1 \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/libQt6Gui.so.6.9.1 \
@@ -94,19 +94,19 @@ CMakeFiles/crashMonitor.dir/main.cpp.o:
 
 CMakeFiles/crashMonitor.dir/mainwindow.cpp.o:
 
-CMakeFiles/crashMonitor.dir/utilities/cpu_calculator.cpp.o:
-
 CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o:
 
-CMakeFiles/crashMonitor.dir/utilities/ram_calculator.cpp.o:
+CMakeFiles/crashMonitor.dir/utilities/memory_stat_processing.cpp.o:
+
+CMakeFiles/crashMonitor.dir/src/application_manager.cpp.o:
+
+CMakeFiles/crashMonitor.dir/src/application_obj.cpp.o:
 
 CMakeFiles/crashMonitor.dir/helpwindow.cpp.o:
 
 CMakeFiles/crashMonitor.dir/settings.cpp.o:
 
 CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o:
-
-CMakeFiles/crashMonitor.dir/application_obj.cpp.o:
 
 CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o:
 

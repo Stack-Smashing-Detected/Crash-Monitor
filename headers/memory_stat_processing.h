@@ -1,9 +1,11 @@
 #ifndef MEMORY_STAT_PROCESSING_H
 #define MEMORY_STAT_PROCESSING_H
 
-#include "application_obj.h"
 #include <filesystem>
+#include <unordered_map>
 #include <memory>
+
+class ApplicationObj; // forward declaration opplication object,
 
 class MemoryStatProcessing
 {
@@ -25,7 +27,7 @@ public:
      * @brief parses the stat_sheet in json format.
      * @param std::string pid
      */
-    void parse_stat_sheet(std::filesystem::path filepath);
+    void evaluate_memory_stat_sheet(std::filesystem::path filepath);
 
     /**
      * @brief handle data relating to protected keys
@@ -39,20 +41,20 @@ public:
      * @param std::string key_value
      * @param std::unordered_map<std::string, int>
      */
-    std::unordered_map<std::string, int> protected_keys_data(std::string key_value, std::unordered_map<std::string, int> &stat_sheet);
+    std::unordered_map<std::string, int> thp_eligibility_data(std::string key_value, std::unordered_map<std::string, int> &stat_sheet);
 
     /**
      * @brief handle data relating to the standard memory metrics relating to "byte size".
      * @param std::string key_value
      * @param std::unordered_map<std::string, int>
      */
-    std::unordered_map<std::string, int> size_metrics_data(const auto &page_key, std::unordered_map<std::string, int> &stat_sheet);
+    std::unordered_map<std::string, int> size_metrics_data(std::string key, std::string key_value, std::unordered_map<std::string, int> &stat_sheet);
 
     /**
      * @brief takes the data obtained from evaluate_memory_stat sheet and passes it to the specified application object.
      * @param std::unique_ptr<ApplicationObj> application
      */
-    void update_application_statistics(std::unique_ptr<ApplicationObj> &application);
+    void update_application_statistics(ApplicationObj &application);
 
 private:
     std::unordered_map<std::string, int> stat_sheet;

@@ -469,16 +469,15 @@ crashMonitor_autogen/timestamp: \
 	/home/victor-j-wilson/projects2/crashMonitor/CMakeLists.txt \
 	/home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.cpp \
 	/home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.h \
-	/home/victor-j-wilson/projects2/crashMonitor/application_obj.cpp \
-	/home/victor-j-wilson/projects2/crashMonitor/application_obj.h \
 	/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/.qtc/package-manager/auto-setup.cmake \
 	/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/4.0.3/CMakeCXXCompiler.cmake \
 	/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/4.0.3/CMakeSystem.cmake \
 	/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/moc_predefs.h \
 	/home/victor-j-wilson/projects2/crashMonitor/headers/alert_controller.h \
-	/home/victor-j-wilson/projects2/crashMonitor/headers/cpu_calculator.h \
+	/home/victor-j-wilson/projects2/crashMonitor/headers/application_manager.h \
+	/home/victor-j-wilson/projects2/crashMonitor/headers/application_obj.h \
+	/home/victor-j-wilson/projects2/crashMonitor/headers/memory_stat_processing.h \
 	/home/victor-j-wilson/projects2/crashMonitor/headers/process_algorithms.h \
-	/home/victor-j-wilson/projects2/crashMonitor/headers/ram_calculator.h \
 	/home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp \
 	/home/victor-j-wilson/projects2/crashMonitor/helpwindow.h \
 	/home/victor-j-wilson/projects2/crashMonitor/main.cpp \
@@ -489,9 +488,10 @@ crashMonitor_autogen/timestamp: \
 	/home/victor-j-wilson/projects2/crashMonitor/resource.qrc \
 	/home/victor-j-wilson/projects2/crashMonitor/settings.cpp \
 	/home/victor-j-wilson/projects2/crashMonitor/settings.h \
-	/home/victor-j-wilson/projects2/crashMonitor/utilities/cpu_calculator.cpp \
+	/home/victor-j-wilson/projects2/crashMonitor/src/application_manager.cpp \
+	/home/victor-j-wilson/projects2/crashMonitor/src/application_obj.cpp \
+	/home/victor-j-wilson/projects2/crashMonitor/utilities/memory_stat_processing.cpp \
 	/home/victor-j-wilson/projects2/crashMonitor/utilities/process_algorithms.cpp \
-	/home/victor-j-wilson/projects2/crashMonitor/utilities/ram_calculator.cpp \
 	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCXXInformation.cmake \
 	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake \
 	/snap/cmake/1468/share/cmake-4.0/Modules/CMakeCommonLanguageInclude.cmake \

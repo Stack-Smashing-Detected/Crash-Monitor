@@ -10,6 +10,7 @@
 #include <cstddef>
 #include <format>
 #include <fstream>
+#include <iostream>
 #include <limits>
 #include <stdexcept>
 #include <unordered_map>
@@ -19,18 +20,18 @@ MemoryStatProcessing::MemoryStatProcessing() {} // nothing needs to be setup sin
 void MemoryStatProcessing::evaluate_memory_stat_sheet(std::filesystem::path filepath)
 {
 
-    using json = nlohmann::json
+    using json = nlohmann::json;
         // read through the json file
-        json j_array;
-    std::ifstream stat_sheet(filepath.string());
+    json j_array;
+    std::ifstream json_file(filepath.string());
 
-    stat_sheet >> j_array;
-    stat_sheet.close();
+    json_file >> j_array;
+    json_file.close();
 
     std::unordered_map<std::string, int> stat_sheet = get_stat_sheet();
     // prepare unique elements for protection key metric
     int protected_count = 0;
-    int unprotectecd_count = 0;
+    int unprotected_count = 0;
 
     // prepare unique elements for THP eligibility metric
     int true_count = 0;
@@ -47,23 +48,23 @@ void MemoryStatProcessing::evaluate_memory_stat_sheet(std::filesystem::path file
     for (auto &item : j_array.items())
     {
         json page = item.value();
-        for (auto &page_key : page.items)
+        for (auto page_key = page.begin(); page_key != page.end(); page_key++)
         {
             // handle "ProtectionKey case"
-            if (page_key->first == "ProtectionKey")
+            if (page_key.key() == "ProtectionKey")
             {
 
-                stat_sheet = protected_keys_data(page_key->second, stat_sheet);
+                stat_sheet = protected_keys_data(page_key.value(), stat_sheet);
                 continue;
             }
             // handle "THPeligible" case
-            if (page_key->first == "THPeligible")
+            if (page_key.key() == "THPeligible")
             {
-                stat_sheet = thp_eligibility_data(page_key->second, stat_sheet);
+                stat_sheet = thp_eligibility_data(page_key.value(), stat_sheet);
                 continue;
             }
 
-            stat_sheet = size_metrics_data(page_key, stat_sheet);
+            stat_sheet = size_metrics_data(page_key.key(), page_key.value(), stat_sheet);
         }
     }
 }
@@ -73,46 +74,45 @@ std::unordered_map<std::string, int> MemoryStatProcessing::protected_keys_data(s
     if (key_value == "0")
     {
         auto const &iterator = stat_sheet.find("Unprotected");
-        &iterator->second += 1;
+        iterator->second += 1;
     }
     else
     {
         auto const &iterator = stat_sheet.find("Protected");
-        &iterator->second += 1;
+        iterator->second += 1;
     }
 
     return stat_sheet;
 }
-
-std::unordered_map<std::string, int> MemoryStatProcess::thp_eligibility_data(std::string key_value, std::unique_ptr<std::string, int> &stat_sheet)
+std::unordered_map<std::string, int> MemoryStatProcessing::thp_eligibility_data(std::string key_value, std::unordered_map<std::string, int> &stat_sheet)
 {
     if (key_value == "0")
     {
         auto const &iterator = stat_sheet.find("False");
-        @iterator->second += 1;
+        iterator->second += 1;
     }
     else
     {
         auto const &iterator = stat_sheet.find("True");
-        &iterator->second += 1;
+        iterator->second += 1;
     }
     return stat_sheet;
 }
 
-std::unordered_map<std::string, int> MemoryStatProcess::size_metrics_data(const auto &page_key, std::uinque_ptr<std::string, int> &stat_sheet)
+std::unordered_map<std::string, int> MemoryStatProcessing::size_metrics_data(std::string key, std::string key_value,  std::unordered_map<std::string, int> &stat_sheet)
 {
     // handle all other data, all though all data should be convertible, always better to be safe than sorry.
     try
     {
-        std::size_t pos {}                                   // address for handling string to int conversion
-        const int size { std::stoi(page_key->second, &pos) } // conversion
+        std::size_t pos {};                                   // address for handling string to int conversion
+        const int size { std::stoi(key_value, &pos) }; // conversion
 
         // currently size is an integer, we'll convert it to size_t when we pass it to the object itself
         // as it is easier to convert ints into size_t types.
-        const auto &emplace_success = stat_sheet.try_emplace(page_key->first, size);
-        if (!emplace_success->second)
+        auto const &emplace_success = stat_sheet.try_emplace(key, size);
+        if (!emplace_success.second)
         {
-            emplace_success->first->second += size;
+            emplace_success.first->second += size;
         }
     }
     catch (std::invalid_argument const &arg_err)
@@ -127,7 +127,3 @@ std::unordered_map<std::string, int> MemoryStatProcess::size_metrics_data(const 
     return stat_sheet;
 }
 
-void MemoryStatProcessing::update_application_statistics(std::unique_ptr<ApplicationObj> &application)
-{
-    // code now!
-}
