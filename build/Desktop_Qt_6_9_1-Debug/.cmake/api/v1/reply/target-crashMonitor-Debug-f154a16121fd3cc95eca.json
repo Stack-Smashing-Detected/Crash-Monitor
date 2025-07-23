@@ -71,13 +71,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 76,
+				"line" : 77,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 59,
+				"line" : 60,
 				"parent" : 0
 			},
 			{
@@ -288,10 +288,10 @@
 				6,
 				8,
 				10,
-				16,
-				19,
-				22,
-				25,
+				14,
+				18,
+				21,
+				24,
 				31
 			]
 		}
@@ -384,10 +384,10 @@
 				6,
 				8,
 				10,
-				16,
-				19,
-				22,
-				25,
+				14,
+				18,
+				21,
+				24,
 				31
 			]
 		},
@@ -403,9 +403,9 @@
 				12,
 				13,
 				15,
-				18,
-				21,
-				24,
+				17,
+				20,
+				23,
 				26,
 				27,
 				28,
@@ -417,16 +417,16 @@
 			"sourceIndexes" : 
 			[
 				4,
-				17,
-				20,
-				23
+				19,
+				22,
+				25
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				14
+				16
 			]
 		},
 		{
@@ -478,17 +478,6 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "headers/cpu_calculator.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 4,
-			"compileGroupIndex" : 0,
-			"path" : "utilities/cpu_calculator.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 4,
 			"path" : "headers/process_algorithms.h",
 			"sourceGroupIndex" : 1
 		},
@@ -500,13 +489,24 @@
 		},
 		{
 			"backtrace" : 4,
-			"path" : "headers/ram_calculator.h",
+			"path" : "headers/memory_stat_processing.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 4,
 			"compileGroupIndex" : 0,
-			"path" : "utilities/ram_calculator.cpp",
+			"path" : "utilities/memory_stat_processing.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "headers/application_manager.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/application_manager.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
@@ -522,6 +522,17 @@
 		{
 			"backtrace" : 4,
 			"path" : "nlohmann/json_fwd.hpp",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/application_obj.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "headers/application_obj.h",
 			"sourceGroupIndex" : 1
 		},
 		{
@@ -576,17 +587,6 @@
 			"backtrace" : 4,
 			"path" : "app_resource_viewer.ui",
 			"sourceGroupIndex" : 2
-		},
-		{
-			"backtrace" : 4,
-			"path" : "application_obj.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 4,
-			"compileGroupIndex" : 0,
-			"path" : "application_obj.cpp",
-			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,

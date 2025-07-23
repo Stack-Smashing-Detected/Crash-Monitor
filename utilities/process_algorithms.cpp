@@ -10,10 +10,10 @@
 // error handling
 #ifdef _WIN32
 #include <windows.h>
-#define SYSERROR()  GetLastError()
+#define SYSERROR() GetLastError()
 #else
 #include <errno.h>
-#define SYSERROR()  errno
+#define SYSERROR() errno
 #endif
 
 constexpr auto max_size = std::numeric_limits<std::streamsize>::max(); // a global constant that's only used in this application (thus far).
@@ -52,15 +52,17 @@ void ProcessAlgorithms::find_processes(DIR *dir)
         // filter out the user owned PIDs using std::filesystem::read_symlink()'s error handling. Any PID owned by the system i.e. root will throw an exception via "readlink()"
         // which is implemented in "read_symlink", this exception should be caught as "filesystem::error" which would stop it from being added to our lists.
 
-        try{
+        try
+        {
             std::stringstream filepathStream;
             filepathStream << "/proc/" << pid << "/exe";
             std::string exePath = filepathStream.str();
 
             processSymlinks.push_back(std::filesystem::read_symlink(exePath).string());
             foundProcesses.push_back(pid);
-
-        }catch(std::filesystem::filesystem_error fe){
+        }
+        catch (std::filesystem::filesystem_error fe)
+        {
             continue;
         }
     }
@@ -72,7 +74,6 @@ void ProcessAlgorithms::find_processes(DIR *dir)
     this->set_symlinks_list(processSymlinks);
 }
 
-
 std::unordered_map<std::string, int> ProcessAlgorithms::get_application_names(std::vector<std::string> processSymlinks)
 {
     // a list of application names and occurences of application name i.e the number of processes per application.
@@ -80,13 +81,14 @@ std::unordered_map<std::string, int> ProcessAlgorithms::get_application_names(st
 
     for (std::string &symlink : processSymlinks)
     {
-        auto const& pos = symlink.find_last_of('/');
+        auto const &pos = symlink.find_last_of('/');
         std::string appName = symlink.substr(pos + 1);
 
         int procCount = 1;
-        auto const& result = appNames.try_emplace(appName, procCount);
+        auto const &result = appNames.try_emplace(appName, procCount);
 
-        if(!result.second){
+        if (!result.second)
+        {
             result.first->second += 1;
         }
     }
@@ -94,30 +96,38 @@ std::unordered_map<std::string, int> ProcessAlgorithms::get_application_names(st
     return appNames;
 }
 
-
-void ProcessAlgorithms::open_smaps(std::vector<std::string> processIndexes){
+void ProcessAlgorithms::open_smaps(std::vector<std::string> processIndexes)
+{
 
     // attempt to open the /proc/$$/smaps file
-    for (std::string &pid : processIndexes){
+    for (std::string &pid : processIndexes)
+    {
         // get filepath to smaps file
         std::string path = std::format("/proc/{}/smaps", pid);
         // open smaps filepath
         std::ifstream smap(path);
-        if(smap.is_open()){
+        if (smap.is_open())
+        {
             parse_smap(smap, pid); /** FUNCTION CALL ALERT for more details go to line 120 **/
-        }else{
+        }
+        else
+        {
             // if this happens then it was probably a zombie process.
             continue;
         }
     }
 }
 
-void ProcessAlgorithms::open_smap(std::string pid){
+void ProcessAlgorithms::open_smap(std::string pid)
+{
     std::string path = std::format("/proc/{}/smaps", pid);
     std::ifstream smap(path);
-    if(smap.is_open()){
+    if (smap.is_open())
+    {
         parse_smap(smap, pid);
-    }else{
+    }
+    else
+    {
         std::cout << "Error opening file" << std::endl;
     }
 }
@@ -126,7 +136,8 @@ void ProcessAlgorithms::open_smap(std::string pid){
  * @brief apologies for the double nested while loop but parsing files really is "f**ed" in terms of time complexity.
  * but the bulk of the large time complexity should be spent in setup.
  */
-void ProcessAlgorithms::parse_smap(std::ifstream &smap, std::string pid){
+void ProcessAlgorithms::parse_smap(std::ifstream &smap, std::string pid)
+{
     // parse through the smap, we want to find the pss Values since that will identify the exact memory mapping of the process.
     using json = nlohmann::json;
     json process = json::array();
@@ -136,16 +147,18 @@ void ProcessAlgorithms::parse_smap(std::ifstream &smap, std::string pid){
     std::string cpp_delim = ": ";
     char *delim = new char[cpp_delim.size() + 1];
     delim[cpp_delim.length()] = '\0';
-    std::copy(cpp_delim.begin(), cpp_delim.end(), delim);    // can specify multiple delimiters for more precise tokenization.
-    char *saveptr, *token; // saveptr is required for strtok_r
+    std::copy(cpp_delim.begin(), cpp_delim.end(), delim); // can specify multiple delimiters for more precise tokenization.
+    char *saveptr, *token;                                // saveptr is required for strtok_r
     std::vector<std::string> tokens;
     json page;
 
     // read each line in proc/pid/smaps until we reach the end.
-    while(!smap.eof()){
+    while (!smap.eof())
+    {
         // lines with a digit or the letter f (specific to the vsyscall page) indicate a new memory page.
         // we can take an opportunity to build a new json object to add to our json array.
-        while(smap.peek() != EOF && !std::isdigit(smap.peek()) && smap.peek() != 'f' ){
+        while (smap.peek() != EOF && !std::isdigit(smap.peek()) && smap.peek() != 'f')
+        {
             // prepare line for tokenization
             std::string buf;
             std::getline(smap, buf);
@@ -156,9 +169,19 @@ void ProcessAlgorithms::parse_smap(std::ifstream &smap, std::string pid){
             std::copy(buf.begin(), buf.end(), buffer);
             token = strtok_r(buffer, delim, &saveptr);
 
+            // we don't need to log the VmFlags as that is unrelated to memory usage and we don't need to know the virtual memory
+            // permissions as we aren't using that memory anyway. Luckily VmFlags is the only stat that starts with a V so a peek will work here.
+            if (smap.peek() == 'V')
+            {
+                smap.ignore(max_size, '\n');
+                process.push_back(page);
+                continue;
+            }
+
             // call strtok_r until it outputs null, should only be 2 times for the most part, last 3 page entries are 1 for 2nd last and 3rd last (THPeligible and ProtectionKey)
             // and an arbitrary number of times for the last entry VmFlags (sometimes a page can have one or 7 different flags).
-            while(token != NULL){
+            while (token != NULL)
+            {
                 tokens.push_back(token);
                 token = strtok_r(nullptr, delim, &saveptr);
             }
@@ -166,30 +189,20 @@ void ProcessAlgorithms::parse_smap(std::ifstream &smap, std::string pid){
             // validate input data using the validateIncomingData helper function,
             // except with the special case for the entry "VmFlags" which is an arbitrary list of virtual memory permissions
             // since VmFlags is the last entry in a memory page we add the page to the process json_array here.
-            if(tokens[0] == "VmFlags"){
-                if(tokens.size() > 2){
-                    std::vector<std::string> flags(tokens.begin() + 1, tokens.end());
-                    page[tokens[0]] = flags;
-                    process.push_back(page);
-                }else{
-                    std::vector<std::string> flags;
-                    flags.push_back(tokens[1]);
-                    page[tokens[0]] = flags;
-                    process.push_back(page);
-                }
-            }else{
-                page[tokens[0]] = validate_incoming_data(tokens); /** FUNCION CALL ALERT check line 192 for more details **/
-            }
+            page[tokens[0]] = validate_incoming_data(tokens); /** FUNCION CALL ALERT check line 192 for more details **/
+
             // free memory allocated to buffer and clear tokens vector.
             delete[] buffer;
             tokens.clear();
         }
         // account for the first line being the descriptor which would mess up the naming convention a little bit.
-        if(!process.empty()){
+        if (!process.empty())
+        {
             page.clear();
         }
         // break if peek at EOF
-        if(smap.peek() == EOF){
+        if (smap.peek() == EOF)
+        {
             break;
         }
 
@@ -204,19 +217,25 @@ void ProcessAlgorithms::parse_smap(std::ifstream &smap, std::string pid){
 
     // finally write the array to the json file.
     std::ofstream out(std::format("../../mem_stats/{}.json", pid));
-    if(out.is_open()){
+    if (out.is_open())
+    {
         out << process.dump(4);
-    }else{
+    }
+    else
+    {
         std::cerr << "Failed to open file: " << SYSERROR() << std::endl;
     }
-
 }
 
-std::string ProcessAlgorithms::validate_incoming_data(std::vector<std::string> tokens){
+std::string ProcessAlgorithms::validate_incoming_data(std::vector<std::string> tokens)
+{
     // edge cases.
-    if(tokens[0] == "THPeligible" || tokens[0] == "ProtectionKey"){
+    if (tokens[0] == "THPeligible" || tokens[0] == "ProtectionKey")
+    {
         return tokens[1];
-    }else {
+    }
+    else
+    {
         return std::format("{}{}", tokens[1], tokens[2]);
     }
 }

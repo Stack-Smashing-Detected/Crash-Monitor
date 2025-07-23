@@ -499,33 +499,33 @@
 			null
 		],
 		[
-			"/home/victor-j-wilson/projects2/crashMonitor/application_obj.h",
-			"MU",
-			"EWIEGA46WW/moc_application_obj.cpp",
-			null
-		],
-		[
 			"/home/victor-j-wilson/projects2/crashMonitor/headers/alert_controller.h",
 			"MU",
 			"K6S233IZAZ/moc_alert_controller.cpp",
 			null
 		],
 		[
-			"/home/victor-j-wilson/projects2/crashMonitor/headers/cpu_calculator.h",
+			"/home/victor-j-wilson/projects2/crashMonitor/headers/application_manager.h",
 			"MU",
-			"K6S233IZAZ/moc_cpu_calculator.cpp",
+			"K6S233IZAZ/moc_application_manager.cpp",
+			null
+		],
+		[
+			"/home/victor-j-wilson/projects2/crashMonitor/headers/application_obj.h",
+			"MU",
+			"K6S233IZAZ/moc_application_obj.cpp",
+			null
+		],
+		[
+			"/home/victor-j-wilson/projects2/crashMonitor/headers/memory_stat_processing.h",
+			"MU",
+			"K6S233IZAZ/moc_memory_stat_processing.cpp",
 			null
 		],
 		[
 			"/home/victor-j-wilson/projects2/crashMonitor/headers/process_algorithms.h",
 			"MU",
 			"K6S233IZAZ/moc_process_algorithms.cpp",
-			null
-		],
-		[
-			"/home/victor-j-wilson/projects2/crashMonitor/headers/ram_calculator.h",
-			"MU",
-			"K6S233IZAZ/moc_ram_calculator.cpp",
 			null
 		],
 		[
@@ -624,11 +624,6 @@
 			null
 		],
 		[
-			"/home/victor-j-wilson/projects2/crashMonitor/application_obj.cpp",
-			"MU",
-			null
-		],
-		[
 			"/home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp",
 			"MU",
 			null
@@ -645,17 +640,22 @@
 			null
 		],
 		[
-			"/home/victor-j-wilson/projects2/crashMonitor/utilities/cpu_calculator.cpp",
+			"/home/victor-j-wilson/projects2/crashMonitor/src/application_manager.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/victor-j-wilson/projects2/crashMonitor/src/application_obj.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/victor-j-wilson/projects2/crashMonitor/utilities/memory_stat_processing.cpp",
 			"MU",
 			null
 		],
 		[
 			"/home/victor-j-wilson/projects2/crashMonitor/utilities/process_algorithms.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/victor-j-wilson/projects2/crashMonitor/utilities/ram_calculator.cpp",
 			"MU",
 			null
 		]

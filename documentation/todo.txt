@@ -2,21 +2,12 @@ Strategy:
 
 Instead of trying to get Pss: We just get everything else and put it into a map since the smaps file is formatted in a key-value pattern (outside of the first line of each map statistic). 
 
-A map emplace procedure usually ties in well with incrementing values, at the same time the extra data could be viewed in a "more details" page. We can make the map temporary, once the calculations are done each key is passed to the statistics updater in the application-object and the map is deleted (if structs are easier to delete than maps we'll use that instead). 
-
-Ideally when a file change in one of the smap files is detected the updater would be called which does the calculation process. 
-
-To make jobs easier we can use both threading and PID lookup.
-
-Objects store their own PIDs privately, the main application would recieve a signal from QFileSystemWatcher that an smap file had changed and then it would be sent its PID from which the main application looks up which application object it is.  
-
-Ownership Hierachy
-
-To avoid a potential circular dependency, the memory stat calculator can write to a yaml/yml file the contents of the smaps file and then the object can grab the data from that file.
-
-this would enable a more reliable way to constantly update the statistics as it will be mirroring the smaps file but in a format that is easy to parse. 
+So the ram calculator should have an unordered_map called the stat_sheet,
 
 
+
+
+851942
 
 
 
