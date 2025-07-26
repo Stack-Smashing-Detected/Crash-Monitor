@@ -220,6 +220,8 @@ CMakeFiles/crashMonitor.dir/utilities/memory_stat_processing.cpp.o: \
  /usr/include/c++/13/bits/ranges_algobase.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
  /usr/include/c++/13/pstl/execution_defs.h \
+ /home/victor-j-wilson/projects2/crashMonitor/utilities/../headers/application_obj.h \
+ /home/victor-j-wilson/projects2/crashMonitor/utilities/../headers/../headers/memory_stat_processing.h \
  /home/victor-j-wilson/projects2/crashMonitor/utilities/../nlohmann/json.hpp \
  /usr/include/c++/13/algorithm /usr/include/c++/13/bits/stl_algo.h \
  /usr/include/c++/13/bits/algorithmfwd.h \

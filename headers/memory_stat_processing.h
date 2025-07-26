@@ -54,7 +54,7 @@ public:
      * @brief takes the data obtained from evaluate_memory_stat sheet and passes it to the specified application object.
      * @param std::unique_ptr<ApplicationObj> application
      */
-    void update_application_statistics(ApplicationObj &application);
+    void update_application_statistics(ApplicationObj &application, std::unordered_map<std::string, int> stat_sheet);
 
 private:
     std::unordered_map<std::string, int> stat_sheet;

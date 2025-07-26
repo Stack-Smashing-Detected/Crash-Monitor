@@ -24,7 +24,7 @@ void ApplicationObj::update_thp_eligibility(int false_count, int true_count)
     this->thp_eligibility = std::format("{}%", thp_eligibility_value);
 }
 
-void ApplicationObj::update_mem_statistic(std::string statistic, size_t amount)
+void ApplicationObj::update_mem_statistic(std::string statistic, int amount)
 {
     // map the statistic to the statistic_map
     auto const &emplace_success = this->app_mem_statistics.try_emplace(statistic, amount);

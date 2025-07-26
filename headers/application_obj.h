@@ -39,7 +39,12 @@ public:
         return this->thp_eligibility;
     }
 
-    void update_mem_statistic(std::string statistic, size_t amount);
+    /**
+     * @brief update the memory usage statistics of this particular application
+     * @param statistic
+     * @param int amount -> the amount in kB(kilobytes) i.e. 4kB = 4096 bytes or size_t value of 4096
+     */
+    void update_mem_statistic(std::string statistic, int amount);
 
 private:
     std::string applicationName;
@@ -48,7 +53,7 @@ private:
     std::string thp_eligibility;      // the percentage of pages that are "true" for the THPeligibility metric
 
     // the statistics of an application's overall memory use footprint.
-    std::unordered_map<std::string, size_t> app_mem_statistics;
+    std::unordered_map<std::string, int> app_mem_statistics;
 };
 
 #endif // APPLICATION_OBJ_H

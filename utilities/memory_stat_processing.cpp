@@ -6,6 +6,7 @@
  **/
 
 #include "../headers/memory_stat_processing.h"
+#include "../headers/application_obj.h"
 #include "../nlohmann/json.hpp"
 #include <cstddef>
 #include <format>
@@ -127,3 +128,24 @@ std::unordered_map<std::string, int> MemoryStatProcessing::size_metrics_data(std
     return stat_sheet;
 }
 
+void MemoryStatProcessing::update_application_statistics(ApplicationObj &application, std::unordered_map<std::string, int> stat_sheet)
+{
+    // as these keys are the same for every memory page, we can use a pre-defined array which will look up our map rather than
+    // trying to traverse the map using an iterator.
+    std::string stat_identifiers[22] = {"AnonHugePages", "Anonymous", "FilePmdMapped", "KSM", "KernelPageSize",
+                                        "LazyFree", "Locked", "MMUPageSize", "Private_Clean", "Private_Dirty",
+                                        "Private_Hugetlb", "Pss", "Pss_Dirty", "Referenced", "Rss", "Shared_Clean",
+                                        "Shared_Dirty", "Shared_Hugetlb", "ShmemPmdMapped", "Size", "Swap", "SwapPss"};
+
+    // check if statsheet is empty
+    if(this->stat_sheet.empty()){
+        for(std::string statistic : stat_identifiers){
+            // find the metric and pass it to the application reference
+            auto const &data = stat_sheet.find(statistic);
+            application.update_mem_statistic(data->first, data->second);
+        }
+    }else{
+        // we'll design some hashmap comparison with some attempt at caching/memoization to make updates faster.
+    }
+
+}
