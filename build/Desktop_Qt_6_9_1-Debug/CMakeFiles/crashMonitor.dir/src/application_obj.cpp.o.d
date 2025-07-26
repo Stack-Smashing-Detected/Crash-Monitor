@@ -220,4 +220,7 @@ CMakeFiles/crashMonitor.dir/src/application_obj.cpp.o: \
  /usr/include/c++/13/bits/ranges_uninitialized.h \
  /usr/include/c++/13/bits/ranges_algobase.h \
  /usr/include/c++/13/pstl/glue_memory_defs.h \
- /usr/include/c++/13/pstl/execution_defs.h
+ /usr/include/c++/13/pstl/execution_defs.h /usr/include/c++/13/format \
+ /usr/include/c++/13/array /usr/include/c++/13/charconv \
+ /usr/include/c++/13/optional /usr/include/c++/13/span \
+ /usr/include/c++/13/variant
