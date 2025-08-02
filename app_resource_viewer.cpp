@@ -8,57 +8,26 @@
 #include <QTableWidgetItem>
 #include <QHeaderView>
 
-
 AppResourceViewer::AppResourceViewer(QWidget *parent)
-    : QDialog(parent)
-    , ui(new Ui::AppResourceViewer)
+    : QDialog(parent), ui(new Ui::AppResourceViewer)
 {
     ui->setupUi(this);
-
-    // Create a diectory pointer to pass to the process finder
-    // create an instance of the process finder object, eventually this will be used as a shared pointer.
-    std::unique_ptr<ProcessAlgorithms> processDataPtr = std::make_unique<ProcessAlgorithms>();
-    std::vector<std::string> pidList = processDataPtr->get_process_list();
-    std::vector<std::string> appList = processDataPtr->get_symlinks();
-
-
-    // set up list viewers
-    cpuTab = ui->tabWidget->widget(0);
-    ramTab = ui->tabWidget->widget(1);
-
-    cpuUsageView = new QListWidget(cpuTab);
-    ramUsageView = new QTableWidget(ramTab);
-
-    // style lists
-    QVBoxLayout *qvBoxLayoutT1 = new QVBoxLayout;
-    qvBoxLayoutT1->addWidget(cpuUsageView);
-
-    QVBoxLayout *qvBoxLayoutT2 = new QVBoxLayout;
-    qvBoxLayoutT2->addWidget(ramUsageView);
-
-    cpuTab->setLayout(qvBoxLayoutT1);
-    ramTab->setLayout(qvBoxLayoutT2);
-
-    // fill list
-    fillListViewer(pidList, cpuUsageView);
-
-    // fill table
-    std::unordered_map<std::string, int> appNames = processDataPtr->get_application_names(appList);
-    fillTableViewer(appNames, ramUsageView);
-
 }
 AppResourceViewer::~AppResourceViewer()
 {
     delete ui;
 }
 
-void AppResourceViewer::fillListViewer(std::vector<std::string> &appList, QListWidget *listWidget){
-    for (const std::string &item: appList){
+void AppResourceViewer::fillListViewer(std::vector<std::string> &appList, QListWidget *listWidget)
+{
+    for (const std::string &item : appList)
+    {
         listWidget->addItem(QString::fromStdString(item));
     }
 }
 
-void AppResourceViewer::fillTableViewer(std::unordered_map<std::string, int> &appNames, QTableWidget *tableWidget){
+void AppResourceViewer::fillTableViewer(std::unordered_map<std::string, int> &appNames, QTableWidget *tableWidget)
+{
     // here the items in the map need to be extracted and converted into QTableWidget Items
     int row = 0;
     tableWidget->insertRow(row);
@@ -68,7 +37,8 @@ void AppResourceViewer::fillTableViewer(std::unordered_map<std::string, int> &ap
     // resize the table view
     tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
 
-    for(const auto &[key, value] : appNames){
+    for (const auto &[key, value] : appNames)
+    {
         // create table widget items
 
         QTableWidgetItem *appName = new QTableWidgetItem(QString::fromStdString(key));
@@ -82,5 +52,3 @@ void AppResourceViewer::fillTableViewer(std::unordered_map<std::string, int> &ap
         tableWidget->insertRow(row);
     }
 }
-
-

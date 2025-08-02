@@ -27,8 +27,7 @@ ProcessAlgorithms::ProcessAlgorithms()
 
 void ProcessAlgorithms::find_processes(DIR *dir)
 {
-    std::vector<std::string> foundProcesses;
-    std::vector<std::string> processSymlinks;
+    std::unordered_map<std::string, std::string> process_identifier;
 
     if (!(dir = opendir("/proc")))
     {
@@ -54,12 +53,8 @@ void ProcessAlgorithms::find_processes(DIR *dir)
 
         try
         {
-            std::stringstream filepathStream;
-            filepathStream << "/proc/" << pid << "/exe";
-            std::string exePath = filepathStream.str();
-
-            processSymlinks.push_back(std::filesystem::read_symlink(exePath).string());
-            foundProcesses.push_back(pid);
+            std::string exe_path = std::format("/proc/{}/exe", pid);
+            process_identifier.emplace(pid, std::filesystem::read_symlink(exe_path).string());
         }
         catch (std::filesystem::filesystem_error fe)
         {
@@ -70,35 +65,11 @@ void ProcessAlgorithms::find_processes(DIR *dir)
         throw std::runtime_error(std::strerror(errno));
 
     // finally set the newly populated data structures so we can use them later.
-    this->set_process_list(foundProcesses);
-    this->set_symlinks_list(processSymlinks);
-}
-
-std::unordered_map<std::string, int> ProcessAlgorithms::get_application_names(std::vector<std::string> processSymlinks)
-{
-    // a list of application names and occurences of application name i.e the number of processes per application.
-    std::unordered_map<std::string, int> appNames;
-
-    for (std::string &symlink : processSymlinks)
-    {
-        auto const &pos = symlink.find_last_of('/');
-        std::string appName = symlink.substr(pos + 1);
-
-        int procCount = 1;
-        auto const &result = appNames.try_emplace(appName, procCount);
-
-        if (!result.second)
-        {
-            result.first->second += 1;
-        }
-    }
-
-    return appNames;
 }
 
 void ProcessAlgorithms::open_smaps(std::vector<std::string> processIndexes)
 {
-
+    int index = 0;
     // attempt to open the /proc/$$/smaps file
     for (std::string &pid : processIndexes)
     {
@@ -115,6 +86,7 @@ void ProcessAlgorithms::open_smaps(std::vector<std::string> processIndexes)
             // if this happens then it was probably a zombie process.
             continue;
         }
+        index++;
     }
 }
 

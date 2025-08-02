@@ -7,7 +7,6 @@
 
 #include "../headers/memory_stat_processing.h"
 #include "../headers/application_obj.h"
-#include "../nlohmann/json.hpp"
 #include <cstddef>
 #include <format>
 #include <fstream>
@@ -18,13 +17,13 @@
 
 MemoryStatProcessing::MemoryStatProcessing() {} // nothing needs to be setup since data is accessed from file.
 
-void MemoryStatProcessing::evaluate_memory_stat_sheet(std::filesystem::path filepath)
+std::unordered_map<std::string, int> MemoryStatProcessing::evaluate_memory_stat_sheet(std::string filepath)
 {
 
     using json = nlohmann::json;
-        // read through the json file
+    // read through the json file
     json j_array;
-    std::ifstream json_file(filepath.string());
+    std::ifstream json_file(filepath);
 
     json_file >> j_array;
     json_file.close();
@@ -49,25 +48,54 @@ void MemoryStatProcessing::evaluate_memory_stat_sheet(std::filesystem::path file
     for (auto &item : j_array.items())
     {
         json page = item.value();
-        for (auto page_key = page.begin(); page_key != page.end(); page_key++)
+        stat_sheet = size_metrics_data(page, stat_sheet);
+    }
+    return stat_sheet;
+}
+
+std::unordered_map<std::string, int> MemoryStatProcessing::size_metrics_data(nlohmann::json &page, std::unordered_map<std::string, int> &stat_sheet)
+{
+    for (auto page_key = page.begin(); page_key != page.end(); page_key++)
+    {
+        // handle "ProtectionKey case"
+        if (page_key.key() == "ProtectionKey")
         {
-            // handle "ProtectionKey case"
-            if (page_key.key() == "ProtectionKey")
-            {
 
-                stat_sheet = protected_keys_data(page_key.value(), stat_sheet);
-                continue;
-            }
-            // handle "THPeligible" case
-            if (page_key.key() == "THPeligible")
-            {
-                stat_sheet = thp_eligibility_data(page_key.value(), stat_sheet);
-                continue;
-            }
+            stat_sheet = protected_keys_data(page_key.value().dump(), stat_sheet);
+            continue;
+        }
+        // handle "THPeligible" case
+        if (page_key.key() == "THPeligible")
+        {
+            stat_sheet = thp_eligibility_data(page_key.value().dump(), stat_sheet);
+            continue;
+        }
 
-            stat_sheet = size_metrics_data(page_key.key(), page_key.value(), stat_sheet);
+        // handle all other data, all though all data should be convertible, always better to be safe than sorry.
+        try
+        {
+            std::size_t pos{};
+            // address for handling string to int conversion
+            const int size{std::stoi(page_key.value().dump(), &pos)}; // conversion
+
+            // currently size is an integer, we'll convert it to size_t when we pass it to the object itself
+            // as it is easier to convert ints into size_t types.
+            auto const &emplace_success = stat_sheet.try_emplace(page_key.key(), size);
+            if (!emplace_success.second)
+            {
+                emplace_success.first->second += size;
+            }
+        }
+        catch (std::invalid_argument const &arg_err)
+        {
+            std::cout << "std::invalid_argument::what(): " << arg_err.what() << '\n';
+        }
+        catch (std::out_of_range const &range_err)
+        {
+            std::cout << "std::out_of_range::(): " << range_err.what() << '\n';
         }
     }
+    return stat_sheet;
 }
 
 std::unordered_map<std::string, int> MemoryStatProcessing::protected_keys_data(std::string key_value, std::unordered_map<std::string, int> &stat_sheet)
@@ -100,35 +128,7 @@ std::unordered_map<std::string, int> MemoryStatProcessing::thp_eligibility_data(
     return stat_sheet;
 }
 
-std::unordered_map<std::string, int> MemoryStatProcessing::size_metrics_data(std::string key, std::string key_value,  std::unordered_map<std::string, int> &stat_sheet)
-{
-    // handle all other data, all though all data should be convertible, always better to be safe than sorry.
-    try
-    {
-        std::size_t pos {};                                   // address for handling string to int conversion
-        const int size { std::stoi(key_value, &pos) }; // conversion
-
-        // currently size is an integer, we'll convert it to size_t when we pass it to the object itself
-        // as it is easier to convert ints into size_t types.
-        auto const &emplace_success = stat_sheet.try_emplace(key, size);
-        if (!emplace_success.second)
-        {
-            emplace_success.first->second += size;
-        }
-    }
-    catch (std::invalid_argument const &arg_err)
-    {
-        std::cout << "std::invalid_argument::what(): " << arg_err.what() << '\n';
-    }
-    catch (std::out_of_range const &range_err)
-    {
-        std::cout << "std::out_of_range::(): " << range_err.what() << '\n';
-    }
-
-    return stat_sheet;
-}
-
-void MemoryStatProcessing::update_application_statistics(ApplicationObj &application, std::unordered_map<std::string, int> stat_sheet)
+void MemoryStatProcessing::update_application_statistics(std::unique_ptr<ApplicationObj> &app_ref, std::unordered_map<std::string, int> stat_sheet)
 {
     // as these keys are the same for every memory page, we can use a pre-defined array which will look up our map rather than
     // trying to traverse the map using an iterator.
@@ -138,14 +138,36 @@ void MemoryStatProcessing::update_application_statistics(ApplicationObj &applica
                                         "Shared_Dirty", "Shared_Hugetlb", "ShmemPmdMapped", "Size", "Swap", "SwapPss"};
 
     // check if statsheet is empty
-    if(this->stat_sheet.empty()){
-        for(std::string statistic : stat_identifiers){
-            // find the metric and pass it to the application reference
-            auto const &data = stat_sheet.find(statistic);
-            application.update_mem_statistic(data->first, data->second);
-        }
-    }else{
-        // we'll design some hashmap comparison with some attempt at caching/memoization to make updates faster.
+    if (this->stat_sheet.empty())
+    {
+        app_ref->update_mem_statistics(stat_sheet);
+        return;
     }
 
+    std::unordered_map<std::string, int> changed_stats;
+    for (std::string statistic : stat_identifiers)
+    {
+        // get iterator to each statistic key and check if there is an incoming change
+        auto const &incoming = stat_sheet.find(statistic);
+        auto const &current = this->stat_sheet.find(statistic);
+
+        // if no change in value then continue to next statistic.
+        if (incoming->second == current->second)
+            continue;
+        // add it to the changed_stats map if different.
+        changed_stats.emplace(statistic, incoming->second);
+    }
+
+    // update our object's memory statistics
+    app_ref->update_mem_statistics(changed_stats);
+
+    // update the application's protection level, required data is under keys Protected and Unprotected.
+    const auto &protected_key = stat_sheet.find("Protected");
+    const auto &unprotected_key = stat_sheet.find("Unprotected");
+    app_ref->update_protection_level(protected_key->second, unprotected_key->second);
+
+    // update the application's THP Eligibility level, required data is under keys "False" and "True"
+    const auto &thp_eligibility_false = stat_sheet.find("False");
+    const auto &thp_eligibility_true = stat_sheet.find("True");
+    app_ref->update_thp_eligibility(thp_eligibility_false->second, thp_eligibility_true->second);
 }
