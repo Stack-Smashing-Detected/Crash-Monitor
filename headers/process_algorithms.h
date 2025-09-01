@@ -21,14 +21,14 @@ class ProcessAlgorithms
 public:
     ProcessAlgorithms();
 
-    void set_pid_symlink_data(std::unordered_map<std::string, std::string> pid_symlink_data)
+    void set_application_identification_data(std::unordered_map<std::string, std::string> applications)
     {
-        this->pid_symlink_data = pid_symlink_data;
+        this->applications = applications;
     }
 
-    std::unordered_map<std::string, std::string> get_pid_symlink_data()
+    std::unordered_map<std::string, std::string> get_application_identification_data()
     {
-        return this->pid_symlink_data;
+        return this->applications;
     }
 
     /**
@@ -38,6 +38,11 @@ public:
      * @return: std::vector<std::string>
      */
     void find_processes(DIR *dir);
+
+    /**
+     * Get the name of an application based on its process.
+     */
+    std::string find_process_name(std::string pid);
 
     /**
      * using the symlinks we obtained from the findProcesses function we can find our application names
@@ -81,6 +86,6 @@ public:
     std::string validate_incoming_data(std::vector<std::string> tokens);
 
 private:
-    std::unordered_map<std::string, std::string> pid_symlink_data; // a map of pids and their filepaths to the processes' executables
+    std::unordered_map<std::string, std::string> applications; // a map of pids and their filepaths to the processes' executables
 };
 #endif // PROCESS_ALGORITHMS_H

@@ -1,10 +1,10 @@
 Strategy:
 
-Instead of trying to get Pss: We just get everything else and put it into a map since the smaps file is formatted in a key-value pattern (outside of the first line of each map statistic). 
-
-So the ram calculator should have an unordered_map called the stat_sheet,
-
-
+The create method should create the object by:
+1. Calculating the memory statistics of the incoming process.
+2. Checking for duplicate names
+3. Calling the update statistics method if the name exists. 
+4. 
 
 
 851942

@@ -11,6 +11,8 @@ public:
     // an enum class for all the size_t metric
     ApplicationObj(std::string pid, std::string name);
 
+    // s
+
     std::string get_application_name()
     {
         return this->application_name;

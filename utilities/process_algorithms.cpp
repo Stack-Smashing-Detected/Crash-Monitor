@@ -27,7 +27,7 @@ ProcessAlgorithms::ProcessAlgorithms()
 
 void ProcessAlgorithms::find_processes(DIR *dir)
 {
-    std::unordered_map<std::string, std::string> process_identifier;
+    std::unordered_map<std::string, std::string> applications;
 
     if (!(dir = opendir("/proc")))
     {
@@ -54,7 +54,11 @@ void ProcessAlgorithms::find_processes(DIR *dir)
         try
         {
             std::string exe_path = std::format("/proc/{}/exe", pid);
-            process_identifier.emplace(pid, std::filesystem::read_symlink(exe_path).string());
+            std::string symlink = std::filesystem::read_symlink(exe_path).string();
+
+            size_t pos = symlink.find_last_of('/');
+            std::string name = symlink.substr(pos + 1);
+            applications.emplace(pid, name);
         }
         catch (std::filesystem::filesystem_error fe)
         {
@@ -65,6 +69,23 @@ void ProcessAlgorithms::find_processes(DIR *dir)
         throw std::runtime_error(std::strerror(errno));
 
     // finally set the newly populated data structures so we can use them later.
+    set_application_identification_data(applications);
+}
+
+std::string ProcessAlgorithms::find_process_name(std::string pid)
+{
+    try
+    {
+        std::string exe_path = std::format("/proc/{}/exe", pid);
+        std::string symlink = std::filesystem::read_symlink(exe_path).string();
+        size_t pos = symlink.find_last_of('/');
+        std::string name = symlink.substr(pos + 1);
+        return name;
+    }
+    catch (std::filesystem::filesystem_error fe)
+    {
+        return fe.code().message();
+    }
 }
 
 void ProcessAlgorithms::open_smaps(std::vector<std::string> processIndexes)

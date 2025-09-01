@@ -1,19 +1,19 @@
 #include "application_obj.h"
-#include "process_algorithms.h"
 #include "../nlohmann/json.hpp"
 #include <memory>
 #include <vector>
+
+/**
+ * Forward Delcarations
+ */
+class ApplicationObj;
+class MemoryStatProcessing;
 
 /**
  * @brief A class for managing a list of application processes using a RESTful API design style (minus API Routes).
  * Create, update and delete are all automated which is another key difference with typical APIs as applications are
  * dynamic in nature.
  */
-
-// forward declaration of ApplicationObject so that we can strongly define the type of object contained within the managing list.
-class ApplicationObj;
-// forward declaration of MemoryStatProcessing class that way the application_manager and the memory stat processor can work independently.
-class MemoryStatProcessing;
 
 class ApplicationManager
 {
@@ -32,16 +32,17 @@ public:
      * @param name
      * @return Template class (will be a unique pointer to application object).
      */
-    nlohmann::json read(std::string name);
+    nlohmann::json read(int index);
 
     /**
-     * @brief creates an application instance from a supplied process identifier.
-     * @param pid
+     * @brief creates an application instance if an application initialization signal is recieved.
+     * @param pid, name, stat_processor
      */
-    void create(std::string pid);
+    nlohmann::json create(std::string pid, std::string name, MemoryStatProcessing &stat_processor);
 
     /**
-     * @brief create the processes discovered when the app starts
+     * @brief creates application objects from data generated during application setup.
+     * @param applications, stat_processor
      */
     void initial_create(std::unordered_map<std::string, std::string> applications, MemoryStatProcessing &stat_processor);
 
@@ -49,7 +50,7 @@ public:
      * @brief updates a specific application, again the application is found by name as we don't want to expose its process identifier.
      * @param app_name
      */
-    void update(std::string app_name);
+    nlohmann::json update(std::string app_name);
 
     /**
      * @brief destroys the current resource by name, again we don't want to expose the PID of an application for security reasons.
@@ -57,7 +58,7 @@ public:
      * @param name
      * @return
      */
-    void destroy(std::string name);
+    nlohmann::json destroy(std::string name);
 
 private:
     // this will become std::unique_ptr<AppliationList> later
