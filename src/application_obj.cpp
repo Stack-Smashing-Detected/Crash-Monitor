@@ -1,27 +1,14 @@
 #include "../headers/application_obj.h"
 #include <format>
 
-ApplicationObj::ApplicationObj(std::string pid, std::string name)
+ApplicationObj::ApplicationObj(std::string name)
 {
-    // initialize the member variables
-    this->application_pid = pid;
     this->application_name = name;
-    this->protection_level = 0.0;
-    this->thp_eligibility = 0.0;
 }
 
-void ApplicationObj::update_protection_level(int protected_count, int unprotected_count)
+void ApplicationObj::register_process(std::unique_ptr<ProcessObj> discovered_process)
 {
-    int page_count = protected_count + unprotected_count;
-    double protection_value = (static_cast<double>(page_count) / protected_count) * 100;
-    this->protection_level = std::format("{}%", protection_value);
-}
-
-void ApplicationObj::update_thp_eligibility(int false_count, int true_count)
-{
-    int page_count = false_count + true_count;
-    double thp_eligibility_value = (static_cast<double>(page_count) / true_count) * 100;
-    this->thp_eligibility = std::format("{}%", thp_eligibility_value);
+    this->owned_processes.push_back(std::move(discovered_process));
 }
 
 int ApplicationObj::get_mem_statistic(std::string statistic)
@@ -33,16 +20,16 @@ int ApplicationObj::get_mem_statistic(std::string statistic)
     return target_stat->second;
 }
 
-void ApplicationObj::update_mem_statistics(std::unordered_map<std::string, int> incoming_mem_data)
+void ApplicationObj::update_mem_statistics(std::unordered_map<std::string, double> stat_changes)
 {
     // map the statistic to the statistic_map
-    for (auto const &it : incoming_mem_data)
+    for (auto const &it : stat_changes)
     {
         auto const &insert_success = this->app_mem_statistics.try_emplace(it.first, it.second);
         // if the item exists, update the value of that item with the new item value.
         if (!insert_success.second)
         {
-            insert_success.first->second = it.second;
+            insert_success.first->second += it.second;
         }
     }
 }

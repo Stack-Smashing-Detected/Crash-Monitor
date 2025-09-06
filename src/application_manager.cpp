@@ -22,7 +22,7 @@ nlohmann::json ApplicationManager::index()
     {
         json app_json; // initialize single json object represting app data we want to send
 
-        // construct json object
+        // construct json objauto const& emplace_success = application_list.try_emplace()ect
         app_json["Name"] = app->get_application_name();
         app_json["RAM"] = app->get_mem_statistic("Pss");
         app_json["Swap"] = app->get_mem_statistic("SwapPss");
@@ -65,18 +65,16 @@ nlohmann::json ApplicationManager::read(int index)
         data["Swap Rss"] = app->get_mem_statistic("Swap");
         data["Swap Pss"] = app->get_mem_statistic("SwapPss");
         data["Locked"] = app->get_mem_statistic("Locked");
-        data["Protection Level"] = app->get_current_protection_level();
-        data["THP Eligibility"] = app->get_current_thp_eligibility_level();
 
         response["message"] = "Application data successfully retrieved";
-        response["status"] = "SUCCESS";
+        response["status"] = "READ SUCCESS";
         response["data"] = data;
         return response;
     }
     else
     {
         response["message"] = "Unable to find application with provided index";
-        response["status"] = "FAILURE";
+        response["status"] = "READ FAILURE";
         response["data"] = {};
 
         return response;
@@ -103,14 +101,69 @@ nlohmann::json ApplicationManager::create(std::string pid, std::string name, Mem
     return response;
 }
 
-void ApplicationManager::initial_create(std::unordered_map<std::string, std::string> applications, MemoryStatProcessing &stat_processor)
+std::optional<size_t> ApplicationManager::check_if_app_registered(std::string name)
 {
-    for (auto const &it : applications)
+    auto it = std::find_if(application_list.begin(), application_list.end(),
+                           [&](const std::unique_ptr<ApplicationObj> &app)
+                           {
+                               return app->match_search(name);
+                           });
+    if (it != application_list.end())
     {
-        std::unique_ptr<ApplicationObj> app = std::make_unique<ApplicationObj>(it.first, it.second);
+        return std::distance(application_list.begin(), it);
+    }
+    return std::nullopt;
+}
+
+void ApplicationManager::initial_create(std::unordered_map<std::string, std::string> processes, MemoryStatProcessing &stat_processor)
+{
+    for (auto const &it : processes)
+    {
         std::string filepath = std::format("../../mem_stats/{}.json", it.first);
         std::unordered_map<std::string, int> stat_sheet = stat_processor.evaluate_memory_stat_sheet(filepath);
-        stat_processor.update_application_statistics(app, stat_sheet);
-        this->application_list.push_back(app);
+        std::unique_ptr<ProcessObj> process = std::make_unique<ProcessObj>(it.first, it.second, stat_sheet);
+
+        if (auto index = check_if_app_registered(it.second))
+        {
+            auto &app = this->application_list[*index];
+            app->register_process(std::move(process));
+            continue;
+        }
+
+        std::unique_ptr<ApplicationObj> app = std::make_unique<ApplicationObj>(it.second);
+        this->application_list.push_back(std::move(app));
     }
+}
+
+nlohmann::json ApplicationManager::update_app_obj(std::string name, std::unordered_map<std::string, double> incoming_stats)
+{
+    using json = nlohmann::json;
+    json response;
+
+    if (auto index = check_if_app_registered(name))
+    {
+        json data;
+        auto &app = this->application_list[*index];
+        app->update_mem_statistics(incoming_stats);
+        response["message"] = "Successfully Updated Data";
+        response["status"] = "UPDATE SUCCESS";
+
+        for (auto const &it : incoming_stats)
+        {
+            data[it.first] = app->get_mem_statistic(it.first);
+        }
+        response["updated data"] = data;
+        return response;
+    }
+    else
+    {
+        response["message"] = "Could not find application with that name";
+        response["status"] = "UPDATE FAILURE";
+        response["data"] = {};
+    }
+}
+
+nlohmann::json ApplicationManager::delete_app_obj(std::string name)
+{
+    // code
 }

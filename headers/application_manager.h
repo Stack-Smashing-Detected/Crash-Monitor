@@ -1,4 +1,5 @@
 #include "application_obj.h"
+#include "process_obj.h"
 #include "../nlohmann/json.hpp"
 #include <memory>
 #include <vector>
@@ -35,6 +36,14 @@ public:
     nlohmann::json read(int index);
 
     /**
+     * @brief check if a name is already registered in the application list if a matching name is found return the index
+     * so we can modify the Application Object at that index without
+     * @param name -> std::string
+     * @return int
+     */
+    std::optional<size_t> check_if_app_registered(std::string name);
+
+    /**
      * @brief creates an application instance if an application initialization signal is recieved.
      * @param pid, name, stat_processor
      */
@@ -44,13 +53,13 @@ public:
      * @brief creates application objects from data generated during application setup.
      * @param applications, stat_processor
      */
-    void initial_create(std::unordered_map<std::string, std::string> applications, MemoryStatProcessing &stat_processor);
+    void initial_create(std::unordered_map<std::string, std::string> processes, MemoryStatProcessing &stat_processor);
 
     /**
      * @brief updates a specific application, again the application is found by name as we don't want to expose its process identifier.
      * @param app_name
      */
-    nlohmann::json update(std::string app_name);
+    nlohmann::json update_app_obj(std::string name, std::unordered_map<std::string, double> incoming_stats);
 
     /**
      * @brief destroys the current resource by name, again we don't want to expose the PID of an application for security reasons.
@@ -58,7 +67,7 @@ public:
      * @param name
      * @return
      */
-    nlohmann::json destroy(std::string name);
+    nlohmann::json delete_app_obj(std::string name);
 
 private:
     // this will become std::unique_ptr<AppliationList> later

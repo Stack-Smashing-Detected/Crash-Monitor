@@ -3,13 +3,14 @@
 
 // unordered_map is already included in memory_stat_processing.h
 #include "../headers/memory_stat_processing.h"
+#include "../headers/process_obj.h"
 #include <string>
 
 class ApplicationObj
 {
 public:
     // an enum class for all the size_t metric
-    ApplicationObj(std::string pid, std::string name);
+    ApplicationObj(std::string name);
 
     // s
 
@@ -18,17 +19,20 @@ public:
         return this->application_name;
     }
 
-    void update_protection_level(int protected_count, int unprotected_count);
-    std::string get_current_protection_level()
+    bool match_search(std::string name)
     {
-        return this->protection_level;
+        if (name == this->application_name)
+            return true;
+
+        return false;
     }
 
-    void update_thp_eligibility(int false_count, int true_count);
-    std::string get_current_thp_eligibility_level()
-    {
-        return this->thp_eligibility;
-    }
+    /**
+     * @brief registers a process with this application, the process object itself is created in the App Manager
+     * and then its ownership is changed to this application object through "move semantics"
+     * @param pid -> the pid of an discovered process.
+     */
+    void register_process(std::unique_ptr<ProcessObj> discovered_process);
 
     /**
      * @brief validates input and obtains get a specific statistic from the object through string matching if no match it will pass a value of -1
@@ -39,17 +43,15 @@ public:
 
     /**
      * @brief update the memory usage statistics of this particular application
+     * (either whole new process or changes in existing process memory usage);
      * @param statistic
-     * @param int amount -> the amount in kB(kilobytes) i.e. 4kB = 4096 bytes or size_t value of 4096
+     * @param amount -> the amount in kB(kilobytes) i.e. 4kB = 4096 bytes or size_t value of 4096
      */
-    void update_mem_statistics(std::unordered_map<std::string, int> incoming_mem_data);
+    void update_mem_statistics(std::unordered_map<std::string, double> stat_changes);
 
 private:
-    std::string application_pid;
+    std::vector<std::unique_ptr<ProcessObj>> owned_processes;
     std::string application_name;
-    std::string protection_level; // the percentage of pages with a non-zero protection key.
-    std::string thp_eligibility;  // the percentage of pages that are "true" for the THPeligibility metric
-
     // the statistics of an application's overall memory use footprint.
     std::unordered_map<std::string, int> app_mem_statistics;
 };

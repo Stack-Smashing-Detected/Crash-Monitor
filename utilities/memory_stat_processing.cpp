@@ -160,14 +160,4 @@ void MemoryStatProcessing::update_application_statistics(std::unique_ptr<Applica
 
     // update our object's memory statistics
     app_ref->update_mem_statistics(changed_stats);
-
-    // update the application's protection level, required data is under keys Protected and Unprotected.
-    const auto &protected_key = stat_sheet.find("Protected");
-    const auto &unprotected_key = stat_sheet.find("Unprotected");
-    app_ref->update_protection_level(protected_key->second, unprotected_key->second);
-
-    // update the application's THP Eligibility level, required data is under keys "False" and "True"
-    const auto &thp_eligibility_false = stat_sheet.find("False");
-    const auto &thp_eligibility_true = stat_sheet.find("True");
-    app_ref->update_thp_eligibility(thp_eligibility_false->second, thp_eligibility_true->second);
 }
