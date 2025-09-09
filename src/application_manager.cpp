@@ -157,6 +157,46 @@ nlohmann::json ApplicationManager::delete_app_obj(std::string name)
 
     response["message"] = "Terminated Application was successfully removed from list";
     response["status"] = "DELETE SUCESS";
-    response["removed_application"] = name;
+    response["application"] = name;
+    return response;
+}
+
+nlohmann::json ApplicationManager::delete_process_obj(std::string name, std::string pid)
+{
+    using json = nlohmann::json;
+    json response;
+
+    if (auto index = check_if_app_registered(name))
+    {
+        auto &app = this->application_list[*index];
+        std::vector<std::unique_ptr<ProcessObj>> owned_processes_ref = app->get_owned_processes();
+
+        auto it = owned_processes_ref.erase(
+            std::remove_if(owned_processes_ref.begin(), owned_processes_ref.end(),
+                           [&](const std::unique_ptr<ProcessObj> &process)
+                           {
+                               return process->process_id_match(pid);
+                           }));
+
+        if (it == owned_processes_ref.end())
+        {
+            response["message"] == "Unable to find process owned by the application";
+            response["status"] == "PROCESS DELETE FAILURE";
+            response["application"] == name;
+            response["process id"] == pid;
+            return response;
+        }
+
+        response["message"] == "Successfully deleted terminated process from application";
+        response["status"] == "PROCESS DELETE SUCESS";
+        response["application"] == name;
+        response["process id"] == pid;
+        return response;
+    }
+
+    response["message"] == "Unable to find application with the provided name";
+    response["status"] == "APPLICATION NOT FOUND";
+    response["application"] == name;
+    response["process id"] == pid;
     return response;
 }

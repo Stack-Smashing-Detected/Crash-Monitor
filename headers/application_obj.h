@@ -19,6 +19,9 @@ public:
         return this->application_name;
     }
 
+    /**
+     * @brief Checks if the incoming name matches the name of the application instance.
+     */
     bool match_search(std::string name)
     {
         if (name == this->application_name)
@@ -36,9 +39,21 @@ public:
 
     /**
      * @brief returns a reference to the application object instance's memory statsheet.
-     * @param statistic
+     * @return std::unordered_map<std::string, double>&
      */
-    std::unordered_map<std::string, double> get_app_statsheet(std::string statistic);
+    std::unordered_map<std::string, double> &get_app_statsheet()
+    {
+        return this->app_mem_statistics;
+    }
+
+    /**
+     * @brief returns a reference to the owned processes container
+     * @return std::vector<std::unique_ptr<ProcessObj>>&
+     */
+    std::vector<std::unique_ptr<ProcessObj>> &get_owned_processes()
+    {
+        return this->owned_processes;
+    }
 
     /**
      * @brief get a specific stat's value from the stat sheet.
@@ -59,7 +74,7 @@ private:
     std::vector<std::unique_ptr<ProcessObj>> owned_processes;
     std::string application_name;
     // the statistics of an application's overall memory use footprint.
-    std::unordered_map<std::string, int> app_mem_statistics;
+    std::unordered_map<std::string, double> app_mem_statistics;
 };
 
 #endif // APPLICATION_OBJ_H

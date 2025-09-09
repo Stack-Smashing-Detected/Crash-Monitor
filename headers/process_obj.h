@@ -13,6 +13,19 @@ public:
     ProcessObj(std::string pid, std::string name, std::unordered_map<std::string, double> incoming);
 
     /**
+     * @brief checks an incoming process id and checks if it matches the instance's process id.
+     * @param pid -> std::string
+     * @return bool
+     */
+    bool process_id_match(std::string pid)
+    {
+        if (pid == this->pid)
+            return true;
+
+        return false;
+    }
+
+    /**
      * @brief Checks the difference between the current sheet and the incoming sheet and collects the changes in values
      * in a new map to be passed to the partial updater service in the "application manager" object.
      *
