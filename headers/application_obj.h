@@ -35,11 +35,17 @@ public:
     void register_process(std::unique_ptr<ProcessObj> discovered_process);
 
     /**
-     * @brief validates input and obtains get a specific statistic from the object through string matching if no match it will pass a value of -1
-     * to the application manager which will output an informative error to the user. For more information refer to "application_manager.h & application_manager.cpp"
+     * @brief returns a reference to the application object instance's memory statsheet.
      * @param statistic
      */
-    int get_mem_statistic(std::string statistic);
+    std::unordered_map<std::string, double> get_app_statsheet(std::string statistic);
+
+    /**
+     * @brief get a specific stat's value from the stat sheet.
+     * @param statistic -> std::string
+     * @return double
+     */
+    double get_specific_stat(std::string statistic);
 
     /**
      * @brief update the memory usage statistics of this particular application

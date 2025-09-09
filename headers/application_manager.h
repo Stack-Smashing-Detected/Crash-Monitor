@@ -22,6 +22,14 @@ public:
     ApplicationManager() {}
 
     /**
+     * @brief check if a name is already registered in the application list if a matching name is found return the index
+     * so we can modify the Application Object at that index without
+     * @param name -> std::string
+     * @return int
+     */
+    std::optional<size_t> check_if_app_registered(std::string name);
+
+    /**
      * @brief index, passes all important data relating to the application to the view
      * @return std::vector<int>
      */
@@ -30,18 +38,10 @@ public:
     /**
      * @brief shows a specific application's data with even more details than the index, takes an application name rather than a PID
      * so that we don't expose the application's pid.
-     * @param name
+     * @param name -> std::string
      * @return Template class (will be a unique pointer to application object).
      */
-    nlohmann::json read(int index);
-
-    /**
-     * @brief check if a name is already registered in the application list if a matching name is found return the index
-     * so we can modify the Application Object at that index without
-     * @param name -> std::string
-     * @return int
-     */
-    std::optional<size_t> check_if_app_registered(std::string name);
+    nlohmann::json read(std::string name);
 
     /**
      * @brief creates an application instance if an application initialization signal is recieved.

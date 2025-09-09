@@ -11,7 +11,7 @@ void ApplicationObj::register_process(std::unique_ptr<ProcessObj> discovered_pro
     this->owned_processes.push_back(std::move(discovered_process));
 }
 
-int ApplicationObj::get_mem_statistic(std::string statistic)
+double ApplicationObj::get_specific_stat(std::string statistic)
 {
     auto const &target_stat = this->app_mem_statistics.find(statistic);
     if (target_stat == this->app_mem_statistics.end())

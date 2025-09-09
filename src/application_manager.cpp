@@ -7,6 +7,20 @@
 #include "../headers/memory_stat_processing.h"
 #include "../headers/process_algorithms.h"
 
+std::optional<size_t> ApplicationManager::check_if_app_registered(std::string name)
+{
+    auto it = std::find_if(this->application_list.begin(), this->application_list.end(),
+                           [&](const std::unique_ptr<ApplicationObj> &app)
+                           {
+                               return app->match_search(name);
+                           });
+    if (it != this->application_list.end())
+    {
+        return std::distance(this->application_list.begin(), it);
+    }
+    return std::nullopt;
+}
+
 /** this just needs to return the proportional set size in both RAM and in swap memory
  * as well as the name of the application those are the most important metrics.
  * In the future for improved user experience it will also pass the logo.
@@ -24,8 +38,8 @@ nlohmann::json ApplicationManager::index()
 
         // construct json objauto const& emplace_success = application_list.try_emplace()ect
         app_json["Name"] = app->get_application_name();
-        app_json["RAM"] = app->get_mem_statistic("Pss");
-        app_json["Swap"] = app->get_mem_statistic("SwapPss");
+        app_json["RAM"] = app->get_specific_stat("Pss");
+        app_json["Swap"] = app->get_specific_stat("SwapPss");
 
         // add app_json to "full_data" json_array
         full_data.push_back(app_json);
@@ -33,43 +47,15 @@ nlohmann::json ApplicationManager::index()
     return full_data;
 }
 
-nlohmann::json ApplicationManager::read(int index)
+nlohmann::json ApplicationManager::read(std::string name)
 {
     // how do you look up this information.
     using json = nlohmann::json;
     json response;
-    if (0 <= index < application_list.size())
+    if (auto index = check_if_app_registered(name))
     {
         json data;
-        auto const &app = this->application_list[index];
-        data["Name"] = app->get_application_name();
-        data["Size"] = app->get_mem_statistic("Size");
-        data["Kernel Page Size"] = app->get_mem_statistic("KernelPageSize");
-        data["MMU Page Size"] = app->get_mem_statistic("MMUPageSize");
-        data["Rss"] = app->get_mem_statistic("Rss");
-        data["Pss"] = app->get_mem_statistic("Pss");
-        data["Pss Dirty"] = app->get_mem_statistic("Pss_Dirty");
-        data["Shared Clean"] = app->get_mem_statistic("Shared_Clean");
-        data["Shared Modified"] = app->get_mem_statistic("Shared_Dirty");
-        data["Private Clean"] = app->get_mem_statistic("Private_Clean");
-        data["Private Modified"] = app->get_mem_statistic("Private_Dirty");
-        data["Referenced Memory"] = app->get_mem_statistic("Referenced");
-        data["Anonymous Memory"] = app->get_mem_statistic("Anonymous");
-        data["KSM"] = app->get_mem_statistic("KSM");
-        data["Lazy Free"] = app->get_mem_statistic("LazyFree");
-        data["Anonymous Huge Pages"] = app->get_mem_statistic("AnonHugePages");
-        data["Shmem Pmd Mapped"] = app->get_mem_statistic("ShmemPmdMapped");
-        data["File Pmd Mapped"] = app->get_mem_statistic("FilePmdMapped");
-        data["Shared Huge TLB"] = app->get_mem_statistic("Shared_Hugetlb");
-        data["Private Huge TLB"] = app->get_mem_statistic("Private_Hugetlb");
-        data["Swap Rss"] = app->get_mem_statistic("Swap");
-        data["Swap Pss"] = app->get_mem_statistic("SwapPss");
-        data["Locked"] = app->get_mem_statistic("Locked");
-
-        response["message"] = "Application data successfully retrieved";
-        response["status"] = "READ SUCCESS";
-        response["data"] = data;
-        return response;
+        auto &app = this->application_list[*index];
     }
     else
     {
@@ -99,20 +85,6 @@ nlohmann::json ApplicationManager::create(std::string pid, std::string name, Mem
     data["name"] = name;
     response["data"] = data;
     return response;
-}
-
-std::optional<size_t> ApplicationManager::check_if_app_registered(std::string name)
-{
-    auto it = std::find_if(application_list.begin(), application_list.end(),
-                           [&](const std::unique_ptr<ApplicationObj> &app)
-                           {
-                               return app->match_search(name);
-                           });
-    if (it != application_list.end())
-    {
-        return std::distance(application_list.begin(), it);
-    }
-    return std::nullopt;
 }
 
 void ApplicationManager::initial_create(std::unordered_map<std::string, std::string> processes, MemoryStatProcessing &stat_processor)
@@ -150,7 +122,7 @@ nlohmann::json ApplicationManager::update_app_obj(std::string name, std::unorder
 
         for (auto const &it : incoming_stats)
         {
-            data[it.first] = app->get_mem_statistic(it.first);
+            data[it.first] = app->get_specific_stat(it.first);
         }
         response["updated data"] = data;
         return response;
@@ -165,5 +137,26 @@ nlohmann::json ApplicationManager::update_app_obj(std::string name, std::unorder
 
 nlohmann::json ApplicationManager::delete_app_obj(std::string name)
 {
-    // code
+    using json = nlohmann::json;
+    json response;
+
+    auto it = this->application_list.erase(
+        std::remove_if(this->application_list.begin(), this->application_list.end(),
+                       [&](const std::unique_ptr<ApplicationObj> &app)
+                       {
+                           return app->match_search(name);
+                       }));
+
+    if (it == this->application_list.end())
+    {
+        response["message"] = "Unable to find application with that name in the tracking list";
+        response["status"] = "DELETE FAILURE";
+        response["data"] = {};
+        return response;
+    }
+
+    response["message"] = "Terminated Application was successfully removed from list";
+    response["status"] = "DELETE SUCESS";
+    response["removed_application"] = name;
+    return response;
 }
