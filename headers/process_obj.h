@@ -10,7 +10,7 @@ public:
     /**
      * @brief Constructs "process object" from its PID, name and memory statsheet.
      */
-    ProcessObj(std::string pid, std::string name, std::unordered_map<std::string, double> incoming);
+    ProcessObj(std::string pid, std::string name, std::unordered_map<std::string, double> initial);
 
     /**
      * @brief checks an incoming process id and checks if it matches the instance's process id.

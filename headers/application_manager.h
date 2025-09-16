@@ -47,7 +47,7 @@ public:
      * @brief creates an application instance if an application initialization signal is recieved.
      * @param pid, name, stat_processor
      */
-    nlohmann::json create(std::string pid, std::string name, MemoryStatProcessing &stat_processor);
+    nlohmann::json_abi_v3_12_0::json create(std::string pid, std::string name, MemoryStatProcessing &stat_processor);
 
     /**
      * @brief creates application objects from data generated during application setup.
@@ -59,7 +59,7 @@ public:
      * @brief updates a specific application, again the application is found by name as we don't want to expose its process identifier.
      * @param app_name
      */
-    nlohmann::json update_app_obj(std::string name, std::unordered_map<std::string, double> incoming_stats);
+    nlohmann::json_abi_v3_12_0::json update_app_obj(std::string name, std::unordered_map<std::string, double> incoming_stats);
 
     /**
      * @brief destroys the current resource by name, again we don't want to expose the PID of an application for security reasons.
@@ -67,7 +67,14 @@ public:
      * @param name
      * @return
      */
-    nlohmann::json delete_app_obj(std::string name);
+    nlohmann::json_abi_v3_12_0::json delete_app_obj(std::string name);
+
+    /**
+    * @brief destroys process owned by app (when a process terminated event is detected)
+    * @param name -> std::string
+    * @param pid -> std::string
+    */
+    nlohmann::json_abi_v3_12_0::json delete_process_obj(std::string, std::string name);
 
 private:
     // this will become std::unique_ptr<AppliationList> later

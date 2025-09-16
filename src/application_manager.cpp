@@ -56,6 +56,16 @@ nlohmann::json ApplicationManager::read(std::string name)
     {
         json data;
         auto &app = this->application_list[*index];
+        // return data here.
+        response["message"] = "Successfully read application information";
+        response["status"] = "READ SUCCESS";
+
+        for (auto const &it : app->get_app_statsheet())
+        {
+            data[it.first] = app->get_specific_stat(it.first);
+        }
+        response["application data"] = data;
+        return response;
     }
     else
     {
@@ -67,15 +77,15 @@ nlohmann::json ApplicationManager::read(std::string name)
     }
 }
 
-nlohmann::json ApplicationManager::create(std::string pid, std::string name, MemoryStatProcessing &stat_processor)
+nlohmann::json_abi_v3_12_0::json ApplicationManager::create(std::string pid, std::string name, MemoryStatProcessing &stat_processor)
 {
     using json = nlohmann::json;
 
-    std::unique_ptr<ApplicationObj> app = std::make_unique<ApplicationObj>(pid, name);
+    std::unique_ptr<ApplicationObj> app = std::make_unique<ApplicationObj>(name);
     std::string filepath = std::format("../../mem_stats/{}.json", pid);
-    std::unordered_map<std::string, int> stat_sheet = stat_processor.evaluate_memory_stat_sheet(filepath);
+    std::unordered_map<std::string, double> stat_sheet = stat_processor.evaluate_memory_stat_sheet(filepath);
     stat_processor.update_application_statistics(app, stat_sheet);
-    this->application_list.push_back(app);
+    this->application_list.push_back(std::move(app));
 
     json response;
     json data;
@@ -92,7 +102,7 @@ void ApplicationManager::initial_create(std::unordered_map<std::string, std::str
     for (auto const &it : processes)
     {
         std::string filepath = std::format("../../mem_stats/{}.json", it.first);
-        std::unordered_map<std::string, int> stat_sheet = stat_processor.evaluate_memory_stat_sheet(filepath);
+        std::unordered_map<std::string, double> stat_sheet = stat_processor.evaluate_memory_stat_sheet(filepath);
         std::unique_ptr<ProcessObj> process = std::make_unique<ProcessObj>(it.first, it.second, stat_sheet);
 
         if (auto index = check_if_app_registered(it.second))
@@ -107,7 +117,7 @@ void ApplicationManager::initial_create(std::unordered_map<std::string, std::str
     }
 }
 
-nlohmann::json ApplicationManager::update_app_obj(std::string name, std::unordered_map<std::string, double> incoming_stats)
+nlohmann::json_abi_v3_12_0::json ApplicationManager::update_app_obj(std::string name, std::unordered_map<std::string, double> incoming_stats)
 {
     using json = nlohmann::json;
     json response;
@@ -127,15 +137,14 @@ nlohmann::json ApplicationManager::update_app_obj(std::string name, std::unorder
         response["updated data"] = data;
         return response;
     }
-    else
-    {
-        response["message"] = "Could not find application with that name";
-        response["status"] = "UPDATE FAILURE";
-        response["data"] = {};
-    }
+
+    response["message"] = "Could not find application with that name";
+    response["status"] = "UPDATE FAILURE";
+    response["data"] = {};
+    return response;
 }
 
-nlohmann::json ApplicationManager::delete_app_obj(std::string name)
+nlohmann::json_abi_v3_12_0::json ApplicationManager::delete_app_obj(std::string name)
 {
     using json = nlohmann::json;
     json response;
@@ -161,7 +170,7 @@ nlohmann::json ApplicationManager::delete_app_obj(std::string name)
     return response;
 }
 
-nlohmann::json ApplicationManager::delete_process_obj(std::string name, std::string pid)
+nlohmann::json_abi_v3_12_0::json ApplicationManager::delete_process_obj(std::string name, std::string pid)
 {
     using json = nlohmann::json;
     json response;
@@ -169,7 +178,7 @@ nlohmann::json ApplicationManager::delete_process_obj(std::string name, std::str
     if (auto index = check_if_app_registered(name))
     {
         auto &app = this->application_list[*index];
-        std::vector<std::unique_ptr<ProcessObj>> owned_processes_ref = app->get_owned_processes();
+        std::vector<std::unique_ptr<ProcessObj>>& owned_processes_ref = app->get_owned_processes();
 
         auto it = owned_processes_ref.erase(
             std::remove_if(owned_processes_ref.begin(), owned_processes_ref.end(),

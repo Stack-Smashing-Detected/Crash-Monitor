@@ -34,6 +34,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
             nlohmann/json_fwd.hpp
             src/application_obj.cpp
             headers/application_obj.h
+            src/process_obj.cpp
+            headers/process_obj.h
             resource.qrc
             helpwindow.h helpwindow.cpp helpwindow.ui
             settings.h settings.cpp settings.ui

@@ -50,7 +50,7 @@ public:
      * @brief returns a reference to the owned processes container
      * @return std::vector<std::unique_ptr<ProcessObj>>&
      */
-    std::vector<std::unique_ptr<ProcessObj>> &get_owned_processes()
+    std::vector<std::unique_ptr<ProcessObj>>& get_owned_processes()
     {
         return this->owned_processes;
     }

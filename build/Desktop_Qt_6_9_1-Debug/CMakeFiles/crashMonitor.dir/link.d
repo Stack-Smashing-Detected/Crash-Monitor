@@ -9,6 +9,7 @@ crashMonitor: \
   CMakeFiles/crashMonitor.dir/utilities/memory_stat_processing.cpp.o \
   CMakeFiles/crashMonitor.dir/src/application_manager.cpp.o \
   CMakeFiles/crashMonitor.dir/src/application_obj.cpp.o \
+  CMakeFiles/crashMonitor.dir/src/process_obj.cpp.o \
   CMakeFiles/crashMonitor.dir/helpwindow.cpp.o \
   CMakeFiles/crashMonitor.dir/settings.cpp.o \
   CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o \
@@ -101,6 +102,8 @@ CMakeFiles/crashMonitor.dir/utilities/memory_stat_processing.cpp.o:
 CMakeFiles/crashMonitor.dir/src/application_manager.cpp.o:
 
 CMakeFiles/crashMonitor.dir/src/application_obj.cpp.o:
+
+CMakeFiles/crashMonitor.dir/src/process_obj.cpp.o:
 
 CMakeFiles/crashMonitor.dir/helpwindow.cpp.o:
 

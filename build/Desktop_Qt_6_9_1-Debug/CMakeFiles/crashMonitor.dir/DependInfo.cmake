@@ -18,6 +18,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/victor-j-wilson/projects2/crashMonitor/settings.cpp" "CMakeFiles/crashMonitor.dir/settings.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/settings.cpp.o.d"
   "/home/victor-j-wilson/projects2/crashMonitor/src/application_manager.cpp" "CMakeFiles/crashMonitor.dir/src/application_manager.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/src/application_manager.cpp.o.d"
   "/home/victor-j-wilson/projects2/crashMonitor/src/application_obj.cpp" "CMakeFiles/crashMonitor.dir/src/application_obj.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/src/application_obj.cpp.o.d"
+  "/home/victor-j-wilson/projects2/crashMonitor/src/process_obj.cpp" "CMakeFiles/crashMonitor.dir/src/process_obj.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/src/process_obj.cpp.o.d"
   "/home/victor-j-wilson/projects2/crashMonitor/utilities/memory_stat_processing.cpp" "CMakeFiles/crashMonitor.dir/utilities/memory_stat_processing.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/utilities/memory_stat_processing.cpp.o.d"
   "/home/victor-j-wilson/projects2/crashMonitor/utilities/process_algorithms.cpp" "CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o.d"
   "" "crashMonitor" "gcc" "CMakeFiles/crashMonitor.dir/link.d"

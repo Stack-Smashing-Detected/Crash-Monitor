@@ -1,10 +1,10 @@
 #include "../headers/process_obj.h"
 
-ProcessObj::ProcessObj(std::string pid, std::string name, std::unordered_map<std::string, double> incoming)
+ProcessObj::ProcessObj(std::string pid, std::string name, std::unordered_map<std::string, double> initial)
 {
     this->pid = pid;
     this->name = name;
-    this->current_statsheet = incoming;
+    this->current_statsheet = initial;
 }
 
 std::unordered_map<std::string, double> ProcessObj::calculate_update_diff(std::unordered_map<std::string, double> incoming)

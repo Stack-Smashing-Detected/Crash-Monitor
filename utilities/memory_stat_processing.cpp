@@ -17,7 +17,7 @@
 
 MemoryStatProcessing::MemoryStatProcessing() {} // nothing needs to be setup since data is accessed from file.
 
-std::unordered_map<std::string, int> MemoryStatProcessing::evaluate_memory_stat_sheet(std::string filepath)
+std::unordered_map<std::string, double> MemoryStatProcessing::evaluate_memory_stat_sheet(std::string filepath)
 {
 
     using json = nlohmann::json;
@@ -28,14 +28,14 @@ std::unordered_map<std::string, int> MemoryStatProcessing::evaluate_memory_stat_
     json_file >> j_array;
     json_file.close();
 
-    std::unordered_map<std::string, int> stat_sheet = get_stat_sheet();
+    std::unordered_map<std::string, double> stat_sheet = get_stat_sheet();
     // prepare unique elements for protection key metric
-    int protected_count = 0;
-    int unprotected_count = 0;
+    double protected_count = 0.0;
+    double unprotected_count = 0.0;
 
     // prepare unique elements for THP eligibility metric
-    int true_count = 0;
-    int false_count = 0;
+    double true_count = 0.0;
+    double false_count = 0.0;
 
     // add unique elements associated with ProtectionKey metric
     stat_sheet.emplace("Protected", protected_count);
@@ -53,7 +53,7 @@ std::unordered_map<std::string, int> MemoryStatProcessing::evaluate_memory_stat_
     return stat_sheet;
 }
 
-std::unordered_map<std::string, int> MemoryStatProcessing::size_metrics_data(nlohmann::json &page, std::unordered_map<std::string, int> &stat_sheet)
+std::unordered_map<std::string, double>& MemoryStatProcessing::size_metrics_data(nlohmann::json &page, std::unordered_map<std::string, double> &stat_sheet)
 {
     for (auto page_key = page.begin(); page_key != page.end(); page_key++)
     {
@@ -98,7 +98,7 @@ std::unordered_map<std::string, int> MemoryStatProcessing::size_metrics_data(nlo
     return stat_sheet;
 }
 
-std::unordered_map<std::string, int> MemoryStatProcessing::protected_keys_data(std::string key_value, std::unordered_map<std::string, int> &stat_sheet)
+std::unordered_map<std::string, double>& MemoryStatProcessing::protected_keys_data(std::string key_value, std::unordered_map<std::string, double> &stat_sheet)
 {
     if (key_value == "0")
     {
@@ -113,7 +113,7 @@ std::unordered_map<std::string, int> MemoryStatProcessing::protected_keys_data(s
 
     return stat_sheet;
 }
-std::unordered_map<std::string, int> MemoryStatProcessing::thp_eligibility_data(std::string key_value, std::unordered_map<std::string, int> &stat_sheet)
+std::unordered_map<std::string, double>& MemoryStatProcessing::thp_eligibility_data(std::string key_value, std::unordered_map<std::string, double> &stat_sheet)
 {
     if (key_value == "0")
     {
@@ -128,7 +128,7 @@ std::unordered_map<std::string, int> MemoryStatProcessing::thp_eligibility_data(
     return stat_sheet;
 }
 
-void MemoryStatProcessing::update_application_statistics(std::unique_ptr<ApplicationObj> &app_ref, std::unordered_map<std::string, int> stat_sheet)
+void MemoryStatProcessing::update_application_statistics(std::unique_ptr<ApplicationObj> &app_ref, std::unordered_map<std::string, double> stat_sheet)
 {
     // as these keys are the same for every memory page, we can use a pre-defined array which will look up our map rather than
     // trying to traverse the map using an iterator.
@@ -144,7 +144,7 @@ void MemoryStatProcessing::update_application_statistics(std::unique_ptr<Applica
         return;
     }
 
-    std::unordered_map<std::string, int> changed_stats;
+    std::unordered_map<std::string, double> changed_stats;
     for (std::string statistic : stat_identifiers)
     {
         // get iterator to each statistic key and check if there is an incoming change

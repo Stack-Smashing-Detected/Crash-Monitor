@@ -275,10 +275,12 @@ CMakeFiles/crashMonitor.dir/src/application_manager.cpp.o: \
  /usr/include/c++/13/span /usr/include/c++/13/numeric \
  /usr/include/c++/13/bits/stl_numeric.h \
  /usr/include/c++/13/pstl/glue_numeric_defs.h /usr/include/c++/13/any \
+ /home/victor-j-wilson/projects2/crashMonitor/src/../headers/../headers/process_obj.h \
+ /home/victor-j-wilson/projects2/crashMonitor/src/../headers/process_obj.h \
+ /home/victor-j-wilson/projects2/crashMonitor/src/../headers/../nlohmann/json.hpp \
+ /home/victor-j-wilson/projects2/crashMonitor/src/../headers/memory_stat_processing.h \
  /home/victor-j-wilson/projects2/crashMonitor/src/../headers/process_algorithms.h \
  /usr/include/c++/13/format /usr/include/c++/13/charconv \
  /usr/include/c++/13/variant /usr/include/dirent.h \
  /usr/include/x86_64-linux-gnu/bits/dirent.h \
- /usr/include/x86_64-linux-gnu/bits/dirent_ext.h \
- /home/victor-j-wilson/projects2/crashMonitor/src/../headers/../nlohmann/json.hpp \
- /home/victor-j-wilson/projects2/crashMonitor/src/../headers/memory_stat_processing.h
+ /usr/include/x86_64-linux-gnu/bits/dirent_ext.h
