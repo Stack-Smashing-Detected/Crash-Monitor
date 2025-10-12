@@ -21,36 +21,24 @@ class ProcessAlgorithms
 public:
     ProcessAlgorithms();
 
-    void set_application_identification_data(std::unordered_map<std::string, std::string> applications)
-    {
-        this->applications = applications;
-    }
-
-    std::unordered_map<std::string, std::string> get_application_identification_data()
-    {
-        return this->applications;
-    }
-
     /**
      * Traverses through the "/proc" directory and stores all user owned PID directory names and symlinks
      *
      * @param: DIR
-     * @return: std::vector<std::string>
+     * @return: std::unordered_map<std::string, std::string>
      */
-    void find_processes(DIR *dir);
+    std::unordered_map<std::string, std::string> find_processes();
 
     /**
-     * Get the name of an application based on its process.
+     * @brief Finds a possible application name from a newly discovered process, this function is used only after the inital setup.
+     * for initial setup functionality, refer to "find_processes" function.
+     *
+     * @param: pid -> std::string
+     * @return: std::string
      */
     std::string find_process_name(std::string pid);
 
-    /**
-     * using the symlinks we obtained from the findProcesses function we can find our application names
-     *
-     * @param: std::vector<std::string>
-     * @return: std::vector<std::string>
-     */
-    std::unordered_map<std::string, int> get_application_names(std::vector<std::string> processIndexes);
+
 
     /** Algorithm for finding Application Logos for better UI/UX
     std::vector<std::string> getApplicationLogoPaths(std::vector<std::string> processSymlinks);
@@ -62,7 +50,7 @@ public:
      * @param std::vector<std::string>
      * @return void
      */
-    void open_smaps(std::vector<std::string> processIndexes);
+    void open_smaps(std::unordered_map<std::string, std::string> &processes);
 
     /**
      * @brief opens an smap file for a single process
@@ -80,12 +68,15 @@ public:
     void parse_smap(std::ifstream &smap, std::string pid);
 
     /**
+     * @brief: Handles the name of the page, the line always starts with a hexadecimal number so we can check for that.
+     * the data we're after is the
+     */
+
+    /**
      * @brief incoming smaps data is not consistent so validation is required to ensure seamless transfer of data to json file.
      * @return std::string
      */
     std::string validate_incoming_data(std::vector<std::string> tokens);
 
-private:
-    std::unordered_map<std::string, std::string> applications; // a map of pids and their filepaths to the processes' executables
 };
 #endif // PROCESS_ALGORITHMS_H

@@ -5,7 +5,7 @@
 #include <filesystem>
 #include <unordered_map>
 
-class ApplicationObj; // forward declaration opplication object,
+class ProcessObj; // forward declaration opplication object,
 
 class MemoryStatProcessing
 {
@@ -18,28 +18,6 @@ public:
      */
     MemoryStatProcessing();
 
-    std::unordered_map<std::string, double> get_stat_sheet()
-    {
-        return this->stat_sheet;
-    }
-
-    /**
-     * @brief fully updates the current stat sheet (usually only need to do this once).
-     * @param new_stat_sheet
-     */
-    void update_stat_sheet(std::unordered_map<std::string, double> new_stat_sheet)
-    {
-        this->stat_sheet = new_stat_sheet;
-    }
-
-    /**
-     * @brief compares incoming stat_sheet with existing stat_sheet if it exists.
-     * @param new_stat_sheet
-     */
-    bool compare_incoming_statistics(std::unordered_map<std::string, double> new_stat_sheet)
-    {
-        return new_stat_sheet == this->stat_sheet;
-    }
 
     /**
      * @brief parses the stat_sheet in json format.
@@ -72,10 +50,7 @@ public:
      * @brief takes the data obtained from evaluate_memory_stat sheet and passes it to the specified application object.
      * @param std::unique_ptr<ApplicationObj> application
      */
-    void update_application_statistics(std::unique_ptr<ApplicationObj> &app, std::unordered_map<std::string, double> stat_sheet);
-
-private:
-    std::unordered_map<std::string, double> stat_sheet;
+    std::unordered_map<std::string, double> update_process_statistics(std::unique_ptr<ProcessObj> &process, std::unordered_map<std::string, double> stat_sheet);
 };
 
 #endif // CALCULATE_RAM_H

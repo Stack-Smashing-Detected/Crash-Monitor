@@ -1,3 +1,6 @@
+#ifndef APPLICATION_MANAGER_H
+#define APPLICATION_MANAGER_H
+
 #include "application_obj.h"
 #include "process_obj.h"
 #include "../nlohmann/json.hpp"
@@ -80,3 +83,5 @@ private:
     // this will become std::unique_ptr<AppliationList> later
     std::vector<std::unique_ptr<ApplicationObj>> application_list;
 };
+
+#endif // APPLICATION_MANAGER_H

@@ -1,4 +1,5 @@
 #include "mainwindow.h"
+#include "headers/application_manager.h"
 #include "./ui_mainwindow.h"
 #include <memory>
 #include <QMessageBox>
@@ -6,8 +7,7 @@
 #include <QPixmap>
 #include <QString>
 #include <QFrame>
-#include <QPushButton>
-#include "headers/process_algorithms.h"
+#include <QPushButton> 
 
 
 MainWindow::MainWindow(QWidget *parent)
@@ -16,6 +16,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     QPixmap pix(":/resources/images/app-visual.png");
+    std::unique_ptr<ApplicationManager> app_manager = std::make_unique<ApplicationManager>();
 
     // Style the title
     ui->title->setAlignment(Qt::AlignCenter);
@@ -43,6 +44,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(ui->settingsBtn, &QPushButton::clicked, this, &MainWindow::settings_button_clicked);
     connect(ui->viewBtn, &QPushButton::clicked, this, &MainWindow::view_button_clicked);
     connect(ui->setupBtn, &QPushButton::clicked, this, &MainWindow::setup_button_clicked);
+    connect(ui->runBtn, &QPushButton::clicked, this, &MainWindow::run_button_clicked);
 }
 
 MainWindow::~MainWindow()
@@ -80,6 +82,11 @@ void MainWindow::view_button_clicked(){
 }
 
 void MainWindow::setup_button_clicked(){
-    // may add code later
+    std::unique_ptr<ProcessAlgorithms> p_algo_ptr = std::make_unique<ProcessAlgorithms>();
+    std::unordered_map<std::string, std::string> processes = p_algo_ptr->find_processes();
+    p_algo_ptr->open_smaps(processes);
 }
 
+void MainWindow::run_button_clicked(std::unique_ptr<ApplicationManager> &app_manager){
+    // figure out how to pass that reference to the app manager after the click event occurs.
+}

@@ -276,6 +276,7 @@ CMakeFiles/crashMonitor.dir/utilities/memory_stat_processing.cpp.o: \
  /home/victor-j-wilson/projects2/crashMonitor/utilities/../headers/application_obj.h \
  /home/victor-j-wilson/projects2/crashMonitor/utilities/../headers/../headers/memory_stat_processing.h \
  /home/victor-j-wilson/projects2/crashMonitor/utilities/../headers/../headers/process_obj.h \
+ /home/victor-j-wilson/projects2/crashMonitor/utilities/../headers/process_obj.h \
  /usr/include/c++/13/format /usr/include/c++/13/charconv \
  /usr/include/c++/13/variant /usr/include/c++/13/fstream \
  /usr/include/x86_64-linux-gnu/c++/13/bits/basic_file.h \

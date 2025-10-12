@@ -1,24 +1,15 @@
-ChatGPT recommended method 2. 
+The program flow:
 
-However I think I can take parts of method 1 and 2. For Caching to be realistic, the previous statsheet for a process needs to be kept. Alternatively a separate method in the Application Object should handle a partial update. 
+find_processes -> open_smaps -> write_smaps to JSON file -> add values in JSON file into singular statsheet.
 
-The hierarchy is now this:
+Color: #509E32
 
-Application Manager: Manages the lifetime of Applications, is an interface for adding, deleting and updating of application objects. Therefore it should calculate the total footprint of all processes associated with an application and pass those into the Application's own statistic sheet. 
 
-What would be going on under the hood:
-Application Manager:
-- Listening for update/init/term signals.
-- Handles calculation of an Application's memory statistics
-- Keeps a separate list of processes and Applications and maps them to each other when updates are incoming.
--
 
-Application:
-- recieves update data and adds it to current data it has
-- has endpoints for fetching specific data.
 
-Process:
-- Holds its own stat sheet
+
+
+
 
 
 

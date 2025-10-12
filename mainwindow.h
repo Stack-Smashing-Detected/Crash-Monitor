@@ -9,6 +9,12 @@
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
+
+/**
+ * Forward Declarations
+ */
+class ApplicationManager;
+
 class MainWindow;
 }
 QT_END_NAMESPACE
@@ -31,6 +37,8 @@ private slots:
     void view_button_clicked();
 
     void setup_button_clicked();
+
+    void run_button_clicked(std::unique_ptr<ApplicationManager> &app_manager);
 private:
     Ui::MainWindow *ui;
     HelpWindow *helpWindow;

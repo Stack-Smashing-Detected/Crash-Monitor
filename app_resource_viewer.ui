@@ -46,23 +46,46 @@
    <property name="geometry">
     <rect>
      <x>30</x>
-     <y>80</y>
+     <y>70</y>
      <width>401</width>
      <height>401</height>
     </rect>
    </property>
+   <property name="tabPosition">
+    <enum>QTabWidget::TabPosition::North</enum>
+   </property>
    <property name="currentIndex">
     <number>0</number>
    </property>
-   <widget class="QWidget" name="cpu">
+   <widget class="QWidget" name="processStatsTab">
     <attribute name="title">
-     <string>CPU</string>
+     <string>Process Memory Profile</string>
     </attribute>
+    <widget class="QTableWidget" name="processStats">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>271</width>
+       <height>291</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
-   <widget class="QWidget" name="m_ram">
+   <widget class="QWidget" name="appStatsTab">
     <attribute name="title">
-     <string>Memory (RAM)</string>
+     <string>App Memory Profile</string>
     </attribute>
+    <widget class="QTableWidget" name="appStats">
+     <property name="geometry">
+      <rect>
+       <x>60</x>
+       <y>40</y>
+       <width>271</width>
+       <height>291</height>
+      </rect>
+     </property>
+    </widget>
    </widget>
   </widget>
  </widget>

@@ -84,7 +84,7 @@ nlohmann::json_abi_v3_12_0::json ApplicationManager::create(std::string pid, std
     std::unique_ptr<ApplicationObj> app = std::make_unique<ApplicationObj>(name);
     std::string filepath = std::format("../../mem_stats/{}.json", pid);
     std::unordered_map<std::string, double> stat_sheet = stat_processor.evaluate_memory_stat_sheet(filepath);
-    stat_processor.update_application_statistics(app, stat_sheet);
+
     this->application_list.push_back(std::move(app));
 
     json response;
@@ -189,23 +189,23 @@ nlohmann::json_abi_v3_12_0::json ApplicationManager::delete_process_obj(std::str
 
         if (it == owned_processes_ref.end())
         {
-            response["message"] == "Unable to find process owned by the application";
-            response["status"] == "PROCESS DELETE FAILURE";
-            response["application"] == name;
-            response["process id"] == pid;
+            response["message"] = "Unable to find process owned by the application";
+            response["status"] = "PROCESS DELETE FAILURE";
+            response["application"] = name;
+            response["process id"] = pid;
             return response;
         }
 
-        response["message"] == "Successfully deleted terminated process from application";
-        response["status"] == "PROCESS DELETE SUCESS";
-        response["application"] == name;
-        response["process id"] == pid;
+        response["message"] = "Successfully deleted terminated process from application";
+        response["status"] = "PROCESS DELETE SUCESS";
+        response["application"] = name;
+        response["process id"] = pid;
         return response;
     }
 
-    response["message"] == "Unable to find application with the provided name";
-    response["status"] == "APPLICATION NOT FOUND";
-    response["application"] == name;
-    response["process id"] == pid;
+    response["message"] = "Unable to find application with the provided name";
+    response["status"] = "APPLICATION NOT FOUND";
+    response["application"] = name;
+    response["process id"] = pid;
     return response;
 }

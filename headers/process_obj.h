@@ -26,14 +26,30 @@ public:
     }
 
     /**
-     * @brief Checks the difference between the current sheet and the incoming sheet and collects the changes in values
-     * in a new map to be passed to the partial updater service in the "application manager" object.
-     *
-     * @param incoming -> std::unordered_map<std::string, double>
+     * @brief returns a reference to the process' current statsheet
+     * @return
      */
-    std::unordered_map<std::string, double> calculate_update_diff(std::unordered_map<std::string, double> incoming);
+    std::unordered_map<std::string, double>& get_process_statsheet_ref(){
+        return this->current_statsheet;
+    }
+
+    /**
+     * @brief recieves a map of changed statistics from last snapshot and updates the matching changed statistics.
+     * @param incoming -> std::unordered_map<std::string, double>
+     * @return void
+     */
+    void do_partial_update(std::unordered_map<std::string, double> incoming);
+
+    /**
+     * @brief replace old statsheet with new statsheet
+     * @return void
+     */
+    void update_process_statsheet(std::unordered_map<std::string, double> incoming){
+        this->current_statsheet = incoming;
+    }
 
 private:
+    bool updated_alert = false;
     std::string pid;
     std::string name;
     std::unordered_map<std::string, double> current_statsheet;

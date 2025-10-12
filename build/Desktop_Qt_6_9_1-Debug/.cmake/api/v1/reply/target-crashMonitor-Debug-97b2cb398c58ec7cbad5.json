@@ -31,9 +31,9 @@
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/Qt6Config.cmake",
-			"/snap/cmake/1468/share/cmake-4.0/Modules/FindOpenGL.cmake",
+			"/snap/cmake/1481/share/cmake-4.1/Modules/FindOpenGL.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/FindWrapOpenGL.cmake",
-			"/snap/cmake/1468/share/cmake-4.0/Modules/CMakeFindDependencyMacro.cmake",
+			"/snap/cmake/1481/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
@@ -71,13 +71,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 77,
+				"line" : 80,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 60,
+				"line" : 63,
 				"parent" : 0
 			},
 			{
@@ -289,10 +289,11 @@
 				8,
 				10,
 				14,
-				18,
-				21,
-				24,
-				31
+				16,
+				20,
+				23,
+				26,
+				35
 			]
 		}
 	],
@@ -385,10 +386,11 @@
 				8,
 				10,
 				14,
-				18,
-				21,
-				24,
-				31
+				16,
+				20,
+				23,
+				26,
+				35
 			]
 		},
 		{
@@ -404,12 +406,14 @@
 				13,
 				15,
 				17,
-				20,
-				23,
-				26,
-				27,
-				28,
-				29
+				19,
+				22,
+				25,
+				29,
+				30,
+				31,
+				32,
+				33
 			]
 		},
 		{
@@ -417,31 +421,32 @@
 			"sourceIndexes" : 
 			[
 				4,
-				19,
-				22,
-				25
+				21,
+				24,
+				27,
+				28
 			]
 		},
 		{
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				16
+				18
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				30
+				34
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				32,
-				33
+				36,
+				37
 			]
 		}
 	],
@@ -537,6 +542,17 @@
 		},
 		{
 			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "src/process_obj.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "headers/process_obj.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
 			"path" : "resource.qrc",
 			"sourceGroupIndex" : 3
 		},
@@ -589,6 +605,11 @@
 			"sourceGroupIndex" : 2
 		},
 		{
+			"backtrace" : 4,
+			"path" : "runningStatus.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/include/ui_mainwindow.h",
@@ -610,6 +631,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/include/ui_app_resource_viewer.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/include/ui_runningStatus.h",
 			"sourceGroupIndex" : 1
 		},
 		{

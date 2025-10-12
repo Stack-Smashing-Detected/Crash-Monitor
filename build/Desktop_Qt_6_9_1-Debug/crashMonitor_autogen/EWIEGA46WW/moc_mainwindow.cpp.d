@@ -156,7 +156,6 @@
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qvalidator.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qwindowdefs.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QDialog \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QListWidget \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QMainWindow \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTableWidget \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget \
@@ -167,8 +166,6 @@
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qdialog.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlistview.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlistwidget.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qmainwindow.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qsizepolicy.h \

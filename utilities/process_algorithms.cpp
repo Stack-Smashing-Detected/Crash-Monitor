@@ -19,15 +19,12 @@
 constexpr auto max_size = std::numeric_limits<std::streamsize>::max(); // a global constant that's only used in this application (thus far).
 
 // constructor, sets up the process list and process symlinks for use later.
-ProcessAlgorithms::ProcessAlgorithms()
+ProcessAlgorithms::ProcessAlgorithms(){}
+
+std::unordered_map<std::string, std::string> ProcessAlgorithms::find_processes()
 {
     DIR *dir;
-    find_processes(dir);
-}
-
-void ProcessAlgorithms::find_processes(DIR *dir)
-{
-    std::unordered_map<std::string, std::string> applications;
+    std::unordered_map<std::string, std::string> processes;
 
     if (!(dir = opendir("/proc")))
     {
@@ -58,7 +55,7 @@ void ProcessAlgorithms::find_processes(DIR *dir)
 
             size_t pos = symlink.find_last_of('/');
             std::string name = symlink.substr(pos + 1);
-            applications.emplace(pid, name);
+            processes.emplace(pid, name);
         }
         catch (std::filesystem::filesystem_error fe)
         {
@@ -68,8 +65,7 @@ void ProcessAlgorithms::find_processes(DIR *dir)
     if (closedir(dir))
         throw std::runtime_error(std::strerror(errno));
 
-    // finally set the newly populated data structures so we can use them later.
-    set_application_identification_data(applications);
+    return std::move(processes);
 }
 
 std::string ProcessAlgorithms::find_process_name(std::string pid)
@@ -88,19 +84,19 @@ std::string ProcessAlgorithms::find_process_name(std::string pid)
     }
 }
 
-void ProcessAlgorithms::open_smaps(std::vector<std::string> processIndexes)
+void ProcessAlgorithms::open_smaps(std::unordered_map<std::string, std::string> &processes)
 {
     int index = 0;
     // attempt to open the /proc/$$/smaps file
-    for (std::string &pid : processIndexes)
+    for (auto const &it : processes)
     {
         // get filepath to smaps file
-        std::string path = std::format("/proc/{}/smaps", pid);
+        std::string path = std::format("/proc/{}/smaps", it.first);
         // open smaps filepath
         std::ifstream smap(path);
         if (smap.is_open())
         {
-            parse_smap(smap, pid); /** FUNCTION CALL ALERT for more details go to line 120 **/
+            parse_smap(smap, it.first); /** FUNCTION CALL ALERT for more details go to line 120 **/
         }
         else
         {
@@ -162,12 +158,15 @@ void ProcessAlgorithms::parse_smap(std::ifstream &smap, std::string pid)
             std::copy(buf.begin(), buf.end(), buffer);
             token = strtok_r(buffer, delim, &saveptr);
 
-            // we don't need to log the VmFlags as that is unrelated to memory usage and we don't need to know the virtual memory
-            // permissions as we aren't using that memory anyway. Luckily VmFlags is the only stat that starts with a V so a peek will work here.
+            // currently we won't log VmFlags as we would need to switch to storing data in an SQL or No-SQL database as opposed to just writing them to .JSON files.
+            // permissions as we aren't using that memory anyway. Luckily VmFlags is the only stat that starts with a V so a peek will work here and since its the last
+            // we can just push the process.
             if (smap.peek() == 'V')
             {
                 smap.ignore(max_size, '\n');
                 process.push_back(page);
+                delete[] buffer;
+                tokens.clear();
                 continue;
             }
 

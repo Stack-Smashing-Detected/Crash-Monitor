@@ -6,7 +6,6 @@
 #include <unordered_map>
 
 #include <QDialog>
-#include <QListWidget>
 #include <QWidget>
 #include <QTableWidget>
 
@@ -22,15 +21,15 @@ public:
     explicit AppResourceViewer(QWidget *parent = nullptr);
     ~AppResourceViewer();
 
-    void fillListViewer(std::vector<std::string> &appList, QListWidget *listWidget);
-    void fillTableViewer(std::unordered_map<std::string, int> &appNames, QTableWidget *tableWidget);
+    void showProcessStats(std::unordered_map<std::string, double> &process_stats, QTableWidget *tableWidget);
+    void showApplicationStats(std::unordered_map<std::string, double> &app_stats, QTableWidget *tableWidget);
 
 private:
     Ui::AppResourceViewer *ui;
-    QWidget* cpuTab;
-    QWidget* ramTab;
-    QListWidget* cpuUsageView;
-    QTableWidget* ramUsageView;
+    QWidget* processTab;
+    QWidget* appTab;
+    QTableWidget* ProcessStatView;
+    QTableWidget* ApplicationStatView;
 };
 
 #endif // APP_RESOURCE_VIEWER_H

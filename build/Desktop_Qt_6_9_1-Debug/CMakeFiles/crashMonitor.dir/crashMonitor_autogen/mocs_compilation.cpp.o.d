@@ -433,9 +433,11 @@ CMakeFiles/crashMonitor.dir/crashMonitor_autogen/mocs_compilation.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qsizepolicy.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qcursor.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qbitmap.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QListWidget \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlistwidget.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qlistview.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qwidget.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTableWidget \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtablewidget.h \
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
@@ -453,11 +455,6 @@ CMakeFiles/crashMonitor.dir/crashMonitor_autogen/mocs_compilation.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qwidget.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTableWidget \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtablewidget.h \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qtmochelpers.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qtmocconstants.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/q20algorithm.h \

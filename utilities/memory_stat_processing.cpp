@@ -7,6 +7,8 @@
 
 #include "../headers/memory_stat_processing.h"
 #include "../headers/application_obj.h"
+#include "../headers/process_obj.h"
+#include <cctype>
 #include <cstddef>
 #include <format>
 #include <fstream>
@@ -28,7 +30,7 @@ std::unordered_map<std::string, double> MemoryStatProcessing::evaluate_memory_st
     json_file >> j_array;
     json_file.close();
 
-    std::unordered_map<std::string, double> stat_sheet = get_stat_sheet();
+    std::unordered_map<std::string, double> stat_sheet;
     // prepare unique elements for protection key metric
     double protected_count = 0.0;
     double unprotected_count = 0.0;
@@ -71,29 +73,22 @@ std::unordered_map<std::string, double>& MemoryStatProcessing::size_metrics_data
             continue;
         }
 
-        // handle all other data, all though all data should be convertible, always better to be safe than sorry.
-        try
-        {
-            std::size_t pos{};
-            // address for handling string to int conversion
-            const int size{std::stoi(page_key.value().dump(), &pos)}; // conversion
-
+        // address for handling string to int conversion
+        std::string value = page_key.value().get<std::string>();
+        if(std::isdigit(value[0])){
+            int size = std::stoi(value.substr(0, 1));
             // currently size is an integer, we'll convert it to size_t when we pass it to the object itself
             // as it is easier to convert ints into size_t types.
-            auto const &emplace_success = stat_sheet.try_emplace(page_key.key(), size);
+            auto const &emplace_success = stat_sheet.try_emplace(page_key.key(), static_cast<double>(size));
             if (!emplace_success.second)
             {
                 emplace_success.first->second += size;
             }
+        } else {
+            continue;
         }
-        catch (std::invalid_argument const &arg_err)
-        {
-            std::cout << "std::invalid_argument::what(): " << arg_err.what() << '\n';
-        }
-        catch (std::out_of_range const &range_err)
-        {
-            std::cout << "std::out_of_range::(): " << range_err.what() << '\n';
-        }
+
+
     }
     return stat_sheet;
 }
@@ -128,7 +123,7 @@ std::unordered_map<std::string, double>& MemoryStatProcessing::thp_eligibility_d
     return stat_sheet;
 }
 
-void MemoryStatProcessing::update_application_statistics(std::unique_ptr<ApplicationObj> &app_ref, std::unordered_map<std::string, double> stat_sheet)
+std::unordered_map<std::string, double> MemoryStatProcessing::update_process_statistics(std::unique_ptr<ProcessObj> &process, std::unordered_map<std::string, double> stat_sheet)
 {
     // as these keys are the same for every memory page, we can use a pre-defined array which will look up our map rather than
     // trying to traverse the map using an iterator.
@@ -137,19 +132,12 @@ void MemoryStatProcessing::update_application_statistics(std::unique_ptr<Applica
                                         "Private_Hugetlb", "Pss", "Pss_Dirty", "Referenced", "Rss", "Shared_Clean",
                                         "Shared_Dirty", "Shared_Hugetlb", "ShmemPmdMapped", "Size", "Swap", "SwapPss"};
 
-    // check if statsheet is empty
-    if (this->stat_sheet.empty())
-    {
-        app_ref->update_mem_statistics(stat_sheet);
-        return;
-    }
-
     std::unordered_map<std::string, double> changed_stats;
     for (std::string statistic : stat_identifiers)
     {
         // get iterator to each statistic key and check if there is an incoming change
         auto const &incoming = stat_sheet.find(statistic);
-        auto const &current = this->stat_sheet.find(statistic);
+        auto const &current = process->get_process_statsheet_ref().find(statistic);
 
         // if no change in value then continue to next statistic.
         if (incoming->second == current->second)
@@ -157,7 +145,7 @@ void MemoryStatProcessing::update_application_statistics(std::unique_ptr<Applica
         // add it to the changed_stats map if different.
         changed_stats.emplace(statistic, incoming->second);
     }
-
     // update our object's memory statistics
-    app_ref->update_mem_statistics(changed_stats);
+    process->do_partial_update(changed_stats);
+    return std::move(changed_stats);
 }
