@@ -1,4 +1,4 @@
-/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/EWIEGA46WW/moc_mainwindow.cpp: /home/victor-j-wilson/projects2/crashMonitor/mainwindow.h \
+/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/EWIEGA46WW/moc_running_window.cpp: /home/victor-j-wilson/projects2/crashMonitor/running_window.h \
   /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/moc_predefs.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/q17memory.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/q20functional.h \
@@ -7,7 +7,6 @@
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/q20type_traits.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/q20utility.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/q23utility.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qabstractitemmodel.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qalgorithms.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qanystringview.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qarraydata.h \
@@ -49,13 +48,11 @@
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qhash.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qhashfunctions.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qiodevicebase.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qitemselectionmodel.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qiterable.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qiterator.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qlatin1stringview.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qline.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qlist.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qlocale.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qlogging.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qmalloc.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qmap.h \
@@ -76,7 +73,6 @@
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qprocessordetection.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qrect.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qrefcount.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qregularexpression.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qscopedpointer.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qscopeguard.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qset.h \
@@ -153,37 +149,14 @@
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qtguiexports.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qtguiglobal.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qtransform.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qvalidator.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtGui/qwindowdefs.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QDialog \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QMainWindow \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QTableWidget \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QWidget \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemdelegate.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractitemview.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractscrollarea.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractslider.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qabstractspinbox.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qdialog.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qframe.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qmainwindow.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qsizepolicy.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qslider.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qstyle.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qstyleoption.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtableview.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtablewidget.h \
-  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtwidgets-config.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtwidgetsexports.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtwidgetsglobal.h \
   /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qwidget.h \
-  /home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.h \
-  /home/victor-j-wilson/projects2/crashMonitor/helpwindow.h \
-  /home/victor-j-wilson/projects2/crashMonitor/running_window.h \
-  /home/victor-j-wilson/projects2/crashMonitor/settings.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/errno-base.h \
   /usr/include/asm-generic/errno.h \

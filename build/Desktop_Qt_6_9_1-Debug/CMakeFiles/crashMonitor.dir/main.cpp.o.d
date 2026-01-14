@@ -454,6 +454,7 @@ CMakeFiles/crashMonitor.dir/main.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
+ /home/victor-j-wilson/projects2/crashMonitor/running_window.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QMainWindow \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qmainwindow.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QApplication \

@@ -454,8 +454,34 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabbar.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qtabwidget.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qrubberband.h \
+ /home/victor-j-wilson/projects2/crashMonitor/running_window.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QMainWindow \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/qmainwindow.h \
+ /home/victor-j-wilson/projects2/crashMonitor/headers/application_manager.h \
+ /home/victor-j-wilson/projects2/crashMonitor/headers/application_obj.h \
+ /home/victor-j-wilson/projects2/crashMonitor/headers/../headers/memory_stat_processing.h \
+ /home/victor-j-wilson/projects2/crashMonitor/headers/../headers/../nlohmann/json.hpp \
+ /usr/include/c++/13/forward_list /usr/include/c++/13/bits/forward_list.h \
+ /usr/include/c++/13/bits/forward_list.tcc /usr/include/c++/13/valarray \
+ /usr/include/c++/13/bits/valarray_array.h \
+ /usr/include/c++/13/bits/valarray_array.tcc \
+ /usr/include/c++/13/bits/valarray_before.h \
+ /usr/include/c++/13/bits/slice_array.h \
+ /usr/include/c++/13/bits/valarray_after.h \
+ /usr/include/c++/13/bits/gslice.h \
+ /usr/include/c++/13/bits/gslice_array.h \
+ /usr/include/c++/13/bits/mask_array.h \
+ /usr/include/c++/13/bits/indirect_array.h /usr/include/c++/13/filesystem \
+ /usr/include/c++/13/bits/fs_fwd.h /usr/include/c++/13/bits/fs_path.h \
+ /usr/include/c++/13/codecvt /usr/include/c++/13/bits/fs_dir.h \
+ /usr/include/c++/13/bits/fs_ops.h /usr/include/c++/13/ranges \
+ /usr/include/c++/13/any \
+ /home/victor-j-wilson/projects2/crashMonitor/headers/../headers/process_obj.h \
+ /home/victor-j-wilson/projects2/crashMonitor/headers/process_obj.h \
+ /home/victor-j-wilson/projects2/crashMonitor/headers/../nlohmann/json.hpp \
+ /home/victor-j-wilson/projects2/crashMonitor/headers/process_algorithms.h \
+ /usr/include/dirent.h /usr/include/x86_64-linux-gnu/bits/dirent.h \
+ /usr/include/x86_64-linux-gnu/bits/dirent_ext.h \
  /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/include/./ui_mainwindow.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/QVariant \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qvariant.h \
@@ -509,7 +535,4 @@ CMakeFiles/crashMonitor.dir/mainwindow.cpp.o: \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/QString \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtCore/qstring.h \
  /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QFrame \
- /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton \
- /home/victor-j-wilson/projects2/crashMonitor/headers/process_algorithms.h \
- /usr/include/dirent.h /usr/include/x86_64-linux-gnu/bits/dirent.h \
- /usr/include/x86_64-linux-gnu/bits/dirent_ext.h
+ /home/victor-j-wilson/Qt/6.9.1/gcc_64/include/QtWidgets/QPushButton

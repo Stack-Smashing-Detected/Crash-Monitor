@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "headers/application_manager.h"
+#include "headers/process_algorithms.h"
 #include "./ui_mainwindow.h"
 #include <memory>
 #include <QMessageBox>
@@ -53,13 +54,6 @@ MainWindow::~MainWindow()
 }
 
 
-
-
-void MainWindow::run_button_clicked()
-{
-    // run the crash monitor program, include a loading message if needed.
-}
-
 void MainWindow::help_button_clicked()
 {
     // open the help tab for assistance on using the application
@@ -87,6 +81,8 @@ void MainWindow::setup_button_clicked(){
     p_algo_ptr->open_smaps(processes);
 }
 
-void MainWindow::run_button_clicked(std::unique_ptr<ApplicationManager> &app_manager){
+void MainWindow::run_button_clicked(){
     // figure out how to pass that reference to the app manager after the click event occurs.
+    runningWindow = new RunningWindow(this);
+    runningWindow->show();
 }

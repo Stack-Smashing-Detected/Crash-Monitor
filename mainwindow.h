@@ -4,6 +4,7 @@
 #include "helpwindow.h"
 #include "settings.h"
 #include "app_resource_viewer.h"
+#include "running_window.h"
 #include <QMainWindow>
 #include <memory>
 
@@ -28,7 +29,6 @@ public:
     ~MainWindow();
 
 private slots:
-    void run_button_clicked();
 
     void help_button_clicked();
 
@@ -38,10 +38,12 @@ private slots:
 
     void setup_button_clicked();
 
-    void run_button_clicked(std::unique_ptr<ApplicationManager> &app_manager);
+    void run_button_clicked();
+
 private:
     Ui::MainWindow *ui;
     HelpWindow *helpWindow;
+    RunningWindow *runningWindow;
     Settings *settings;
     AppResourceViewer *app_resource_viewer;
 };

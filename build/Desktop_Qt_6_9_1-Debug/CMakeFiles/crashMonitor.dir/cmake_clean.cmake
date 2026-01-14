@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/crashMonitor.dir/main.cpp.o.d"
   "CMakeFiles/crashMonitor.dir/mainwindow.cpp.o"
   "CMakeFiles/crashMonitor.dir/mainwindow.cpp.o.d"
+  "CMakeFiles/crashMonitor.dir/running_window.cpp.o"
+  "CMakeFiles/crashMonitor.dir/running_window.cpp.o.d"
   "CMakeFiles/crashMonitor.dir/settings.cpp.o"
   "CMakeFiles/crashMonitor.dir/settings.cpp.o.d"
   "CMakeFiles/crashMonitor.dir/src/application_manager.cpp.o"

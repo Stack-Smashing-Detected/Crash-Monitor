@@ -117,6 +117,7 @@ void ApplicationManager::initial_create(std::unordered_map<std::string, std::str
     }
 }
 
+
 nlohmann::json_abi_v3_12_0::json ApplicationManager::update_app_obj(std::string name, std::unordered_map<std::string, double> incoming_stats)
 {
     using json = nlohmann::json;

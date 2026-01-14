@@ -6,11 +6,6 @@ ApplicationObj::ApplicationObj(std::string name)
     this->application_name = name;
 }
 
-void ApplicationObj::register_process(std::unique_ptr<ProcessObj> discovered_process)
-{
-    this->owned_processes.push_back(std::move(discovered_process));
-}
-
 double ApplicationObj::get_specific_stat(std::string statistic)
 {
     auto const &target_stat = this->app_mem_statistics.find(statistic);
@@ -19,6 +14,7 @@ double ApplicationObj::get_specific_stat(std::string statistic)
 
     return target_stat->second;
 }
+
 
 void ApplicationObj::update_mem_statistics(std::unordered_map<std::string, double> stat_changes)
 {
@@ -32,4 +28,11 @@ void ApplicationObj::update_mem_statistics(std::unordered_map<std::string, doubl
             insert_success.first->second += it.second;
         }
     }
+}
+
+void ApplicationObj::register_process(std::unique_ptr<ProcessObj> discovered_process)
+{
+    std::unordered_map<std::string, double> process_statsheet = discovered_process->get_process_statsheet_ref();
+    this->update_mem_statistics(process_statsheet);
+    this->owned_processes.push_back(std::move(discovered_process));
 }

@@ -40,7 +40,10 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
             helpwindow.h helpwindow.cpp helpwindow.ui
             settings.h settings.cpp settings.ui
             app_resource_viewer.h app_resource_viewer.cpp app_resource_viewer.ui
-            runningStatus.ui
+            running_window.h running_window.cpp running_window.ui
+
+
+
         )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET crashMonitor APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR

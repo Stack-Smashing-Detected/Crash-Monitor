@@ -44,10 +44,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /snap/cmake/1481/bin/cmake
+CMAKE_COMMAND = /snap/cmake/1487/bin/cmake
 
 # The command to remove a file.
-RM = /snap/cmake/1481/bin/cmake -E rm -f
+RM = /snap/cmake/1487/bin/cmake -E rm -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -73,8 +73,8 @@ crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/libexec/mo
 crashMonitor_autogen/timestamp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/libexec/uic
 crashMonitor_autogen/timestamp: CMakeFiles/crashMonitor.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target crashMonitor"
-	/snap/cmake/1481/bin/cmake -E cmake_autogen /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/crashMonitor_autogen.dir/AutogenInfo.json Debug
-	/snap/cmake/1481/bin/cmake -E touch /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/timestamp
+	/snap/cmake/1487/bin/cmake -E cmake_autogen /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/crashMonitor_autogen.dir/AutogenInfo.json Debug
+	/snap/cmake/1487/bin/cmake -E touch /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/timestamp
 
 crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp: /home/victor-j-wilson/projects2/crashMonitor/resource.qrc
 crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp: CMakeFiles/crashMonitor_autogen.dir/AutoRcc_resource_EWIEGA46WW_Info.json
@@ -82,7 +82,7 @@ crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp: /home/victor-j-wilson/projects
 crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/libexec/rcc
 crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp: /home/victor-j-wilson/Qt/6.9.1/gcc_64/libexec/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for resource.qrc"
-	/snap/cmake/1481/bin/cmake -E cmake_autorcc /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/crashMonitor_autogen.dir/AutoRcc_resource_EWIEGA46WW_Info.json Debug
+	/snap/cmake/1487/bin/cmake -E cmake_autorcc /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles/crashMonitor_autogen.dir/AutoRcc_resource_EWIEGA46WW_Info.json Debug
 
 CMakeFiles/crashMonitor.dir/codegen:
 .PHONY : CMakeFiles/crashMonitor.dir/codegen
@@ -241,10 +241,24 @@ CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.s"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victor-j-wilson/projects2/crashMonitor/app_resource_viewer.cpp -o CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.s
 
+CMakeFiles/crashMonitor.dir/running_window.cpp.o: CMakeFiles/crashMonitor.dir/flags.make
+CMakeFiles/crashMonitor.dir/running_window.cpp.o: /home/victor-j-wilson/projects2/crashMonitor/running_window.cpp
+CMakeFiles/crashMonitor.dir/running_window.cpp.o: CMakeFiles/crashMonitor.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/crashMonitor.dir/running_window.cpp.o"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crashMonitor.dir/running_window.cpp.o -MF CMakeFiles/crashMonitor.dir/running_window.cpp.o.d -o CMakeFiles/crashMonitor.dir/running_window.cpp.o -c /home/victor-j-wilson/projects2/crashMonitor/running_window.cpp
+
+CMakeFiles/crashMonitor.dir/running_window.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/crashMonitor.dir/running_window.cpp.i"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/victor-j-wilson/projects2/crashMonitor/running_window.cpp > CMakeFiles/crashMonitor.dir/running_window.cpp.i
+
+CMakeFiles/crashMonitor.dir/running_window.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/crashMonitor.dir/running_window.cpp.s"
+	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/victor-j-wilson/projects2/crashMonitor/running_window.cpp -o CMakeFiles/crashMonitor.dir/running_window.cpp.s
+
 CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o: CMakeFiles/crashMonitor.dir/flags.make
 CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o: crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp
 CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o: CMakeFiles/crashMonitor.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o"
 	/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o -MF CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o.d -o CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o -c /home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp
 
 CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.i: cmake_force
@@ -268,6 +282,7 @@ crashMonitor_OBJECTS = \
 "CMakeFiles/crashMonitor.dir/helpwindow.cpp.o" \
 "CMakeFiles/crashMonitor.dir/settings.cpp.o" \
 "CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o" \
+"CMakeFiles/crashMonitor.dir/running_window.cpp.o" \
 "CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o"
 
 # External object files for target crashMonitor
@@ -284,6 +299,7 @@ crashMonitor: CMakeFiles/crashMonitor.dir/src/process_obj.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/helpwindow.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/settings.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/app_resource_viewer.cpp.o
+crashMonitor: CMakeFiles/crashMonitor.dir/running_window.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/crashMonitor_autogen/EWIEGA46WW/qrc_resource.cpp.o
 crashMonitor: CMakeFiles/crashMonitor.dir/build.make
 crashMonitor: CMakeFiles/crashMonitor.dir/compiler_depend.ts
@@ -293,7 +309,7 @@ crashMonitor: /usr/lib/x86_64-linux-gnu/libGLX.so
 crashMonitor: /usr/lib/x86_64-linux-gnu/libOpenGL.so
 crashMonitor: /home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/libQt6Core.so.6.9.1
 crashMonitor: CMakeFiles/crashMonitor.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable crashMonitor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/victor-j-wilson/projects2/crashMonitor/build/Desktop_Qt_6_9_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable crashMonitor"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/crashMonitor.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

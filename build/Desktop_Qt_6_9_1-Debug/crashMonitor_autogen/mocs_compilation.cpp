@@ -2,4 +2,5 @@
 #include "EWIEGA46WW/moc_app_resource_viewer.cpp"
 #include "EWIEGA46WW/moc_helpwindow.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
+#include "EWIEGA46WW/moc_running_window.cpp"
 #include "EWIEGA46WW/moc_settings.cpp"

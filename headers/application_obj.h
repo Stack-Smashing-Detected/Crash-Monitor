@@ -30,13 +30,6 @@ public:
     }
 
     /**
-     * @brief registers a process with this application, the process object itself is created in the App Manager
-     * and then its ownership is changed to this application object through "move semantics"
-     * @param pid -> the pid of an discovered process.
-     */
-    void register_process(std::unique_ptr<ProcessObj> discovered_process);
-
-    /**
      * @brief returns a reference to the application object instance's memory statsheet.
      * @return std::unordered_map<std::string, double>&
      */
@@ -68,6 +61,14 @@ public:
      * @param amount -> the amount in kB(kilobytes) i.e. 4kB = 4096 bytes or size_t value of 4096
      */
     void update_mem_statistics(std::unordered_map<std::string, double> stat_changes);
+
+    /**
+     * @brief registers a process with this application, the process object itself is created in the App Manager
+     * and then its ownership is changed to this application object through "move semantics". The process' stat sheet is also
+     * added to the application's own stat_sheet.
+     * @param pid -> the pid of an discovered process.
+     */
+    void register_process(std::unique_ptr<ProcessObj> discovered_process);
 
 private:
     std::vector<std::unique_ptr<ProcessObj>> owned_processes;

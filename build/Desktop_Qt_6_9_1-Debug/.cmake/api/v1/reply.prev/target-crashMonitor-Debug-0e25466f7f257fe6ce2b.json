@@ -31,9 +31,9 @@
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/Qt6Config.cmake",
-			"/snap/cmake/1481/share/cmake-4.1/Modules/FindOpenGL.cmake",
+			"/snap/cmake/1487/share/cmake-4.1/Modules/FindOpenGL.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/FindWrapOpenGL.cmake",
-			"/snap/cmake/1481/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake",
+			"/snap/cmake/1487/share/cmake-4.1/Modules/CMakeFindDependencyMacro.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6/QtPublicDependencyHelpers.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6GuiDependencies.cmake",
 			"/home/victor-j-wilson/Qt/6.9.1/gcc_64/lib/cmake/Qt6Gui/Qt6GuiConfig.cmake",
@@ -71,13 +71,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 79,
+				"line" : 82,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 62,
+				"line" : 65,
 				"parent" : 0
 			},
 			{

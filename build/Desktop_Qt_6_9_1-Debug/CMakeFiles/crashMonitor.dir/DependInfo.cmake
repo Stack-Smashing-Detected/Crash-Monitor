@@ -15,6 +15,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/victor-j-wilson/projects2/crashMonitor/helpwindow.cpp" "CMakeFiles/crashMonitor.dir/helpwindow.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/helpwindow.cpp.o.d"
   "/home/victor-j-wilson/projects2/crashMonitor/main.cpp" "CMakeFiles/crashMonitor.dir/main.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/main.cpp.o.d"
   "/home/victor-j-wilson/projects2/crashMonitor/mainwindow.cpp" "CMakeFiles/crashMonitor.dir/mainwindow.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/mainwindow.cpp.o.d"
+  "/home/victor-j-wilson/projects2/crashMonitor/running_window.cpp" "CMakeFiles/crashMonitor.dir/running_window.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/running_window.cpp.o.d"
   "/home/victor-j-wilson/projects2/crashMonitor/settings.cpp" "CMakeFiles/crashMonitor.dir/settings.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/settings.cpp.o.d"
   "/home/victor-j-wilson/projects2/crashMonitor/src/application_manager.cpp" "CMakeFiles/crashMonitor.dir/src/application_manager.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/src/application_manager.cpp.o.d"
   "/home/victor-j-wilson/projects2/crashMonitor/src/application_obj.cpp" "CMakeFiles/crashMonitor.dir/src/application_obj.cpp.o" "gcc" "CMakeFiles/crashMonitor.dir/src/application_obj.cpp.o.d"
