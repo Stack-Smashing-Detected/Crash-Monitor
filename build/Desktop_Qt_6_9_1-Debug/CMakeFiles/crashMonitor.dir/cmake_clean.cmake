@@ -25,6 +25,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/crashMonitor.dir/src/application_obj.cpp.o.d"
   "CMakeFiles/crashMonitor.dir/src/process_obj.cpp.o"
   "CMakeFiles/crashMonitor.dir/src/process_obj.cpp.o.d"
+  "CMakeFiles/crashMonitor.dir/utilities/details_button_delegate.cpp.o"
+  "CMakeFiles/crashMonitor.dir/utilities/details_button_delegate.cpp.o.d"
   "CMakeFiles/crashMonitor.dir/utilities/memory_stat_processing.cpp.o"
   "CMakeFiles/crashMonitor.dir/utilities/memory_stat_processing.cpp.o.d"
   "CMakeFiles/crashMonitor.dir/utilities/process_algorithms.cpp.o"

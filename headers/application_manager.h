@@ -32,6 +32,7 @@ public:
      */
     std::optional<size_t> check_if_app_registered(std::string name);
 
+
     /**
      * @brief index, passes all important data relating to the application to the view
      * @return std::vector<int>

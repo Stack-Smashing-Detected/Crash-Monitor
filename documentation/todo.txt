@@ -1,6 +1,10 @@
-The program flow:
+Current Task:
 
-find_processes -> open_smaps -> write_smaps to JSON file -> add values in JSON file into singular statsheet.
+Research:
+- Identify a way to add button objects to each entry in the main stat window (which is a QTableView object).
+
+Todo:
+- Implement buttons and a way for the program to identify the application object representing the entry who's button was clicked and pass its stat_sheet to the "show_api".
 
 Color: #509E32
 

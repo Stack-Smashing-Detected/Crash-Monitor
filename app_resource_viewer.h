@@ -21,7 +21,8 @@ public:
     explicit AppResourceViewer(QWidget *parent = nullptr);
     ~AppResourceViewer();
 
-    void showProcessStats(std::unordered_map<std::string, double> &process_stats, QTableWidget *tableWidget);
+    void setCurrentApp(std::unordered_map<std::string, double> app_stats, std::string appName);
+
     void showApplicationStats(std::unordered_map<std::string, double> &app_stats, QTableWidget *tableWidget);
 
 private:
@@ -30,6 +31,8 @@ private:
     QWidget* appTab;
     QTableWidget* ProcessStatView;
     QTableWidget* ApplicationStatView;
+    std::unordered_map<std::string, double> app_stats;
+    QString currentApp;
 };
 
 #endif // APP_RESOURCE_VIEWER_H

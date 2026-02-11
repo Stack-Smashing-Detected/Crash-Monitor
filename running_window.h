@@ -4,6 +4,8 @@
 #include <QDialog>
 #include <QTableView>
 #include "nlohmann/json.hpp"
+#include "headers/application_manager.h"
+#include "app_resource_viewer.h"
 
 namespace Ui {
 class RunningWindow;
@@ -17,11 +19,19 @@ public:
     explicit RunningWindow(QWidget *parent = nullptr);
     ~RunningWindow();
 
-    void indexAppStats(nlohman::json &all_stats, QTableView *tableView);
+    void indexAppStats(nlohmann::json &response, QTableView *tableView);
+
+    void drawMemoryGraph();
+    void checkForUpdates();
+
+public slots:
+    void showAppStatistics(nlohmann::json &response);
 
 private:
     Ui::RunningWindow *ui;
     QTableView* GeneralAppStats;
+    std::unique_ptr<ApplicationManager> am_ptr = nullptr;
+    AppResourceViewer* appResourceViewer = nullptr;
 };
 
 #endif // RUNNING_WINDOW_H

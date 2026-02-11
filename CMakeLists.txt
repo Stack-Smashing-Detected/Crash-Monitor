@@ -29,6 +29,8 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
             utilities/memory_stat_processing.cpp
             headers/application_manager.h
             src/application_manager.cpp
+            headers/details_button_delegate.h
+            utilities/details_button_delegate.cpp
             headers/alert_controller.h
             nlohmann/json.hpp
             nlohmann/json_fwd.hpp

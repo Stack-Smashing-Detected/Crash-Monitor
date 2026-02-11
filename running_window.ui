@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QTableView" name="tableView">
+  <widget class="QTableView" name="mainStatView">
    <property name="geometry">
     <rect>
      <x>90</x>

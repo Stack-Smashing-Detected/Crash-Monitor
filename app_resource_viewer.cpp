@@ -14,42 +14,28 @@ AppResourceViewer::AppResourceViewer(QWidget *parent)
     : QDialog(parent), ui(new Ui::AppResourceViewer)
 {
     ui->setupUi(this);
-
-    // setup
-    std::unique_ptr<MemoryStatProcessing> msp_testing = std::make_unique<MemoryStatProcessing>();
-    std::string path = "../../mem_stats/3348.json";
-    std::string path_2 = "../../mem_stats/3349.json";
-
-    std::unordered_map<std::string, double> process_stats_a = msp_testing->evaluate_memory_stat_sheet(path);
-    std::unordered_map<std::string, double> process_stats_b = msp_testing->evaluate_memory_stat_sheet(path_2);
-
-    this->showProcessStats(process_stats_a, ui->processStats);
-    this->showProcessStats(process_stats_b, ui->appStats);
 }
 AppResourceViewer::~AppResourceViewer()
 {
     delete ui;
 }
 
-void AppResourceViewer::showProcessStats(std::unordered_map<std::string, double> &process_stats , QTableWidget *tableWidget)
-{
-    int row = 0;
-    tableWidget->insertRow(row);
-    tableWidget->insertColumn(0);
-    tableWidget->insertColumn(1);
-
-    tableWidget->horizontalHeader()->setSectionResizeMode(QHeaderView::Stretch);
-    for(const auto &[key, value] : process_stats)
-    {
-        QTableWidgetItem *process_stat = new QTableWidgetItem(QString::fromStdString(key));
-        tableWidget->setItem(row, 0, process_stat);
-
-        QTableWidgetItem *stat_value = new QTableWidgetItem(QString::number(value));
-        tableWidget->setItem(row, 1, stat_value);
-
-        row++;
-        tableWidget->insertRow(row);
+void AppResourceViewer::setCurrentApp(std::unordered_map<std::string, double> &app_stats, std::string appName){
+    if(!app_stats){
+        this->appName = appName;
+        ui->appName->setText(QString(this->appName));
+        this->app_stats = std::move(app_stats);
+        this->showApplicationStats(app_stats, ui->appStatistics);
+        return;
     }
+
+    this->appName = appName;
+    ui->appName->setText(QString(this->appName));
+    this->app_stats->clear();
+    this->app_stats = std::move(app_stats);
+    ui->appStatistics->clearContents();
+    this->showApplicationStats(this->app_stats, ui->appStatistics);
+
 }
 
 void AppResourceViewer::showApplicationStats(std::unordered_map<std::string, double> &app_stats, QTableWidget *tableWidget)

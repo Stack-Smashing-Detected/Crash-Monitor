@@ -57,6 +57,7 @@ nlohmann::json ApplicationManager::read(std::string name)
         json data;
         auto &app = this->application_list[*index];
         // return data here.
+        response["name"] = name;
         response["message"] = "Successfully read application information";
         response["status"] = "READ SUCCESS";
 
@@ -81,7 +82,7 @@ nlohmann::json_abi_v3_12_0::json ApplicationManager::create(std::string pid, std
 {
     using json = nlohmann::json;
 
-    std::unique_ptr<ApplicationObj> app = std::make_unique<ApplicationObj>(name);
+        std::unique_ptr<ApplicationObj> app = std::make_unique<ApplicationObj>(name);
     std::string filepath = std::format("../../mem_stats/{}.json", pid);
     std::unordered_map<std::string, double> stat_sheet = stat_processor.evaluate_memory_stat_sheet(filepath);
 
